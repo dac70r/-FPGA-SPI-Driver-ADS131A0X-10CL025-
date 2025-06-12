@@ -1,0 +1,281 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SPI_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_CS",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "clock_4_167Mhz_debug",
+					"strict" : false
+				},
+				{
+					"name" : "clock_8_333Mhz_debug",
+					"strict" : false
+				},
+				{
+					"name" : "state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state[3]",
+					"strict" : false
+				},
+				{
+					"name" : "state_2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state_2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state_2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_clock_cycles_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "heartbeat",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[16]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[17]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[18]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[19]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[20]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[21]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[22]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[23]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[24]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[25]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[26]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[27]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[28]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[29]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[30]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_output[31]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_miso_data_cc_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_tap_debug_output",
+					"strict" : false
+				},
+				{
+					"name" : "system_clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

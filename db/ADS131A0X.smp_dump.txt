@@ -1,0 +1,12 @@
+
+State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState
+Name presentState.TRANSACTION_START_STABLE presentState.TRANSACTION_START presentState.WAIT_TRANSACTION presentState.ADC_INIT_COMPLETE presentState.ADC_INIT_START_STABLE presentState.ADC_INIT_START presentState.IDLE presentState.00000 presentState.TRANSACTION_COMPLETE 
+presentState.00000 0 0 0 0 0 0 0 0 0 
+presentState.IDLE 0 0 0 0 0 0 1 1 0 
+presentState.ADC_INIT_START 0 0 0 0 0 1 0 1 0 
+presentState.ADC_INIT_START_STABLE 0 0 0 0 1 0 0 1 0 
+presentState.ADC_INIT_COMPLETE 0 0 0 1 0 0 0 1 0 
+presentState.WAIT_TRANSACTION 0 0 1 0 0 0 0 1 0 
+presentState.TRANSACTION_START 0 1 0 0 0 0 0 1 0 
+presentState.TRANSACTION_START_STABLE 1 0 0 0 0 0 0 1 0 
+presentState.TRANSACTION_COMPLETE 0 0 0 0 0 0 0 1 1 

@@ -1,0 +1,65 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'altera_reserved_tck'
+Slack : 44.645
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'altera_reserved_tck'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Recovery 'altera_reserved_tck'
+Slack : 95.844
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Removal 'altera_reserved_tck'
+Slack : 1.020
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.541
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Setup 'altera_reserved_tck'
+Slack : 45.370
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'altera_reserved_tck'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Recovery 'altera_reserved_tck'
+Slack : 96.402
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Removal 'altera_reserved_tck'
+Slack : 0.891
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.410
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Setup 'altera_reserved_tck'
+Slack : 47.664
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'altera_reserved_tck'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Recovery 'altera_reserved_tck'
+Slack : 97.926
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Removal 'altera_reserved_tck'
+Slack : 0.476
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.442
+TNS   : 0.000
+
+------------------------------------------------------------
