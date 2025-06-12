@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SPI_RESET",
+					"strict" : false
+				},
+				{
 					"name" : "SPI_MOSI",
 					"strict" : false
 				},
@@ -241,6 +245,10 @@
 				},
 				{
 					"name" : "spi_miso_data_cc_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_init_state[0]",
 					"strict" : false
 				},
 				{

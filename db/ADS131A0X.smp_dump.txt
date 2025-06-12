@@ -1,12 +1,28 @@
 
+State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|adc_init_state_i
+Name adc_init_state_i.00000011 adc_init_state_i.00000010 adc_init_state_i.00000001 adc_init_state_i.00000000 adc_init_state_i.00000100 
+adc_init_state_i.00000000 0 0 0 0 0 
+adc_init_state_i.00000001 0 0 1 1 0 
+adc_init_state_i.00000010 0 1 0 1 0 
+adc_init_state_i.00000011 1 0 0 1 0 
+adc_init_state_i.00000100 0 0 0 1 1 
+
 State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState
-Name presentState.TRANSACTION_START_STABLE presentState.TRANSACTION_START presentState.WAIT_TRANSACTION presentState.ADC_INIT_COMPLETE presentState.ADC_INIT_START_STABLE presentState.ADC_INIT_START presentState.IDLE presentState.00000 presentState.TRANSACTION_COMPLETE 
-presentState.00000 0 0 0 0 0 0 0 0 0 
-presentState.IDLE 0 0 0 0 0 0 1 1 0 
-presentState.ADC_INIT_START 0 0 0 0 0 1 0 1 0 
-presentState.ADC_INIT_START_STABLE 0 0 0 0 1 0 0 1 0 
-presentState.ADC_INIT_COMPLETE 0 0 0 1 0 0 0 1 0 
-presentState.WAIT_TRANSACTION 0 0 1 0 0 0 0 1 0 
-presentState.TRANSACTION_START 0 1 0 0 0 0 0 1 0 
-presentState.TRANSACTION_START_STABLE 1 0 0 0 0 0 0 1 0 
-presentState.TRANSACTION_COMPLETE 0 0 0 0 0 0 0 1 1 
+Name presentState.ADC_INIT_START_STABLE_0555 presentState.ADC_INIT_START_0555 presentState.ADC_INIT_COMPLETE_0655 presentState.ADC_INIT_START_STABLE_0655 presentState.ADC_INIT_START_0655 presentState.TRANSACTION_COMPLETE presentState.TRANSACTION_START_STABLE presentState.TRANSACTION_START presentState.WAIT_TRANSACTION presentState.ADC_INIT_COMPLETE presentState.ADC_INIT_START_STABLE presentState.ADC_INIT_START presentState.ADC_RESET_COMPLETE presentState.ADC_RESET presentState.IDLE presentState.00000 presentState.ADC_INIT_COMPLETE_0555 
+presentState.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+presentState.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 
+presentState.ADC_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 
+presentState.ADC_RESET_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 
+presentState.ADC_INIT_START 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 
+presentState.ADC_INIT_START_STABLE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 
+presentState.ADC_INIT_COMPLETE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 
+presentState.WAIT_TRANSACTION 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 
+presentState.TRANSACTION_START 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 
+presentState.TRANSACTION_START_STABLE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 
+presentState.TRANSACTION_COMPLETE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_START_0655 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_START_STABLE_0655 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_COMPLETE_0655 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_START_0555 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_START_STABLE_0555 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+presentState.ADC_INIT_COMPLETE_0555 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 

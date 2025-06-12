@@ -19,6 +19,7 @@ module ADS131A0X(
 		output 				SPI_RESET,				// SPI_RESET
 		output 				SPI_MOSI,				// SPI MOSI
 		input 				SPI_MISO,				// SPI MISO
+		input					SPI_DRDY,				// SPI DRDY
 
 		/* Supplementary SPI Signals for ADC */
 		// for development purposes, tbc inclusion in main design
@@ -39,7 +40,7 @@ module ADS131A0X(
 		output [7:0]		spi_miso_data_cc_output,
 		output [3:0] 		spi_mosi_byte_count_output,	
 		output [7:0]		spi_transaction_count,
-		output				spi_sclk_clock_state_2_removed_output,
+		output [7:0]		adc_init_state,
 		output				signal_tap_debug_output
 
 );
@@ -59,6 +60,7 @@ SPI_Master SPI_Master_uut
 	.SPI_CS(SPI_CS),											//	SPI CS
 	.SPI_SCLK(SPI_SCLK),								// SPI SCLK
 	.SPI_RESET(SPI_RESET),
+	.SPI_DRDY(SPI_DRDY),
 	.trigger(trigger),
 	
 	// Non crucial Signals (for simulation and debugging)
@@ -75,7 +77,7 @@ SPI_Master SPI_Master_uut
 	
 	.spi_mosi_byte_count_output(spi_mosi_byte_count_output),
 	.spi_transaction_count(spi_transaction_count),
-	.spi_sclk_clock_state_2_removed_output(spi_sclk_clock_state_2_removed_output)
+	.adc_init_state(adc_init_state)
 );
 
 // Debug by Dennis 

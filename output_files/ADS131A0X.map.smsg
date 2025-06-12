@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at SPI_Master.v(87): always construct contains both blocking and non-blocking assignments File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 87
+Warning (10268): Verilog HDL information at SPI_Master.v(219): always construct contains both blocking and non-blocking assignments File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 219
