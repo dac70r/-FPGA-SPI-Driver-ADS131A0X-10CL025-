@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ADS131A0X
-Fri Jun 13 02:34:07 2025
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Fri Jun 13 09:15:34 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -38,7 +38,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -58,15 +58,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 13 02:34:07 2025          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun 13 09:15:34 2025          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ADS131A0X                                      ;
 ; Top-level Entity Name              ; ADS131A0X                                      ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 2,350                                          ;
-;     Total combinational functions  ; 1,160                                          ;
-;     Dedicated logic registers      ; 1,900                                          ;
-; Total registers                    ; 1900                                           ;
+; Total logic elements               ; 2,450                                          ;
+;     Total combinational functions  ; 1,263                                          ;
+;     Dedicated logic registers      ; 1,944                                          ;
+; Total registers                    ; 1944                                           ;
 ; Total pins                         ; 120                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 425,984                                        ;
@@ -174,78 +174,78 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                              ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                    ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
-; ADS131A0X.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v                                                        ;             ;
-; SPI_Master.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v                                                       ;             ;
-; heartbeat.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/heartbeat.v                                                        ;             ;
-; clock_synthesizer.v                                                ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer.v                                                ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                     ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                                   ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                      ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                      ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                            ;             ;
-; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                        ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                         ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                          ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                        ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                 ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                           ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                        ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                         ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                            ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                            ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                          ;             ;
-; db/altsyncram_1e24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/altsyncram_1e24.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                          ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                        ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                           ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                   ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                        ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                           ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                            ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                          ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                                                          ;             ;
-; db/mux_msc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/mux_msc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                        ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/declut.inc                                                            ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                       ;             ;
-; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/decode_6vf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                       ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                       ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                          ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                       ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                               ;             ;
-; db/cntr_phi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_phi.tdf                                                    ;             ;
-; db/cmpr_mgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_mgc.tdf                                                    ;             ;
-; db/cntr_f9j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_f9j.tdf                                                    ;             ;
-; db/cntr_9gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_9gi.tdf                                                    ;             ;
-; db/cmpr_kgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_kgc.tdf                                                    ;             ;
-; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_r2j.tdf                                                    ;             ;
-; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_ggc.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                        ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                         ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                     ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                           ; altera_sld  ;
-; db/ip/slda5d34450/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                      ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                              ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; ADS131A0X.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v                                                        ;             ;
+; SPI_Master.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v                                                       ;             ;
+; heartbeat.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/heartbeat.v                                                        ;             ;
+; clock_synthesizer.v                                                ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer.v                                                ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                               ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                          ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                                             ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                                ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                                      ;             ;
+; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                                  ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                   ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                    ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                          ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                                  ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                           ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                                     ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                                  ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                                   ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                                      ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                                      ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                                    ;             ;
+; db/altsyncram_1e24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/altsyncram_1e24.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                                    ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                                  ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                                     ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                             ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                                  ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                                     ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                                      ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                                    ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                                                                    ;             ;
+; db/mux_msc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/mux_msc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                                  ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/declut.inc                                                                      ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                                 ;             ;
+; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/decode_6vf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                                 ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                 ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                                    ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                                 ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                         ;             ;
+; db/cntr_phi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_phi.tdf                                                    ;             ;
+; db/cmpr_mgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_mgc.tdf                                                    ;             ;
+; db/cntr_f9j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_f9j.tdf                                                    ;             ;
+; db/cntr_9gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_9gi.tdf                                                    ;             ;
+; db/cmpr_kgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_kgc.tdf                                                    ;             ;
+; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_r2j.tdf                                                    ;             ;
+; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_ggc.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                  ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                   ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                               ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                                     ; altera_sld  ;
+; db/ip/slda5d34450/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------+
@@ -253,20 +253,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 2,350              ;
+; Estimated Total logic elements              ; 2,450              ;
 ;                                             ;                    ;
-; Total combinational functions               ; 1160               ;
+; Total combinational functions               ; 1263               ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 523                ;
-;     -- 3 input functions                    ; 278                ;
-;     -- <=2 input functions                  ; 359                ;
+;     -- 4 input functions                    ; 576                ;
+;     -- 3 input functions                    ; 286                ;
+;     -- <=2 input functions                  ; 401                ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 920                ;
-;     -- arithmetic mode                      ; 240                ;
+;     -- normal mode                          ; 992                ;
+;     -- arithmetic mode                      ; 271                ;
 ;                                             ;                    ;
-; Total registers                             ; 1900               ;
-;     -- Dedicated logic registers            ; 1900               ;
+; Total registers                             ; 1944               ;
+;     -- Dedicated logic registers            ; 1944               ;
 ;     -- I/O registers                        ; 0                  ;
 ;                                             ;                    ;
 ; I/O pins                                    ; 120                ;
@@ -276,8 +276,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                    ;
 ; Maximum fan-out node                        ; system_clock~input ;
 ; Maximum fan-out                             ; 1222               ;
-; Total fan-out                               ; 12017              ;
-; Average fan-out                             ; 3.52               ;
+; Total fan-out                               ; 12491              ;
+; Average fan-out                             ; 3.51               ;
 +---------------------------------------------+--------------------+
 
 
@@ -286,8 +286,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |ADS131A0X                                                                                                                              ; 1160 (1)            ; 1900 (0)                  ; 425984      ; 0            ; 0       ; 0         ; 120  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
-;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 218 (127)           ; 127 (61)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
+; |ADS131A0X                                                                                                                              ; 1263 (1)            ; 1944 (0)                  ; 425984      ; 0            ; 0       ; 0         ; 120  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
+;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 321 (230)           ; 171 (105)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
 ;       |clock_synthesizer:uut0|                                                                                                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer:uut0                                                                                                                                                                                                                                                                                           ; clock_synthesizer                 ; work         ;
 ;       |clock_synthesizer:uut1|                                                                                                          ; 47 (47)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer:uut1                                                                                                                                                                                                                                                                                           ; clock_synthesizer                 ; work         ;
 ;    |clock_synthesizer:clock_synthesizer_uut_0|                                                                                          ; 46 (46)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|clock_synthesizer:clock_synthesizer_uut_0                                                                                                                                                                                                                                                                                                  ; clock_synthesizer                 ; work         ;
@@ -479,63 +479,58 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
-+-----------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+-------------------------------------+
-; Name                                    ; presentState.ADC_INIT_START_STABLE_0555 ; presentState.ADC_INIT_START_0555 ; presentState.ADC_INIT_COMPLETE_0655 ; presentState.ADC_INIT_START_STABLE_0655 ; presentState.ADC_INIT_START_0655 ; presentState.TRANSACTION_COMPLETE ; presentState.TRANSACTION_START_STABLE ; presentState.TRANSACTION_START ; presentState.WAIT_TRANSACTION ; presentState.ADC_INIT_COMPLETE ; presentState.ADC_INIT_START_STABLE ; presentState.ADC_INIT_START ; presentState.ADC_RESET_COMPLETE ; presentState.ADC_RESET ; presentState.IDLE ; presentState.00000 ; presentState.ADC_INIT_COMPLETE_0555 ;
-+-----------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+-------------------------------------+
-; presentState.00000                      ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 0                  ; 0                                   ;
-; presentState.IDLE                       ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 1                 ; 1                  ; 0                                   ;
-; presentState.ADC_RESET                  ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 1                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_RESET_COMPLETE         ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 1                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START             ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 1                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START_STABLE      ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 1                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_COMPLETE          ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 1                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.WAIT_TRANSACTION           ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 1                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.TRANSACTION_START          ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 1                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.TRANSACTION_START_STABLE   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 1                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.TRANSACTION_COMPLETE       ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 1                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START_0655        ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 1                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START_STABLE_0655 ; 0                                       ; 0                                ; 0                                   ; 1                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_COMPLETE_0655     ; 0                                       ; 0                                ; 1                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START_0555        ; 0                                       ; 1                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_START_STABLE_0555 ; 1                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 0                                   ;
-; presentState.ADC_INIT_COMPLETE_0555     ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ; 1                                   ;
-+-----------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+-------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
++-----------------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+
+; Name                                    ; presentState.ADC_INIT_COMPLETE_0033 ; presentState.ADC_INIT_START_STABLE_0033 ; presentState.ADC_INIT_START_0033 ; presentState.ADC_INIT_COMPLETE_0555 ; presentState.ADC_INIT_START_STABLE_0555 ; presentState.ADC_INIT_START_0555 ; presentState.ADC_INIT_COMPLETE_0655 ; presentState.ADC_INIT_START_STABLE_0655 ; presentState.ADC_INIT_START_0655 ; presentState.TRANSACTION_COMPLETE ; presentState.TRANSACTION_START_STABLE ; presentState.TRANSACTION_START ; presentState.WAIT_TRANSACTION ; presentState.ADC_INIT_COMPLETE ; presentState.ADC_INIT_START_STABLE ; presentState.ADC_INIT_START ; presentState.ADC_RESET_COMPLETE ; presentState.ADC_RESET ; presentState.IDLE ; presentState.00000 ;
++-----------------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+
+; presentState.00000                      ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 0                  ;
+; presentState.IDLE                       ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 1                 ; 1                  ;
+; presentState.ADC_RESET                  ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 1                      ; 0                 ; 1                  ;
+; presentState.ADC_RESET_COMPLETE         ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 1                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START             ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 1                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_STABLE      ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 1                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_COMPLETE          ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 1                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.WAIT_TRANSACTION           ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 1                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.TRANSACTION_START          ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 1                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.TRANSACTION_START_STABLE   ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 1                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.TRANSACTION_COMPLETE       ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 1                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_0655        ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 1                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_STABLE_0655 ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 1                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_COMPLETE_0655     ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 1                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_0555        ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 1                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_STABLE_0555 ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 1                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_COMPLETE_0555     ; 0                                   ; 0                                       ; 0                                ; 1                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_0033        ; 0                                   ; 0                                       ; 1                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_START_STABLE_0033 ; 0                                   ; 1                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
+; presentState.ADC_INIT_COMPLETE_0033     ; 1                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                   ; 0                                       ; 0                                ; 0                                 ; 0                                     ; 0                              ; 0                             ; 0                              ; 0                                  ; 0                           ; 0                               ; 0                      ; 0                 ; 1                  ;
++-----------------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                          ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------+
-; Register name                                                     ; Reason for Removal                                                      ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------+
-; SPI_Master:SPI_Master_uut|spi_clock_cycles[6..9,11..31]           ; Merged with SPI_Master:SPI_Master_uut|spi_clock_cycles[10]              ;
-; SPI_Master:SPI_Master_uut|spi_clock_cycles[10]                    ; Stuck at GND due to stuck port data_in                                  ;
-; SPI_Master:SPI_Master_uut|presentState.WAIT_TRANSACTION           ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.TRANSACTION_START          ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.TRANSACTION_START_STABLE   ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.TRANSACTION_COMPLETE       ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.ADC_INIT_START_0555        ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.ADC_INIT_START_STABLE_0555 ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState.ADC_INIT_COMPLETE_0555     ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~2                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~3                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~5                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~6                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~7                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~8                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~9                      ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState~2                          ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState~3                          ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState~4                          ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|presentState~5                          ; Lost fanout                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i.00000011               ; Merged with SPI_Master:SPI_Master_uut|adc_init_state_i.00000010         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i.00000100               ; Merged with SPI_Master:SPI_Master_uut|adc_init_state_i.00000010         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i.00000010               ; Stuck at GND due to stuck port data_in                                  ;
-; heartbeat:heartbeat_uut|counter[0]                                ; Merged with SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|counter[0] ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i.00000000               ; Lost fanout                                                             ;
-; Total Number of Removed Registers = 49                            ;                                                                         ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                ;
++---------------------------------------------------------+-------------------------------------------------------------------------+
+; Register name                                           ; Reason for Removal                                                      ;
++---------------------------------------------------------+-------------------------------------------------------------------------+
+; SPI_Master:SPI_Master_uut|spi_clock_cycles[6..9,11..31] ; Merged with SPI_Master:SPI_Master_uut|spi_clock_cycles[10]              ;
+; SPI_Master:SPI_Master_uut|spi_clock_cycles[10]          ; Stuck at GND due to stuck port data_in                                  ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~2            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~3            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~5            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~6            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~7            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~8            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~9            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~2                ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~3                ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~4                ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~5                ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~6                ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i.00000010     ; Stuck at GND due to stuck port data_in                                  ;
+; heartbeat:heartbeat_uut|counter[0]                      ; Merged with SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|counter[0] ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i.00000000     ; Lost fanout                                                             ;
+; Total Number of Removed Registers = 41                  ;                                                                         ;
++---------------------------------------------------------+-------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
@@ -553,12 +548,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1900  ;
-; Number of registers using Synchronous Clear  ; 48    ;
+; Total registers                              ; 1944  ;
+; Number of registers using Synchronous Clear  ; 81    ;
 ; Number of registers using Synchronous Load   ; 71    ;
 ; Number of registers using Asynchronous Clear ; 589   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 657   ;
+; Number of registers using Clock Enable       ; 689   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -594,7 +589,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|spi_miso_data_cc_output[3] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|adc_reset_count[21]        ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|spi_clock_cycles[5]        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|spi_miso_data_cc_output[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
 
 
@@ -718,22 +715,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 120                         ;
-; cycloneiii_ff         ; 192                         ;
+; cycloneiii_ff         ; 236                         ;
 ;     ENA               ; 14                          ;
-;     plain             ; 178                         ;
-; cycloneiii_lcell_comb ; 320                         ;
-;     arith             ; 143                         ;
-;         2 data inputs ; 142                         ;
+;     ENA SCLR          ; 32                          ;
+;     SCLR              ; 1                           ;
+;     plain             ; 189                         ;
+; cycloneiii_lcell_comb ; 423                         ;
+;     arith             ; 174                         ;
+;         2 data inputs ; 173                         ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 177                         ;
+;     normal            ; 249                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 24                          ;
-;         4 data inputs ; 108                         ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 161                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.78                        ;
+; Average LUT depth     ; 3.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -742,7 +741,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -763,12 +762,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; SPI_RESET                     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|SPI_RESET_Temp~_wirecell           ; N/A     ;
 ; SPI_SCLK                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|SPI_SCLK_Temp                      ; N/A     ;
 ; SPI_SCLK                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|SPI_SCLK_Temp                      ; N/A     ;
-; adc_init_state[0]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000001          ; N/A     ;
-; adc_init_state[0]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000001          ; N/A     ;
-; adc_init_state[1]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; adc_init_state[1]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; adc_init_state[2]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; adc_init_state[2]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
+; adc_init_state[0]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state[0]                  ; N/A     ;
+; adc_init_state[0]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state[0]                  ; N/A     ;
+; adc_init_state[1]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000011          ; N/A     ;
+; adc_init_state[1]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000011          ; N/A     ;
+; adc_init_state[2]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000100          ; N/A     ;
+; adc_init_state[2]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00000100          ; N/A     ;
 ; adc_init_state[3]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
 ; adc_init_state[3]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
 ; adc_init_state[4]             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
@@ -937,26 +936,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; spi_mosi_byte_count_output[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
 ; spi_mosi_byte_count_output[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
 ; spi_mosi_byte_count_output[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; state[0]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr19                           ; N/A     ;
-; state[0]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr19                           ; N/A     ;
-; state[1]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr18~0                         ; N/A     ;
-; state[1]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr18~0                         ; N/A     ;
-; state[2]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr17                           ; N/A     ;
-; state[2]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr17                           ; N/A     ;
-; state[3]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr16                           ; N/A     ;
-; state[3]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr16                           ; N/A     ;
-; state[4]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; state[4]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; state_2[0]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr23~_wirecell                 ; N/A     ;
-; state_2[0]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr23~_wirecell                 ; N/A     ;
-; state_2[1]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr22                           ; N/A     ;
-; state_2[1]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr22                           ; N/A     ;
-; state_2[2]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr21~_wirecell                 ; N/A     ;
-; state_2[2]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr21~_wirecell                 ; N/A     ;
-; state_2[3]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr20                           ; N/A     ;
-; state_2[3]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr20                           ; N/A     ;
-; state_2[4]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
-; state_2[4]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                         ; N/A     ;
+; state[0]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr29~1_wirecell                ; N/A     ;
+; state[0]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr29~1_wirecell                ; N/A     ;
+; state[1]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr28~2_wirecell                ; N/A     ;
+; state[1]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr28~2_wirecell                ; N/A     ;
+; state[2]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr27                           ; N/A     ;
+; state[2]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr27                           ; N/A     ;
+; state[3]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr26                           ; N/A     ;
+; state[3]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr26                           ; N/A     ;
+; state[4]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr25                           ; N/A     ;
+; state[4]                      ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr25                           ; N/A     ;
+; state_2[0]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr34~2_wirecell                ; N/A     ;
+; state_2[0]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr34~2_wirecell                ; N/A     ;
+; state_2[1]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr33~4_wirecell                ; N/A     ;
+; state_2[1]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr33~4_wirecell                ; N/A     ;
+; state_2[2]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr32                           ; N/A     ;
+; state_2[2]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr32                           ; N/A     ;
+; state_2[3]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr31~1                         ; N/A     ;
+; state_2[3]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr31~1                         ; N/A     ;
+; state_2[4]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr30                           ; N/A     ;
+; state_2[4]                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr30                           ; N/A     ;
 ; system_clock                  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; system_clock                                                 ; N/A     ;
 ; trigger                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; trigger                                                      ; N/A     ;
 ; trigger                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; trigger                                                      ; N/A     ;
@@ -1000,62 +999,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Jun 13 02:33:39 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Fri Jun 13 09:15:09 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADS131A0X -c ADS131A0X
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ads131a0x.v
-    Info (12023): Found entity 1: ADS131A0X File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 11
+    Info (12023): Found entity 1: ADS131A0X File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file spi_master.v
-    Info (12023): Found entity 1: SPI_Master File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 4
+    Info (12023): Found entity 1: SPI_Master File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file heartbeat.v
-    Info (12023): Found entity 1: heartbeat File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/heartbeat.v Line: 4
+    Info (12023): Found entity 1: heartbeat File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/heartbeat.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file clock_synthesizer.v
-    Info (12023): Found entity 1: clock_synthesizer File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer.v Line: 22
-Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(21): truncated literal to match 3 bits File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 21
-Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(22): truncated literal to match 3 bits File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 22
+    Info (12023): Found entity 1: clock_synthesizer File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer.v Line: 22
+Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(21): truncated literal to match 3 bits File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 21
+Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(22): truncated literal to match 3 bits File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file spi_sclk_generator.v
-    Info (12023): Found entity 1: spi_sclk_generator File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 8
+    Info (12023): Found entity 1: spi_sclk_generator File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 8
 Info (12127): Elaborating entity "ADS131A0X" for the top level hierarchy
-Info (12128): Elaborating entity "SPI_Master" for hierarchy "SPI_Master:SPI_Master_uut" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 81
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(76): object "adc_reset_count" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 76
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(77): object "delay_counter_transition_logic" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 77
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(79): object "adc_init_complete_flag" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 79
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(82): object "spi_mosi_bit_count" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 82
-Warning (10230): Verilog HDL assignment warning at SPI_Master.v(181): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 181
-Warning (10230): Verilog HDL assignment warning at SPI_Master.v(205): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 205
-Warning (10230): Verilog HDL assignment warning at SPI_Master.v(228): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 228
-Warning (10230): Verilog HDL assignment warning at SPI_Master.v(257): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 257
-Info (10264): Verilog HDL Case Statement information at SPI_Master.v(276): all case item expressions in this case statement are onehot File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 276
-Warning (10034): Output port "spi_transaction_count" at SPI_Master.v(30) has no driver File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 30
-Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 96
-Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut1" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 102
-Info (12128): Elaborating entity "heartbeat" for hierarchy "heartbeat:heartbeat_uut" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 93
-Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "clock_synthesizer:clock_synthesizer_uut_0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 108
+Info (12128): Elaborating entity "SPI_Master" for hierarchy "SPI_Master:SPI_Master_uut" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 81
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(83): object "delay_counter_transition_logic" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 83
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(85): object "adc_init_complete_flag" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 85
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(88): object "spi_mosi_bit_count" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 88
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(194): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 194
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(218): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 218
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(242): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 242
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(266): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 266
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(295): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 295
+Warning (10034): Output port "spi_transaction_count" at SPI_Master.v(30) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 30
+Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 102
+Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut1" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 108
+Info (12128): Elaborating entity "heartbeat" for hierarchy "heartbeat:heartbeat_uut" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 93
+Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "clock_synthesizer:clock_synthesizer_uut_0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 108
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1e24.tdf
-    Info (12023): Found entity 1: altsyncram_1e24 File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/altsyncram_1e24.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_1e24 File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/altsyncram_1e24.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_msc.tdf
-    Info (12023): Found entity 1: mux_msc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/mux_msc.tdf Line: 23
+    Info (12023): Found entity 1: mux_msc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/mux_msc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_6vf.tdf
-    Info (12023): Found entity 1: decode_6vf File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/decode_6vf.tdf Line: 23
+    Info (12023): Found entity 1: decode_6vf File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/decode_6vf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_phi.tdf
-    Info (12023): Found entity 1: cntr_phi File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_phi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_phi File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_phi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_mgc.tdf
-    Info (12023): Found entity 1: cmpr_mgc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_mgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_mgc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_mgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_f9j.tdf
-    Info (12023): Found entity 1: cntr_f9j File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_f9j.tdf Line: 26
+    Info (12023): Found entity 1: cntr_f9j File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_f9j.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_9gi.tdf
-    Info (12023): Found entity 1: cntr_9gi File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_9gi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_9gi File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_9gi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_kgc.tdf
-    Info (12023): Found entity 1: cmpr_kgc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_kgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_kgc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_kgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r2j.tdf
-    Info (12023): Found entity 1: cntr_r2j File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_r2j.tdf Line: 28
+    Info (12023): Found entity 1: cntr_r2j File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_r2j.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ggc.tdf
-    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_ggc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_ggc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.13.02:33:54 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.13.09:15:22 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1066,85 +1064,81 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "state[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 32
-    Warning (13410): Pin "state_2[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 33
-    Warning (13410): Pin "spi_clock_cycles_output[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[8]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[9]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[10]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[11]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[12]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[13]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[14]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[15]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[16]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[17]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[18]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[19]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[20]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[21]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[22]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[23]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[24]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[25]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[26]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[27]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[28]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[29]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[30]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "spi_clock_cycles_output[31]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 34
-    Warning (13410): Pin "state_tracker_output[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "spi_mosi_byte_count_output[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_transaction_count[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "adc_init_state[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
+    Warning (13410): Pin "spi_clock_cycles_output[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[8]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[9]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[10]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[11]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[12]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[13]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[14]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[15]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[16]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[17]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[18]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[19]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[20]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[21]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[22]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[23]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[24]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[25]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[26]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[27]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[28]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[29]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[30]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "spi_clock_cycles_output[31]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 34
+    Warning (13410): Pin "state_tracker_output[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "spi_mosi_byte_count_output[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_transaction_count[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "adc_init_state[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 19 registers lost all their fanouts during netlist optimizations.
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 241 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2608 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2711 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 116 output pins
-    Info (21061): Implemented 2379 logic cells
+    Info (21061): Implemented 2482 logic cells
     Info (21064): Implemented 104 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
-    Info: Peak virtual memory: 4893 megabytes
-    Info: Processing ended: Fri Jun 13 02:34:07 2025
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
+    Info: Peak virtual memory: 4865 megabytes
+    Info: Processing ended: Fri Jun 13 09:15:34 2025
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:21
 
 
