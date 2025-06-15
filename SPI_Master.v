@@ -91,7 +91,7 @@ reg [3:0]	spi_mosi_byte_count	= 'd0;
 /* Hard Coded Messages */
 reg [31:0]		ADC_READY_0000		= 32'h0000_0000;
 reg [31:0]		ADC_UNLOCK_0655	= 32'h0655_0000;
-reg [31:0]		ADC_WAKEUP_0033	= 32'b0000_0000_0011_0011_0000_0000_0000_0000; //32'h0033_0000;
+reg [31:0]		ADC_WAKEUP_0033	= 32'h4B68_0000;
 reg [31:0]		ADC_LOCKED_0555	= 32'h0555_0000;
 reg [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
 
@@ -114,8 +114,12 @@ begin
 	case(adc_init_state_i)
 	0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_miso_data_cc_output];
 	1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_miso_data_cc_output];
-	2: SPI_MOSI_Temp 		<= ADC_ENABLE_ALL_4F0F	['d32 - spi_miso_data_cc_output];
-	3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_miso_data_cc_output];
+	2: SPI_MOSI_Temp 		<= ADC_ENABLE_ALL_4F0F	[spi_miso_data_cc_output];
+	3:	
+		//begin
+			//if(spi_miso_data_cc_output >= 1)
+				begin SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_miso_data_cc_output]; end
+		//end
 	4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_miso_data_cc_output];
 	default:
 		SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_miso_data_cc_output];
@@ -254,13 +258,15 @@ begin
 				end
 		  ADC_INIT_START_STABLE_0033: begin
 					SPI_CS_Temp					<= SPI_CS_Temp; 
-					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 64;
-					SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; /*
+					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 65;
+					if(spi_clock_cycles <= 63)
+						begin SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; end
+						/*
 					if(spi_clock_cycles%2==0)
 						spi_miso_data_cc_output <= (spi_miso_data_cc_output + 'd1) % 32; */
 					if(spi_clock_cycles%2==0) 
 					begin
-						if (spi_miso_data_cc_output == 'd31)
+						if (spi_miso_data_cc_output == 'd32)
 							spi_miso_data_cc_output <= 'd0;
 						else
 							spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
@@ -346,7 +352,7 @@ begin
 				end
 		  ADC_INIT_COMPLETE: begin
 					if(spi_miso_data == 32'hff04_0000)// || spi_miso_data == 32'h0655_0000)
-						begin nextState = ADC_INIT_START_0655; end//ADC_INIT_START_0655; adc_init_state_i = 'd1;end
+						begin nextState = ADC_INIT_START_0033; end//ADC_INIT_START_0655; adc_init_state_i = 'd1;end
 					else
 						nextState = ADC_INIT_START;
 				end
@@ -376,7 +382,7 @@ begin
 				nextState = ADC_INIT_START_STABLE_0033;
 		  ADC_INIT_START_STABLE_0033:
 				begin
-					if(spi_clock_cycles == 'd64 - 'd1)
+					if(spi_clock_cycles == 'd65 - 'd1)
 						begin
 							nextState = ADC_INIT_COMPLETE_0033; 
 						end

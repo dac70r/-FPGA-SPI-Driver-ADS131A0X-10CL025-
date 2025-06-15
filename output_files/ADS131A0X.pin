@@ -1,4 +1,4 @@
- -- Copyright (C) 2024  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2023  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
  -- and other software and tools, and any partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -64,86 +64,86 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 CHIP  "ADS131A0X"  ASSIGNED TO AN: 10CL025YU256I7G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-spi_clock_cycles_output[31]  : A2        : output : 2.5 V             :         : 8         : N              
-adc_init_state[4]            : A3        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-spi_miso_data_output[5]      : A5        : output : 2.5 V             :         : 8         : N              
-spi_clock_cycles_output[0]   : A6        : output : 2.5 V             :         : 8         : N              
-state_tracker_output[3]      : A7        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
+spi_clock_cycles_output[0]   : A3        : output : 2.5 V             :         : 8         : N              
+adc_init_state[1]            : A4        : output : 2.5 V             :         : 8         : N              
+state_2[0]                   : A5        : output : 2.5 V             :         : 8         : N              
+state[4]                     : A6        : output : 2.5 V             :         : 8         : N              
+state_2[1]                   : A7        : output : 2.5 V             :         : 8         : N              
 GND+                         : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
-spi_miso_data_output[1]      : A10       : output : 2.5 V             :         : 7         : N              
-state[0]                     : A11       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[25]     : A12       : output : 2.5 V             :         : 7         : N              
-state_2[4]                   : A13       : output : 2.5 V             :         : 7         : N              
-state_2[0]                   : A14       : output : 2.5 V             :         : 7         : N              
-state[1]                     : A15       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[27]     : A10       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[23]     : A11       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[31]     : A12       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[24]     : A13       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[21]     : A14       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[17]     : A15       : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
+state[1]                     : B1        : output : 2.5 V             :         : 1         : N              
 GND                          : B2        : gnd    :                   :         :           :                
-spi_clock_cycles_output[22]  : B3        : output : 2.5 V             :         : 8         : N              
-spi_clock_cycles_output[13]  : B4        : output : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
-state_2[3]                   : B7        : output : 2.5 V             :         : 8         : N              
+spi_transaction_count[3]     : B3        : output : 2.5 V             :         : 8         : N              
+spi_clock_cycles_output[16]  : B4        : output : 2.5 V             :         : 8         : N              
+state_2[3]                   : B5        : output : 2.5 V             :         : 8         : N              
+state_2[2]                   : B6        : output : 2.5 V             :         : 8         : N              
+adc_init_state[2]            : B7        : output : 2.5 V             :         : 8         : N              
 GND+                         : B8        :        :                   :         : 8         :                
 GND+                         : B9        :        :                   :         : 7         :                
-spi_miso_data_output[12]     : B10       : output : 2.5 V             :         : 7         : N              
-state[2]                     : B11       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_cc_output[0]   : B12       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[4]      : B13       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[28]     : B14       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_cc_output[1]   : B10       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[8]      : B11       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[3]      : B12       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[18]     : B13       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[30]     : B14       : output : 2.5 V             :         : 7         : N              
 GND                          : B15       : gnd    :                   :         :           :                
-adc_init_state[2]            : B16       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[22]     : B16       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-spi_clock_cycles_output[25]  : C2        : output : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
+state[2]                     : C2        : output : 2.5 V             :         : 1         : N              
+spi_transaction_count[2]     : C3        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
-spi_transaction_count[0]     : C6        : output : 2.5 V             :         : 8         : N              
+spi_clock_cycles_output[3]   : C6        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-state[3]                     : C8        : output : 2.5 V             :         : 8         : N              
-spi_clock_cycles_output[4]   : C9        : output : 2.5 V             :         : 7         : N              
+spi_miso_data_cc_output[0]   : C8        : output : 2.5 V             :         : 8         : N              
+spi_miso_data_output[9]      : C9        : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-state_2[1]                   : C11       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[6]      : C11       : output : 2.5 V             :         : 7         : N              
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-spi_clock_cycles_output[5]   : C14       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[9]      : C15       : output : 2.5 V             :         : 6         : N              
-spi_miso_data_output[2]      : C16       : output : 2.5 V             :         : 6         : N              
-spi_mosi_byte_count_output[2] : D1        : output : 2.5 V             :         : 1         : N              
+spi_miso_data_output[13]     : C14       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[14]     : C15       : output : 2.5 V             :         : 6         : N              
+spi_clock_cycles_output[22]  : C16       : output : 2.5 V             :         : 6         : N              
+spi_clock_cycles_output[2]   : D1        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
-adc_init_state[6]            : D3        : output : 2.5 V             :         : 8         : N              
+spi_clock_cycles_output[25]  : D3        : output : 2.5 V             :         : 8         : N              
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
 GND                          : D5        : gnd    :                   :         :           :                
-spi_transaction_count[7]     : D6        : output : 2.5 V             :         : 8         : N              
+spi_clock_cycles_output[6]   : D6        : output : 2.5 V             :         : 8         : N              
 GND                          : D7        : gnd    :                   :         :           :                
-spi_clock_cycles_output[2]   : D8        : output : 2.5 V             :         : 8         : N              
-state_2[2]                   : D9        : output : 2.5 V             :         : 7         : N              
+state[0]                     : D8        : output : 2.5 V             :         : 8         : N              
+spi_miso_data_cc_output[2]   : D9        : output : 2.5 V             :         : 7         : N              
 GND                          : D10       : gnd    :                   :         :           :                
-spi_mosi_byte_count_output[3] : D11       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[8]      : D12       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_cc_output[7]   : D11       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[2]      : D12       : output : 2.5 V             :         : 7         : N              
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-spi_clock_cycles_output[27]  : D14       : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[23]     : D15       : output : 2.5 V             :         : 6         : N              
-spi_miso_data_output[6]      : D16       : output : 2.5 V             :         : 6         : N              
+spi_clock_cycles_output[9]   : D14       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[15]     : D15       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[11]     : D16       : output : 2.5 V             :         : 6         : N              
 system_clock                 : E1        : input  : 2.5 V             :         : 1         : Y              
 GND+                         : E2        :        :                   :         : 1         :                
 VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GNDA3                        : E5        : gnd    :                   :         :           :                
-spi_mosi_byte_count_output[0] : E6        : output : 2.5 V             :         : 8         : N              
-spi_clock_cycles_output[14]  : E7        : output : 2.5 V             :         : 8         : N              
-clock_4_167Mhz_debug         : E8        : output : 2.5 V             :         : 8         : N              
-spi_clock_cycles_output[3]   : E9        : output : 2.5 V             :         : 7         : N              
-spi_miso_data_output[7]      : E10       : output : 2.5 V             :         : 7         : N              
-state[4]                     : E11       : output : 2.5 V             :         : 7         : N              
+state_2[4]                   : E6        : output : 2.5 V             :         : 8         : N              
+spi_clock_cycles_output[4]   : E7        : output : 2.5 V             :         : 8         : N              
+spi_miso_data_cc_output[3]   : E8        : output : 2.5 V             :         : 8         : N              
+signal_tap_debug_output      : E9        : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[28]     : E10       : output : 2.5 V             :         : 7         : N              
+spi_miso_data_output[5]      : E11       : output : 2.5 V             :         : 7         : N              
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
@@ -151,22 +151,22 @@ reset_n                      : E15       : input  : 2.5 V             :         
 GND+                         : E16       :        :                   :         : 6         :                
 GND                          : F1        : gnd    :                   :         :           :                
 GND                          : F2        : gnd    :                   :         :           :                
-spi_clock_cycles_output[10]  : F3        : output : 2.5 V             :         : 1         : N              
+adc_init_state[0]            : F3        : output : 2.5 V             :         : 1         : N              
 nSTATUS                      : F4        :        :                   :         : 1         :                
 VCCA3                        : F5        : power  :                   : 2.5V    :           :                
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
-spi_clock_cycles_output[1]   : F8        : output : 2.5 V             :         : 8         : N              
-spi_miso_data_output[16]     : F9        : output : 2.5 V             :         : 7         : N              
+spi_miso_data_cc_output[4]   : F8        : output : 2.5 V             :         : 8         : N              
+spi_miso_data_output[7]      : F9        : output : 2.5 V             :         : 7         : N              
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-spi_miso_data_output[30]     : F13       : output : 2.5 V             :         : 6         : N              
-spi_miso_data_output[24]     : F14       : output : 2.5 V             :         : 6         : N              
-spi_miso_data_output[26]     : F15       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[0]      : F13       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[4]      : F14       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[19]     : F15       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
-spi_clock_cycles_output[18]  : G1        : output : 2.5 V             :         : 1         : N              
-state_tracker_output[0]      : G2        : output : 2.5 V             :         : 1         : N              
+state[3]                     : G1        : output : 2.5 V             :         : 1         : N              
+spi_clock_cycles_output[5]   : G2        : output : 2.5 V             :         : 1         : N              
 VCCIO1                       : G3        : power  :                   : 2.5V    : 1         :                
 GND                          : G4        : gnd    :                   :         :           :                
 GND                          : G5        : gnd    :                   :         :           :                
@@ -179,8 +179,8 @@ GND                          : G11       : gnd    :                   :         
 MSEL2                        : G12       :        :                   :         : 6         :                
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-adc_init_state[1]            : G15       : output : 2.5 V             :         : 6         : N              
-spi_miso_data_output[31]     : G16       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[12]     : G15       : output : 2.5 V             :         : 6         : N              
+spi_miso_data_output[16]     : G16       : output : 2.5 V             :         : 6         : N              
 ~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
 altera_reserved_tck          : H3        : input  : 2.5 V             :         : 1         : N              
@@ -197,8 +197,8 @@ MSEL0                        : H13       :        :                   :         
 CONF_DONE                    : H14       :        :                   :         : 6         :                
 GND                          : H15       : gnd    :                   :         :           :                
 GND                          : H16       : gnd    :                   :         :           :                
-spi_miso_data_output[14]     : J1        : output : 2.5 V             :         : 2         : N              
-state_tracker_output[2]      : J2        : output : 2.5 V             :         : 2         : N              
+spi_clock_cycles_output[28]  : J1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J2        :        :                   :         : 2         :                
 nCE                          : J3        :        :                   :         : 1         :                
 altera_reserved_tdo          : J4        : output : 2.5 V             :         : 1         : N              
 altera_reserved_tms          : J5        : input  : 2.5 V             :         : 1         : N              
@@ -209,15 +209,15 @@ GND                          : J9        : gnd    :                   :         
 GND                          : J10       : gnd    :                   :         :           :                
 GND                          : J11       : gnd    :                   :         :           :                
 VCCINT                       : J12       : power  :                   : 1.2V    :           :                
-spi_miso_data_output[17]     : J13       : output : 2.5 V             :         : 5         : N              
-spi_miso_data_output[20]     : J14       : output : 2.5 V             :         : 5         : N              
-spi_miso_data_output[22]     : J15       : output : 2.5 V             :         : 5         : N              
-spi_miso_data_output[27]     : J16       : output : 2.5 V             :         : 5         : N              
-spi_clock_cycles_output[17]  : K1        : output : 2.5 V             :         : 2         : N              
-spi_clock_cycles_output[20]  : K2        : output : 2.5 V             :         : 2         : N              
+spi_miso_data_cc_output[6]   : J13       : output : 2.5 V             :         : 5         : N              
+spi_miso_data_output[29]     : J14       : output : 2.5 V             :         : 5         : N              
+spi_miso_data_output[20]     : J15       : output : 2.5 V             :         : 5         : N              
+spi_miso_data_cc_output[5]   : J16       : output : 2.5 V             :         : 5         : N              
+spi_clock_cycles_output[12]  : K1        : output : 2.5 V             :         : 2         : N              
+spi_transaction_count[1]     : K2        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
 GND                          : K4        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
+spi_clock_cycles_output[14]  : K5        : output : 2.5 V             :         : 2         : N              
 GND                          : K6        : gnd    :                   :         :           :                
 VCCINT                       : K7        : power  :                   : 1.2V    :           :                
 GND                          : K8        : gnd    :                   :         :           :                
@@ -227,101 +227,101 @@ VCCINT                       : K11       : power  :                   : 1.2V    
 GND                          : K12       : gnd    :                   :         :           :                
 GND                          : K13       : gnd    :                   :         :           :                
 VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
-spi_miso_data_cc_output[4]   : K15       : output : 2.5 V             :         : 5         : N              
+spi_miso_data_output[25]     : K15       : output : 2.5 V             :         : 5         : N              
 SPI_CS                       : K16       : output : 2.5 V             :         : 5         : Y              
-spi_transaction_count[6]     : L1        : output : 2.5 V             :         : 2         : N              
-spi_clock_cycles_output[19]  : L2        : output : 2.5 V             :         : 2         : N              
-signal_tap_debug_output      : L3        : output : 2.5 V             :         : 2         : N              
-spi_clock_cycles_output[21]  : L4        : output : 2.5 V             :         : 2         : N              
+state_tracker_output[2]      : L1        : output : 2.5 V             :         : 2         : N              
+spi_miso_data_output[26]     : L2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
+adc_init_state[4]            : L4        : output : 2.5 V             :         : 2         : N              
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
 VCCINT                       : L6        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 3         :                
+spi_clock_cycles_output[7]   : L7        : output : 2.5 V             :         : 3         : N              
+state_tracker_output[4]      : L8        : output : 2.5 V             :         : 3         : N              
 GND                          : L9        : gnd    :                   :         :           :                
 GND                          : L10       : gnd    :                   :         :           :                
 GND                          : L11       : gnd    :                   :         :           :                
 VCCA4                        : L12       : power  :                   : 2.5V    :           :                
-spi_miso_data_output[13]     : L13       : output : 2.5 V             :         : 5         : N              
+spi_transaction_count[4]     : L13       : output : 2.5 V             :         : 5         : N              
 heartbeat                    : L14       : output : 2.5 V             :         : 5         : Y              
-spi_miso_data_output[3]      : L15       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L15       :        :                   :         : 5         :                
 SPI_SCLK                     : L16       : output : 2.5 V             :         : 5         : Y              
 GND+                         : M1        :        :                   :         : 2         :                
 GND+                         : M2        :        :                   :         : 2         :                
 VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GNDA1                        : M5        : gnd    :                   :         :           :                
-spi_clock_cycles_output[6]   : M6        : output : 2.5 V             :         : 3         : N              
-spi_clock_cycles_output[24]  : M7        : output : 2.5 V             :         : 3         : N              
-spi_mosi_byte_count_output[1] : M8        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
+spi_clock_cycles_output[11]  : M7        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
-spi_miso_data_cc_output[1]   : M10       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M10       :        :                   :         : 4         :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
 GNDA4                        : M12       : gnd    :                   :         :           :                
 GND                          : M13       : gnd    :                   :         :           :                
 VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
 GND+                         : M15       :        :                   :         : 5         :                
 GND+                         : M16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
-spi_clock_cycles_output[29]  : N2        : output : 2.5 V             :         : 2         : N              
-spi_clock_cycles_output[11]  : N3        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[24]  : N1        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
+adc_init_state[6]            : N3        : output : 2.5 V             :         : 3         : N              
 VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
 adc_init_state[5]            : N5        : output : 2.5 V             :         : 3         : N              
-spi_transaction_count[3]     : N6        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[10]  : N6        : output : 2.5 V             :         : 3         : N              
 GND                          : N7        : gnd    :                   :         :           :                
-spi_miso_data_output[10]     : N8        : output : 2.5 V             :         : 3         : N              
+spi_transaction_count[6]     : N8        : output : 2.5 V             :         : 3         : N              
 clock_8_333Mhz_debug         : N9        : output : 2.5 V             :         : 4         : N              
 GND                          : N10       : gnd    :                   :         :           :                
-spi_miso_data_cc_output[2]   : N11       : output : 2.5 V             :         : 4         : N              
-spi_clock_cycles_output[9]   : N12       : output : 2.5 V             :         : 4         : N              
+spi_mosi_byte_count_output[2] : N11       : output : 2.5 V             :         : 4         : N              
+spi_clock_cycles_output[8]   : N12       : output : 2.5 V             :         : 4         : N              
 VCCD_PLL4                    : N13       : power  :                   : 1.2V    :           :                
-spi_miso_data_output[15]     : N14       : output : 2.5 V             :         : 5         : N              
+spi_clock_cycles_output[13]  : N14       : output : 2.5 V             :         : 5         : N              
 SPI_MOSI                     : N15       : output : 2.5 V             :         : 5         : Y              
-spi_miso_data_cc_output[3]   : N16       : output : 2.5 V             :         : 5         : N              
-spi_clock_cycles_output[26]  : P1        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
-spi_clock_cycles_output[28]  : P3        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
+spi_clock_cycles_output[30]  : P2        : output : 2.5 V             :         : 2         : N              
+spi_clock_cycles_output[31]  : P3        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
 GND                          : P5        : gnd    :                   :         :           :                
-spi_transaction_count[4]     : P6        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[27]  : P6        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
 trigger                      : P8        : input  : 2.5 V             :         : 3         : Y              
-spi_miso_data_output[21]     : P9        : output : 2.5 V             :         : 4         : N              
+spi_miso_data_output[1]      : P9        : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
-spi_miso_data_output[19]     : P11       : output : 2.5 V             :         : 4         : N              
+state_tracker_output[1]      : P11       : output : 2.5 V             :         : 4         : N              
 GND                          : P12       : gnd    :                   :         :           :                
 VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
-spi_transaction_count[2]     : P14       : output : 2.5 V             :         : 4         : N              
+state_tracker_output[0]      : P14       : output : 2.5 V             :         : 4         : N              
 SPI_MISO                     : P15       : input  : 2.5 V             :         : 5         : Y              
-spi_miso_data_cc_output[7]   : P16       : output : 2.5 V             :         : 5         : N              
+state_tracker_output[3]      : P16       : output : 2.5 V             :         : 5         : N              
 SPI_DRDY                     : R1        : input  : 2.5 V             :         : 2         : Y              
 GND                          : R2        : gnd    :                   :         :           :                
-spi_clock_cycles_output[12]  : R3        : output : 2.5 V             :         : 3         : N              
-spi_clock_cycles_output[8]   : R4        : output : 2.5 V             :         : 3         : N              
-state_tracker_output[1]      : R5        : output : 2.5 V             :         : 3         : N              
-spi_clock_cycles_output[7]   : R6        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
+spi_clock_cycles_output[23]  : R3        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[18]  : R4        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[1]   : R5        : output : 2.5 V             :         : 3         : N              
+clock_4_167Mhz_debug         : R6        : output : 2.5 V             :         : 3         : N              
+adc_init_state[3]            : R7        : output : 2.5 V             :         : 3         : N              
 GND+                         : R8        :        :                   :         : 3         :                
 GND+                         : R9        :        :                   :         : 4         :                
-spi_miso_data_output[18]     : R10       : output : 2.5 V             :         : 4         : N              
-adc_init_state[0]            : R11       : output : 2.5 V             :         : 4         : N              
-spi_clock_cycles_output[30]  : R12       : output : 2.5 V             :         : 4         : N              
-spi_miso_data_output[29]     : R13       : output : 2.5 V             :         : 4         : N              
-spi_clock_cycles_output[16]  : R14       : output : 2.5 V             :         : 4         : N              
+spi_clock_cycles_output[26]  : R10       : output : 2.5 V             :         : 4         : N              
+spi_mosi_byte_count_output[0] : R11       : output : 2.5 V             :         : 4         : N              
+spi_miso_data_output[10]     : R12       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
+spi_clock_cycles_output[29]  : R14       : output : 2.5 V             :         : 4         : N              
 GND                          : R15       : gnd    :                   :         :           :                
 SPI_RESET                    : R16       : output : 2.5 V             :         : 5         : Y              
 VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
-spi_transaction_count[1]     : T2        : output : 2.5 V             :         : 3         : N              
-spi_transaction_count[5]     : T3        : output : 2.5 V             :         : 3         : N              
-spi_clock_cycles_output[15]  : T4        : output : 2.5 V             :         : 3         : N              
-state_tracker_output[4]      : T5        : output : 2.5 V             :         : 3         : N              
-spi_clock_cycles_output[23]  : T6        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
+spi_transaction_count[0]     : T2        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[17]  : T3        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[19]  : T4        : output : 2.5 V             :         : 3         : N              
+spi_transaction_count[7]     : T5        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[15]  : T6        : output : 2.5 V             :         : 3         : N              
+spi_clock_cycles_output[20]  : T7        : output : 2.5 V             :         : 3         : N              
 GND+                         : T8        :        :                   :         : 3         :                
 GND+                         : T9        :        :                   :         : 4         :                
-spi_miso_data_output[0]      : T10       : output : 2.5 V             :         : 4         : N              
+spi_mosi_byte_count_output[1] : T10       : output : 2.5 V             :         : 4         : N              
 adc_init_state[7]            : T11       : output : 2.5 V             :         : 4         : N              
-spi_miso_data_output[11]     : T12       : output : 2.5 V             :         : 4         : N              
-spi_miso_data_cc_output[6]   : T13       : output : 2.5 V             :         : 4         : N              
-spi_miso_data_cc_output[5]   : T14       : output : 2.5 V             :         : 4         : N              
-adc_init_state[3]            : T15       : output : 2.5 V             :         : 4         : N              
+spi_clock_cycles_output[21]  : T12       : output : 2.5 V             :         : 4         : N              
+spi_transaction_count[5]     : T13       : output : 2.5 V             :         : 4         : N              
+spi_mosi_byte_count_output[3] : T14       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 4         :                
 VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                

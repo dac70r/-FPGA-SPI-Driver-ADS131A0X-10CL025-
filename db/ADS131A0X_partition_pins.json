@@ -92,6 +92,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "spi_clock_cycles_output[6]",
+					"strict" : false
+				},
+				{
 					"name" : "heartbeat",
 					"strict" : false
 				},

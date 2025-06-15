@@ -1,6 +1,6 @@
 Flow report for ADS131A0X
-Fri Jun 13 09:15:51 2025
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Sun Jun 15 20:36:12 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Jun 13 09:15:51 2025          ;
-; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Flow Status                        ; Successful - Sun Jun 15 20:36:12 2025          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; ADS131A0X                                      ;
 ; Top-level Entity Name              ; ADS131A0X                                      ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL025YU256I7G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 2,382 / 24,624 ( 10 % )                        ;
-;     Total combinational functions  ; 1,265 / 24,624 ( 5 % )                         ;
-;     Dedicated logic registers      ; 1,944 / 24,624 ( 8 % )                         ;
-; Total registers                    ; 1944                                           ;
+; Total logic elements               ; 2,438 / 24,624 ( 10 % )                        ;
+;     Total combinational functions  ; 1,313 / 24,624 ( 5 % )                         ;
+;     Dedicated logic registers      ; 1,945 / 24,624 ( 8 % )                         ;
+; Total registers                    ; 1945                                           ;
 ; Total pins                         ; 120 / 151 ( 79 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 425,984 / 608,256 ( 70 % )                     ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/13/2025 09:15:10 ;
+; Start date & time ; 06/15/2025 20:35:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ADS131A0X           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                                                                                                                                                 ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 198642186969524.174977731015424                                                                                                                                                                                                                                                                                                                                       ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 154027286613922.174999092423520                                                                                                                                                                                                                                                                                                                                       ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                                                                                                                   ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                                                                                                                   ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                                                                                                                   ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -129,12 +129,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4865 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:07     ; 1.2                     ; 5460 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4714 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4812 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4665 MB             ; 00:00:01                           ;
-; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4894 MB             ; 00:00:46                           ;
+; Fitter               ; 00:00:10     ; 1.2                     ; 5478 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4757 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4832 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4676 MB             ; 00:00:02                           ;
+; Total                ; 00:00:42     ; --                      ; --                  ; 00:01:07                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -143,11 +143,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; 2021029058176    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; 2021029058176    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; 2021029058176    ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; 2021029058176    ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; 2021029058176    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DennisesLegion   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DennisesLegion   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DennisesLegion   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DennisesLegion   ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DennisesLegion   ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
