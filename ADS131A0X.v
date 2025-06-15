@@ -30,8 +30,8 @@ module ADS131A0X(
 		output				clock_4_167Mhz_debug,		// Keeps track of the main clock used in Submodule
 		output				clock_8_333Mhz_debug,		// Keeps track of the main clock used in Submodule
 		output [4:0]		state,					 		// Keeps track of the current state of SPI 		- for debugging (remove in final design)
-		output [4:0]		state_2,
-		output [31:0]		spi_clock_cycles_output,
+		//output [4:0]		state_2,
+		//output [31:0]		spi_clock_cycles_output,
 		
 		output				heartbeat,		
 		output [4:0]		state_tracker_output,
@@ -41,14 +41,19 @@ module ADS131A0X(
 		output [3:0] 		spi_mosi_byte_count_output,	
 		output [7:0]		spi_transaction_count,
 		output [7:0]		adc_init_state,
+		output [7:0]		index_visualized,
+		output [7:0]		spi_bit_count,								// spi_bit_count/2 = actual bits of the SPI
+		output [7:0]		spi_bit_count_32max,
 		output				signal_tap_debug_output
 
 );
 
 wire SPI_SCLK_Temp;										// SPI Clock
 wire signal_tap_debug;
-
+//wire [31:0]		spi_miso_data_output;
 wire [7:0] spi_miso_data_cc;
+wire [4:0] state_2;
+wire [31:0] spi_clock_cycles_output;
 
 /* SPI_Master Instance */
 SPI_Master SPI_Master_uut
@@ -77,7 +82,10 @@ SPI_Master SPI_Master_uut
 	
 	.spi_mosi_byte_count_output(spi_mosi_byte_count_output),
 	.spi_transaction_count(spi_transaction_count),
-	.adc_init_state(adc_init_state)
+	.adc_init_state(adc_init_state),
+	.spi_bit_count(spi_bit_count),							// spi_bit_count/2 = actual bits of the SPI
+	.spi_bit_count_32max(spi_bit_count_32max),
+	.index_visualized(index_visualized)
 );
 
 // Debug by Dennis 

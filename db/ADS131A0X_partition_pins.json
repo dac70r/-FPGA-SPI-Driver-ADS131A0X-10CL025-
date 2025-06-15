@@ -48,54 +48,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "state_2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "state_2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "state_2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "state_2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "state_2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[0]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[1]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[2]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[3]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[4]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[5]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_clock_cycles_output[6]",
-					"strict" : false
-				},
-				{
 					"name" : "heartbeat",
 					"strict" : false
 				},
@@ -272,11 +224,63 @@
 					"strict" : false
 				},
 				{
-					"name" : "signal_tap_debug_output",
+					"name" : "spi_bit_count[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SPI_DRDY",
+					"name" : "spi_bit_count[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[5]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[6]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count[7]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[0]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[1]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[2]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[3]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[4]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[5]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_tap_debug_output",
 					"strict" : false
 				},
 				{
@@ -289,6 +293,10 @@
 				},
 				{
 					"name" : "SPI_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_DRDY",
 					"strict" : false
 				},
 				{
