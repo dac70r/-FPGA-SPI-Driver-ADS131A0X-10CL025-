@@ -252,10 +252,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SPI_DRDY",
-					"strict" : false
-				},
-				{
 					"name" : "system_clock",
 					"strict" : false
 				},

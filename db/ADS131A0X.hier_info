@@ -106,6 +106,7 @@ spi_bit_count_32max[5] <= SPI_Master:SPI_Master_uut.spi_bit_count_32max
 spi_bit_count_32max[6] <= SPI_Master:SPI_Master_uut.spi_bit_count_32max
 spi_bit_count_32max[7] <= SPI_Master:SPI_Master_uut.spi_bit_count_32max
 signal_tap_debug_output <= clock_synthesizer:clock_synthesizer_uut_0.clock_pol
+signal_B_negedge <= SPI_Master:SPI_Master_uut.signal_B_negedge
 
 
 |ADS131A0X|SPI_Master:SPI_Master_uut
@@ -173,21 +174,20 @@ SPI_MISO => spi_miso_data.DATAB
 SPI_CS <= SPI_CS_Temp.DB_MAX_OUTPUT_PORT_TYPE
 SPI_SCLK <= clock_synthesizer_toggle:uut1.clock_pol
 SPI_RESET <= SPI_RESET_Temp.DB_MAX_OUTPUT_PORT_TYPE
-SPI_DRDY => SPI_CS_Temp.OUTPUTSELECT
-SPI_DRDY => spi_sclk_enable.OUTPUTSELECT
+SPI_DRDY => ~NO_FANOUT~
 trigger => ~NO_FANOUT~
 clock_4_167Mhz_debug <= clock_synthesizer_toggle:uut1.clock_pol_assist
 clock_8_333Mhz_debug <= clock_synthesizer:uut0.clock_pol
-state[0] <= WideOr37.DB_MAX_OUTPUT_PORT_TYPE
-state[1] <= WideOr36.DB_MAX_OUTPUT_PORT_TYPE
-state[2] <= WideOr35.DB_MAX_OUTPUT_PORT_TYPE
-state[3] <= WideOr34.DB_MAX_OUTPUT_PORT_TYPE
-state[4] <= WideOr33.DB_MAX_OUTPUT_PORT_TYPE
-state_2[0] <= WideOr42.DB_MAX_OUTPUT_PORT_TYPE
-state_2[1] <= WideOr41.DB_MAX_OUTPUT_PORT_TYPE
-state_2[2] <= WideOr40.DB_MAX_OUTPUT_PORT_TYPE
-state_2[3] <= WideOr39.DB_MAX_OUTPUT_PORT_TYPE
-state_2[4] <= WideOr38.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= WideOr38.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= WideOr37.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= WideOr36.DB_MAX_OUTPUT_PORT_TYPE
+state[3] <= WideOr35.DB_MAX_OUTPUT_PORT_TYPE
+state[4] <= WideOr34.DB_MAX_OUTPUT_PORT_TYPE
+state_2[0] <= WideOr43.DB_MAX_OUTPUT_PORT_TYPE
+state_2[1] <= WideOr42.DB_MAX_OUTPUT_PORT_TYPE
+state_2[2] <= WideOr41.DB_MAX_OUTPUT_PORT_TYPE
+state_2[3] <= WideOr40.DB_MAX_OUTPUT_PORT_TYPE
+state_2[4] <= WideOr39.DB_MAX_OUTPUT_PORT_TYPE
 spi_clock_cycles_output[0] <= <GND>
 spi_clock_cycles_output[1] <= <GND>
 spi_clock_cycles_output[2] <= <GND>
@@ -277,7 +277,7 @@ spi_transaction_count[4] <= <GND>
 spi_transaction_count[5] <= <GND>
 spi_transaction_count[6] <= <GND>
 spi_transaction_count[7] <= <GND>
-adc_init_state[0] <= WideOr43.DB_MAX_OUTPUT_PORT_TYPE
+adc_init_state[0] <= WideOr44.DB_MAX_OUTPUT_PORT_TYPE
 adc_init_state[1] <= adc_init_state.DB_MAX_OUTPUT_PORT_TYPE
 adc_init_state[2] <= adc_init_state.DB_MAX_OUTPUT_PORT_TYPE
 adc_init_state[3] <= <GND>
@@ -309,6 +309,7 @@ spi_bit_count_32max[4] <= spi_bit_count_32max[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 spi_bit_count_32max[5] <= spi_bit_count_32max[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 spi_bit_count_32max[6] <= spi_bit_count_32max[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 spi_bit_count_32max[7] <= spi_bit_count_32max[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+signal_B_negedge <= <GND>
 
 
 |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer:uut0

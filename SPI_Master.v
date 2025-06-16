@@ -31,7 +31,8 @@ module SPI_Master
 	output 		[7:0]	adc_init_state,								// Keeps track of which state we are in at the ADC Init Phase
 	output reg  [7:0] index_visualized,
 	output 		[7:0]		spi_bit_count,								// spi_bit_count/2 = actual bits of the SPI
-	output reg	[7:0]		spi_bit_count_32max								// spi_bit_count/2 = actual bits of the SPI
+	output reg	[7:0]		spi_bit_count_32max,						// spi_bit_count/2 = actual bits of the SPI
+	output					signal_B_negedge				
 );
 
 wire	synthesized_clock_8_333Mhz;					// Main Clock of this Submodule	
@@ -95,6 +96,7 @@ reg	[31:0] 	adc_reset_count						= 8'd0;		// Counter for ADC Reset (Single Use)
 reg	[31:0]	delay_counter_transition_logic	= 32'd0;		// Counter for tracking 50ns delay in Setting Up ADC
 reg	[7:0]		adc_init_state_i						= 8'd0;		// Keeps track of which state we are in at the ADC Init Phase
 reg				adc_read									= 'd0;
+reg 				adc_init_completed 					= 'd0;
 reg 				spi_sclk_enable 						= 'd0;
 
 /* SPI MOSI Handler Signals */
@@ -169,17 +171,17 @@ begin
 end
 
 // Interrupt Service Routine ISR for SPI_DRDY
+reg [1:0] signal_B_sync;
+//wire signal_B_negedge;
+
 always @ (negedge SPI_DRDY)
 begin
-	if(presentState == WAIT_TRANSACTION)
-		begin
-			adc_read	<= 'd1;
-		end
-	else
-		begin
-			adc_read <= 'd0;
-		end
+	signal_B_sync[0]	<= SPI_DRDY;
+	signal_B_sync[1]	<= signal_B_sync[0];
 end
+
+assign	signal_B_negedge = (signal_B_sync[1] == 'd1 && signal_B_sync[0] == 'd0);
+
 // State Machine Next State Logic 
 always @ (posedge synthesized_clock_8_333Mhz)
 begin
@@ -198,11 +200,13 @@ begin
         RESET: begin
 					SPI_CS_Temp			<= 'd1;
 					spi_sclk_enable	<= 'd0;
+					adc_init_completed<= 'd0;
 				end
         IDLE: begin
 					SPI_CS_Temp			<= 'd1; 
 					spi_sclk_enable	<= 'd0;
 					adc_reset_count	<= 'd0;					// reset the ADC Reset Counter
+					adc_init_completed<= 'd0;
 				end
 		  ADC_RESET: begin
 					SPI_CS_Temp			<= 'd1; 
@@ -302,6 +306,7 @@ begin
 				
 		  WAIT_TRANSACTION: begin 
 					SPI_CS_Temp 		<= 'd1; 
+					adc_init_completed<= 'd1;
 				end
 		  TRANSACTION_START: begin 
 					SPI_CS_Temp			<= 'd1; 
@@ -310,7 +315,7 @@ begin
 		  TRANSACTION_START_STABLE: begin
 					//SPI_CS_Temp			<= SPI_CS_Temp;
 					adc_init_state_i 	<= 'd0;	
-					if(SPI_DRDY == 0) 
+					if(adc_init_completed == 1 && signal_B_negedge == 1) 
 						begin
 							SPI_CS_Temp			<= 'd0;
 							spi_sclk_enable	<= 'd1;

@@ -44,8 +44,8 @@ module ADS131A0X(
 		output [7:0]		index_visualized,
 		output [7:0]		spi_bit_count,								// spi_bit_count/2 = actual bits of the SPI
 		output [7:0]		spi_bit_count_32max,
-		output				signal_tap_debug_output
-
+		output				signal_tap_debug_output,
+		output				signal_B_negedge
 );
 
 wire SPI_SCLK_Temp;										// SPI Clock
@@ -85,7 +85,8 @@ SPI_Master SPI_Master_uut
 	.adc_init_state(adc_init_state),
 	.spi_bit_count(spi_bit_count),							// spi_bit_count/2 = actual bits of the SPI
 	.spi_bit_count_32max(spi_bit_count_32max),
-	.index_visualized(index_visualized)
+	.index_visualized(index_visualized),
+	.signal_B_negedge(signal_B_negedge)
 );
 
 // Debug by Dennis 
