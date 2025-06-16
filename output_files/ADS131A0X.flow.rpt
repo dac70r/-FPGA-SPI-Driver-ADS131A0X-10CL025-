@@ -1,5 +1,5 @@
 Flow report for ADS131A0X
-Mon Jun 16 23:40:29 2025
+Tue Jun 17 00:29:36 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 16 23:40:29 2025          ;
+; Flow Status                        ; Successful - Tue Jun 17 00:29:36 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; ADS131A0X                                      ;
 ; Top-level Entity Name              ; ADS131A0X                                      ;
 ; Family                             ; Cyclone 10 LP                                  ;
 ; Device                             ; 10CL025YU256I7G                                ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 2,053 / 24,624 ( 8 % )                         ;
-;     Total combinational functions  ; 1,228 / 24,624 ( 5 % )                         ;
-;     Dedicated logic registers      ; 1,568 / 24,624 ( 6 % )                         ;
-; Total registers                    ; 1568                                           ;
+; Total logic elements               ; 2,057 / 24,624 ( 8 % )                         ;
+;     Total combinational functions  ; 1,230 / 24,624 ( 5 % )                         ;
+;     Dedicated logic registers      ; 1,571 / 24,624 ( 6 % )                         ;
+; Total registers                    ; 1571                                           ;
 ; Total pins                         ; 109 / 151 ( 72 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 290,816 / 608,256 ( 48 % )                     ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/16/2025 23:39:26 ;
+; Start date & time ; 06/17/2025 00:28:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ADS131A0X           ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                                                                                                                                                                                                                              ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 154027286613922.175008836525180                                                                                                                                                                                                                                    ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 154027286613922.175009133118112                                                                                                                                                                                                                                    ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                                                                                                                                                                                                                                ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -129,12 +129,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:38     ; 1.0                     ; 4908 MB             ; 00:00:58                           ;
-; Fitter               ; 00:00:12     ; 1.2                     ; 5462 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4757 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.2                     ; 4832 MB             ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4676 MB             ; 00:00:02                           ;
-; Total                ; 00:00:57     ; --                      ; --                  ; 00:01:19                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4878 MB             ; 00:00:43                           ;
+; Fitter               ; 00:00:09     ; 1.1                     ; 5462 MB             ; 00:00:12                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4757 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 4816 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:02                           ;
+; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -260,6 +260,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "signal_B_negedge",
+					"strict" : false
+				},
+				{
 					"name" : "system_clock",
 					"strict" : false
 				},
@@ -269,6 +273,10 @@
 				},
 				{
 					"name" : "SPI_MISO",
+					"strict" : false
+				},
+				{
+					"name" : "SPI_DRDY",
 					"strict" : false
 				},
 				{

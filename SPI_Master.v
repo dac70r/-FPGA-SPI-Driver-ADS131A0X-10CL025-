@@ -194,10 +194,13 @@ end
 reg [1:0] signal_B_sync;
 //wire signal_B_negedge;
 
-always @ (negedge SPI_DRDY)
+always @ (posedge synthesized_clock_8_333Mhz)
 begin
-	signal_B_sync[0]	<= SPI_DRDY;
-	signal_B_sync[1]	<= signal_B_sync[0];
+	if(adc_init_completed == 1)
+	begin
+		signal_B_sync[0]	<= SPI_DRDY;
+		signal_B_sync[1]	<= signal_B_sync[0];
+	end
 end
 
 assign	signal_B_negedge = (signal_B_sync[1] == 'd1 && signal_B_sync[0] == 'd0);

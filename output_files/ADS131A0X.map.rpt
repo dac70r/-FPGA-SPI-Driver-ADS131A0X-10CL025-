@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ADS131A0X
-Mon Jun 16 23:40:04 2025
+Tue Jun 17 00:29:17 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -18,24 +18,21 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  10. State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|adc_init_state_i
  11. State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for sld_signaltap:auto_signaltap_0
- 18. Parameter Settings for User Entity Instance: SPI_Master:SPI_Master_uut|clock_synthesizer:uut0
- 19. Parameter Settings for User Entity Instance: SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1
- 20. Parameter Settings for User Entity Instance: clock_synthesizer:clock_synthesizer_uut_0
- 21. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 22. Parameter Settings for Inferred Entity Instance: SPI_Master:SPI_Master_uut|lpm_divide:Mod0
- 23. Port Connectivity Checks: "SPI_Master:SPI_Master_uut"
- 24. Signal Tap Logic Analyzer Settings
- 25. Post-Synthesis Netlist Statistics for Top Partition
- 26. Post-Synthesis Netlist Statistics for Partition sld_signaltap:auto_signaltap_0
- 27. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
- 28. Elapsed Time Per Partition
- 29. Connections to In-System Debugging Instance "auto_signaltap_0"
- 30. Analysis & Synthesis Messages
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for sld_signaltap:auto_signaltap_0
+ 17. Parameter Settings for User Entity Instance: SPI_Master:SPI_Master_uut|clock_synthesizer:uut0
+ 18. Parameter Settings for User Entity Instance: SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1
+ 19. Parameter Settings for User Entity Instance: clock_synthesizer:clock_synthesizer_uut_0
+ 20. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 21. Parameter Settings for Inferred Entity Instance: SPI_Master:SPI_Master_uut|lpm_divide:Mod0
+ 22. Port Connectivity Checks: "SPI_Master:SPI_Master_uut"
+ 23. Signal Tap Logic Analyzer Settings
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -62,15 +59,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 16 23:40:04 2025          ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 17 00:29:17 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; ADS131A0X                                      ;
 ; Top-level Entity Name              ; ADS131A0X                                      ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 2,084                                          ;
-;     Total combinational functions  ; 1,226                                          ;
-;     Dedicated logic registers      ; 1,568                                          ;
-; Total registers                    ; 1568                                           ;
+; Total logic elements               ; 2,087                                          ;
+;     Total combinational functions  ; 1,228                                          ;
+;     Dedicated logic registers      ; 1,571                                          ;
+; Total registers                    ; 1571                                           ;
 ; Total pins                         ; 109                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 290,816                                        ;
@@ -173,14 +170,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -266,20 +263,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------------------------------------+
 ; Resource                                    ; Usage                                                        ;
 +---------------------------------------------+--------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,084                                                        ;
+; Estimated Total logic elements              ; 2,087                                                        ;
 ;                                             ;                                                              ;
-; Total combinational functions               ; 1226                                                         ;
+; Total combinational functions               ; 1228                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                              ;
-;     -- 4 input functions                    ; 550                                                          ;
-;     -- 3 input functions                    ; 273                                                          ;
-;     -- <=2 input functions                  ; 403                                                          ;
+;     -- 4 input functions                    ; 554                                                          ;
+;     -- 3 input functions                    ; 274                                                          ;
+;     -- <=2 input functions                  ; 400                                                          ;
 ;                                             ;                                                              ;
 ; Logic elements by mode                      ;                                                              ;
-;     -- normal mode                          ; 943                                                          ;
+;     -- normal mode                          ; 945                                                          ;
 ;     -- arithmetic mode                      ; 283                                                          ;
 ;                                             ;                                                              ;
-; Total registers                             ; 1568                                                         ;
-;     -- Dedicated logic registers            ; 1568                                                         ;
+; Total registers                             ; 1571                                                         ;
+;     -- Dedicated logic registers            ; 1571                                                         ;
 ;     -- I/O registers                        ; 0                                                            ;
 ;                                             ;                                                              ;
 ; I/O pins                                    ; 109                                                          ;
@@ -288,8 +285,8 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0                                                            ;
 ;                                             ;                                                              ;
 ; Maximum fan-out node                        ; SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|clock_state ;
-; Maximum fan-out                             ; 874                                                          ;
-; Total fan-out                               ; 10455                                                        ;
+; Maximum fan-out                             ; 877                                                          ;
+; Total fan-out                               ; 10477                                                        ;
 ; Average fan-out                             ; 3.38                                                         ;
 +---------------------------------------------+--------------------------------------------------------------+
 
@@ -299,15 +296,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |ADS131A0X                                                                                                                              ; 1226 (1)            ; 1568 (0)                  ; 290816      ; 0            ; 0       ; 0         ; 109  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
-;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 398 (269)           ; 191 (117)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
+; |ADS131A0X                                                                                                                              ; 1228 (1)            ; 1571 (0)                  ; 290816      ; 0            ; 0       ; 0         ; 109  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
+;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 401 (272)           ; 194 (120)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
 ;       |clock_synthesizer:uut0|                                                                                                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer:uut0                                                                                                                                                                                                                                                                                           ; clock_synthesizer                 ; work         ;
 ;       |clock_synthesizer_toggle:uut1|                                                                                                   ; 57 (57)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1                                                                                                                                                                                                                                                                                    ; clock_synthesizer_toggle          ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_i9m:auto_generated|                                                                                                ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0|lpm_divide_i9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_i9m                    ; work         ;
 ;             |sign_div_unsign_ekh:divider|                                                                                               ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0|lpm_divide_i9m:auto_generated|sign_div_unsign_ekh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_ekh               ; work         ;
 ;                |alt_u_div_94f:divider|                                                                                                  ; 28 (28)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0|lpm_divide_i9m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_94f:divider                                                                                                                                                                                                                  ; alt_u_div_94f                     ; work         ;
-;    |clock_synthesizer:clock_synthesizer_uut_0|                                                                                          ; 46 (46)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|clock_synthesizer:clock_synthesizer_uut_0                                                                                                                                                                                                                                                                                                  ; clock_synthesizer                 ; work         ;
+;    |clock_synthesizer:clock_synthesizer_uut_0|                                                                                          ; 45 (45)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|clock_synthesizer:clock_synthesizer_uut_0                                                                                                                                                                                                                                                                                                  ; clock_synthesizer                 ; work         ;
 ;    |heartbeat:heartbeat_uut|                                                                                                            ; 55 (55)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|heartbeat:heartbeat_uut                                                                                                                                                                                                                                                                                                                    ; heartbeat                         ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 124 (1)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 123 (0)             ; 90 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
@@ -510,71 +507,29 @@ Encoding Type:  One-Hot
 +-----------------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-------------------------------------+-----------------------------------------+----------------------------------+-----------------------------------+---------------------------------------+--------------------------------+-------------------------------+--------------------------------+------------------------------------+-----------------------------+---------------------------------+------------------------+-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                                                                                                                                                                                                                                            ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                                                                                           ; Reason for Removal                                                                                                                                                                                  ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; SPI_Master:SPI_Master_uut|signal_B_sync[0]                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                                                              ;
-; SPI_Master:SPI_Master_uut|spi_bit_count_32max[6,7]                                                                                                                                      ; Stuck at GND due to stuck port data_in                                                                                                                                                              ;
-; SPI_Master:SPI_Master_uut|signal_B_sync[1]                                                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                                                              ;
-; SPI_Master:SPI_Master_uut|adc_init_completed                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~2                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~3                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~4                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~6                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~7                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~8                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i~9                                                                                                                                            ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~2                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~3                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~4                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~5                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~6                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; SPI_Master:SPI_Master_uut|presentState~7                                                                                                                                                ; Lost fanout                                                                                                                                                                                         ;
-; heartbeat:heartbeat_uut|counter[0]                                                                                                                                                      ; Merged with SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|counter[0]                                                                                                                             ;
-; SPI_Master:SPI_Master_uut|adc_init_state_i.00000000                                                                                                                                     ; Lost fanout                                                                                                                                                                                         ;
-; Total Number of Removed Registers = 20                                                                                                                                                  ;                                                                                                                                                                                                     ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|segment_shift_clk_ena                                                       ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_enable_delayed                                                 ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[0]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[0]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[1]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[1]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[2]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[2]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[3]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[3]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[4]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[4]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[5]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[5]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[6]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[6]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[7]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[7]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[8]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[8]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[9]  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[9]  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[10] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[10] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:offset_count[11] ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|\buffer_manager:next_address[11] ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[0]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[0]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[1]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[1]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[2]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[2]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[3]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[3]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[4]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[4]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[5]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[5]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[6]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[6]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[7]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[7]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[8]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[8]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[9]                                                   ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[9]                                             ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[10]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[10]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|current_offset_delayed[11]                                                  ; Merged with sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|buffer_write_address_delayed[11]                                            ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[13..15]                        ; Stuck at GND due to stuck port data_in                                                                                                                                                              ;
-; Total Number of Removed Registers = 28                                                                                                                                                  ;                                                                                                                                                                                                     ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                                                                                                                                                                              ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Register name                                                                                                                                                ; Reason for Removal        ; Registers Removed due to This Register                                                                                                                        ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; SPI_Master:SPI_Master_uut|signal_B_sync[0]                                                                                                                   ; Stuck at GND              ; SPI_Master:SPI_Master_uut|signal_B_sync[1],                                                                                                                   ;
-;                                                                                                                                                              ; due to stuck port data_in ; SPI_Master:SPI_Master_uut|adc_init_completed                                                                                                                  ;
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[15] ; Stuck at GND              ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[14], ;
-;                                                                                                                                                              ; due to stuck port data_in ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[13]  ;
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                            ;
++-----------------------------------------------------+-------------------------------------------------------------------------+
+; Register name                                       ; Reason for Removal                                                      ;
++-----------------------------------------------------+-------------------------------------------------------------------------+
+; SPI_Master:SPI_Master_uut|spi_bit_count_32max[6,7]  ; Stuck at GND due to stuck port data_in                                  ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~2        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~3        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~4        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~6        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~7        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~8        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i~9        ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~2            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~3            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~4            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~5            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~6            ; Lost fanout                                                             ;
+; SPI_Master:SPI_Master_uut|presentState~7            ; Lost fanout                                                             ;
+; heartbeat:heartbeat_uut|counter[0]                  ; Merged with SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|counter[0] ;
+; SPI_Master:SPI_Master_uut|adc_init_state_i.00000000 ; Lost fanout                                                             ;
+; Total Number of Removed Registers = 17              ;                                                                         ;
++-----------------------------------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -582,12 +537,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1568  ;
+; Total registers                              ; 1571  ;
 ; Number of registers using Synchronous Clear  ; 142   ;
 ; Number of registers using Synchronous Load   ; 71    ;
 ; Number of registers using Asynchronous Clear ; 457   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 584   ;
+; Number of registers using Clock Enable       ; 586   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -618,30 +573,16 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|counter[0]                                                                                                                                                                                                                                                                                       ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|spi_bit_count[7]                                                                                                                                                                                                                                                                                 ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|spi_bit_count_32max[0]                                                                                                                                                                                                                                                                                                         ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|adc_reset_count[31]                                                                                                                                                                                                                                                                                                            ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_val_shift_reg[15]                                                                                                                                                                                                                    ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_val_shift_reg[3]                                                                                                                                                                                                                     ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 13 LEs               ; 13 LEs                 ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc|lfsr[1]                                                                                                                                                                                              ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|tdo_crc_len_reg[21]                                                                                                                                                                                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr|word_counter[0]                                                                                                                                                                                                        ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|counter[8]                                                                                                                                                                                        ;
-; 12:1               ; 4 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr|WORD_SR[1]                                                                                                                                                                                                             ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |ADS131A0X|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|offset_count                                                                                                                                                                                      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[0]                             ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]                    ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[4]              ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[0]                      ;
-; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |ADS131A0X|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|counter[3]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|spi_bit_count[0] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|spi_bit_count_32max[0]                         ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ADS131A0X|SPI_Master:SPI_Master_uut|adc_reset_count[22]                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -797,97 +738,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 109                         ;
-; cycloneiii_ff         ; 256                         ;
+; cycloneiii_ff         ; 259                         ;
+;     ENA               ; 2                           ;
 ;     ENA SCLR          ; 40                          ;
 ;     SCLR              ; 54                          ;
-;     plain             ; 162                         ;
-; cycloneiii_lcell_comb ; 500                         ;
+;     plain             ; 163                         ;
+; cycloneiii_lcell_comb ; 502                         ;
 ;     arith             ; 186                         ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 176                         ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 314                         ;
+;     normal            ; 316                         ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 42                          ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 212                         ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 216                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.75                        ;
+; Average LUT depth     ; 3.73                        ;
 +-----------------------+-----------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_signaltap:auto_signaltap_0 ;
-+-----------------------+--------------------------------------------------------+
-; Type                  ; Count                                                  ;
-+-----------------------+--------------------------------------------------------+
-; boundary_port         ; 439                                                    ;
-; cycloneiii_ff         ; 1222                                                   ;
-;     CLR               ; 125                                                    ;
-;     ENA               ; 138                                                    ;
-;     ENA CLR           ; 295                                                    ;
-;     ENA SCLR SLD      ; 36                                                     ;
-;     ENA SLD           ; 13                                                     ;
-;     SLD               ; 12                                                     ;
-;     plain             ; 603                                                    ;
-; cycloneiii_lcell_comb ; 602                                                    ;
-;     arith             ; 89                                                     ;
-;         2 data inputs ; 88                                                     ;
-;         3 data inputs ; 1                                                      ;
-;     normal            ; 513                                                    ;
-;         0 data inputs ; 6                                                      ;
-;         1 data inputs ; 5                                                      ;
-;         2 data inputs ; 35                                                     ;
-;         3 data inputs ; 182                                                    ;
-;         4 data inputs ; 285                                                    ;
-; cycloneiii_ram_block  ; 71                                                     ;
-;                       ;                                                        ;
-; Max LUT depth         ; 5.10                                                   ;
-; Average LUT depth     ; 1.73                                                   ;
-+-----------------------+--------------------------------------------------------+
-
-
-+------------------------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
-+-----------------------+------------------------------------------+
-; Type                  ; Count                                    ;
-+-----------------------+------------------------------------------+
-; boundary_port         ; 107                                      ;
-; cycloneiii_ff         ; 90                                       ;
-;     CLR               ; 5                                        ;
-;     ENA               ; 16                                       ;
-;     ENA CLR           ; 31                                       ;
-;     ENA CLR SLD       ; 1                                        ;
-;     ENA SCLR          ; 5                                        ;
-;     ENA SLD           ; 9                                        ;
-;     SCLR              ; 7                                        ;
-;     plain             ; 16                                       ;
-; cycloneiii_lcell_comb ; 124                                      ;
-;     arith             ; 8                                        ;
-;         2 data inputs ; 8                                        ;
-;     normal            ; 116                                      ;
-;         0 data inputs ; 1                                        ;
-;         1 data inputs ; 6                                        ;
-;         2 data inputs ; 21                                       ;
-;         3 data inputs ; 35                                       ;
-;         4 data inputs ; 53                                       ;
-;                       ;                                          ;
-; Max LUT depth         ; 4.00                                     ;
-; Average LUT depth     ; 1.82                                     ;
-+-----------------------+------------------------------------------+
-
-
-+-----------------------------------------------+
-; Elapsed Time Per Partition                    ;
-+--------------------------------+--------------+
-; Partition Name                 ; Elapsed Time ;
-+--------------------------------+--------------+
-; sld_signaltap:auto_signaltap_0 ; 00:00:02     ;
-; Top                            ; 00:00:01     ;
-; sld_hub:auto_hub               ; 00:00:00     ;
-+--------------------------------+--------------+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -928,8 +807,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; clock_8_333Mhz_debug     ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|clock_state             ; N/A     ;
 ; heartbeat                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; heartbeat:heartbeat_uut|clock_state                                      ; N/A     ;
 ; heartbeat                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; heartbeat:heartbeat_uut|clock_state                                      ; N/A     ;
-; signal_B_negedge         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                     ; N/A     ;
-; signal_B_negedge         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                     ; N/A     ;
+; signal_B_negedge         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|signal_B_negedge                               ; N/A     ;
+; signal_B_negedge         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|signal_B_negedge                               ; N/A     ;
 ; spi_bit_count[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|spi_bit_count[0] ; N/A     ;
 ; spi_bit_count[0]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|spi_bit_count[0] ; N/A     ;
 ; spi_bit_count[1]         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|spi_bit_count[1] ; N/A     ;
@@ -1079,7 +958,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Jun 16 23:39:25 2025
+    Info: Processing started: Tue Jun 17 00:28:50 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADS131A0X -c ADS131A0X
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1137,7 +1016,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ggc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_ggc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.16.23:39:44 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.17.00:29:04 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1218,27 +1097,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "index_visualized[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
     Warning (13410): Pin "spi_bit_count_32max[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 46
     Warning (13410): Pin "spi_bit_count_32max[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 46
-    Warning (13410): Pin "signal_B_negedge" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 49
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 15 registers lost all their fanouts during netlist optimizations.
-Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd Line: 356
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286031): Timing-Driven Synthesis is running on partition "sld_signaltap:auto_signaltap_0"
-Info (13000): Registers with preset signals will power-up high File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd Line: 386
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 175 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2300 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2304 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 105 output pins
-    Info (21061): Implemented 2115 logic cells
+    Info (21061): Implemented 2119 logic cells
     Info (21064): Implemented 71 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 56 warnings
-    Info: Peak virtual memory: 4908 megabytes
-    Info: Processing ended: Mon Jun 16 23:40:04 2025
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:01:00
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Tue Jun 17 00:29:17 2025
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:44
 
 
