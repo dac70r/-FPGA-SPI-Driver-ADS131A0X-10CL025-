@@ -180,38 +180,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "spi_miso_data_cc_output[0]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[1]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[2]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[3]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[4]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[5]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[6]",
-					"strict" : false
-				},
-				{
-					"name" : "spi_miso_data_cc_output[7]",
-					"strict" : false
-				},
-				{
 					"name" : "adc_init_state[0]",
 					"strict" : false
 				},
@@ -284,6 +252,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "SPI_DRDY",
+					"strict" : false
+				},
+				{
 					"name" : "system_clock",
 					"strict" : false
 				},
@@ -293,10 +265,6 @@
 				},
 				{
 					"name" : "SPI_MISO",
-					"strict" : false
-				},
-				{
-					"name" : "SPI_DRDY",
 					"strict" : false
 				},
 				{

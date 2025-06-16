@@ -76,6 +76,14 @@ localparam ADC_INIT_START_0033					= 5'd17;
 localparam ADC_INIT_START_STABLE_0033			= 5'd18;
 localparam ADC_INIT_COMPLETE_0033				= 5'd19;
 
+localparam ADC_INIT_START_4B68					= 5'd20;
+localparam ADC_INIT_START_STABLE_4B68			= 5'd21;
+localparam ADC_INIT_COMPLETE_4B68				= 5'd22;
+
+localparam ADC_INIT_START_4F0F					= 5'd23;
+localparam ADC_INIT_START_STABLE_4F0F			= 5'd24;
+localparam ADC_INIT_COMPLETE_4F0F				= 5'd25;
+
 // Current and Next States 
 reg [4:0] presentState					 		= 5'd0;
 reg [4:0] nextState	 							= 5'd0;
@@ -86,7 +94,7 @@ reg	[4:0]		state_tracker							= 5'd0;
 reg	[31:0] 	adc_reset_count						= 8'd0;		// Counter for ADC Reset (Single Use)	
 reg	[31:0]	delay_counter_transition_logic	= 32'd0;		// Counter for tracking 50ns delay in Setting Up ADC
 reg	[7:0]		adc_init_state_i						= 8'd0;		// Keeps track of which state we are in at the ADC Init Phase
-reg				adc_init_complete_flag				= 'd0;
+reg				adc_read									= 'd0;
 reg 				spi_sclk_enable 						= 'd0;
 
 /* SPI MOSI Handler Signals */
@@ -94,11 +102,14 @@ reg [7:0]	spi_mosi_bit_count 	= 'd0;
 reg [3:0]	spi_mosi_byte_count	= 'd0;
 
 /* Hard Coded Messages */
-reg [31:0]		ADC_READY_0000		= 32'h4B68_0000;
-reg [31:0]		ADC_UNLOCK_0655	= 32'h0655_0000;
-reg [31:0]		ADC_WAKEUP_0033	= 32'h4B68_0000;
-reg [31:0]		ADC_LOCKED_0555	= 32'h0555_0000;
-reg [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
+localparam [31:0]		ADC_READY_0000		= 32'h0000_0000;
+localparam [31:0]		ADC_UNLOCK_0655	= 32'h0655_0000;
+localparam [31:0]		ADC_WAKEUP_0033	= 32'h0033_0000;	
+localparam [31:0]		ADC_LOCKED_0555	= 32'h0555_0000;
+localparam [31:0]		ADC_SETTING_4B68 	=  32'h4B68_0000;
+localparam [31:0]		ADC_SETTING_4F0F  =  32'h4F0F_0000;
+//localparam [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
+//localparam [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
 
 clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 (
@@ -129,13 +140,10 @@ begin
 		case(adc_init_state_i)
 				0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
 				1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_bit_count_32max];
-				2: SPI_MOSI_Temp 		<= ADC_ENABLE_ALL_4F0F	['d32 - spi_bit_count_32max];
-				3:	
-				begin 
-					SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
-					//index_visualized	<= 'd32 - spi_miso_data_cc_output;
-				end
+				2: SPI_MOSI_Temp 		<= ADC_SETTING_4B68		['d32 - spi_bit_count_32max];
+				3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
 				4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_bit_count_32max];
+				5: SPI_MOSI_Temp 		<= ADC_SETTING_4F0F		['d32 - spi_bit_count_32max];
 				default:
 					SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
 		endcase
@@ -149,19 +157,29 @@ begin
 	|| presentState == ADC_INIT_START_STABLE_0555 
 	|| presentState == ADC_INIT_START_STABLE_0655 
 	|| presentState == ADC_INIT_START_STABLE_0033
+	|| presentState == ADC_INIT_START_STABLE_4B68
+	|| presentState == ADC_INIT_START_STABLE_4F0F
 	|| presentState == TRANSACTION_START_STABLE))
 	begin
 		if(spi_bit_count_32max == 0)
 			spi_miso_data[0] <= SPI_MISO;
 		else
 			spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
-		//spi_miso_data_output['d32 - spi_miso_data_cc_output] <= SPI_MISO;
-		//if(spi_miso_data_cc_output >= 1)
-			//begin spi_miso_data[spi_miso_data_cc_output] <= SPI_MISO; end
 	end
-	//if(spi_miso_data_cc_output == 'd32) begin spi_miso_data <= spi_miso_data >> 'd1; end
 end
 
+// Interrupt Service Routine ISR for SPI_DRDY
+always @ (negedge SPI_DRDY)
+begin
+	if(presentState == WAIT_TRANSACTION)
+		begin
+			adc_read	<= 'd1;
+		end
+	else
+		begin
+			adc_read <= 'd0;
+		end
+end
 // State Machine Next State Logic 
 always @ (posedge synthesized_clock_8_333Mhz)
 begin
@@ -178,170 +196,133 @@ always @ (posedge synthesized_clock_8_333Mhz)
 begin
     case(presentState)
         RESET: begin
-					SPI_CS_Temp		<= 'd1;
+					SPI_CS_Temp			<= 'd1;
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 	<= 'd0; 
 				end
         IDLE: begin
 					SPI_CS_Temp			<= 'd1; 
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 	<= 'd0; 
-					adc_reset_count<= 'd0;					// reset the ADC Reset Counter
+					adc_reset_count	<= 'd0;					// reset the ADC Reset Counter
 				end
 		  ADC_RESET: begin
-					SPI_CS_Temp		<= 'd1; 
+					SPI_CS_Temp			<= 'd1; 
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 	<= 'd0;
-					SPI_RESET_Temp	<= 'd0;
-					adc_reset_count<= adc_reset_count +'d1;	// Increment the counter (5ms)
+					SPI_RESET_Temp		<= 'd0;
+					adc_reset_count	<= adc_reset_count +'d1;	// Increment the counter (5ms)
 				end
 		  ADC_RESET_COMPLETE: begin
-					SPI_CS_Temp		<= 'd1;
+					SPI_CS_Temp			<= 'd1;
 					spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 	<= 'd0;
-					SPI_RESET_Temp	<= 'd1;
-					adc_reset_count<= adc_reset_count +'d1;	// Increment the counter (20ms)
+					SPI_RESET_Temp		<= 'd1;
+					adc_reset_count	<= adc_reset_count +'d1;	// Increment the counter (20ms)
 				end
 		  ADC_INIT_START: begin 
-					SPI_CS_Temp		<= 'd0; 
+					SPI_CS_Temp			<= 'd0; 
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 	<= 'd0; 
-					adc_init_state_i <= 'd0;
+					adc_init_state_i 	<= 'd0;
 				end
 		  ADC_INIT_START_STABLE: begin
-					SPI_CS_Temp					<= SPI_CS_Temp;
+					SPI_CS_Temp			<= SPI_CS_Temp;
 					spi_sclk_enable	<= 'd1;	
-					/*
-					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 65;
-					if(spi_clock_cycles <= 63)
-						begin end // SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; end
-					if(spi_clock_cycles%2==0) 
-					begin
-						if (spi_miso_data_cc_output == 'd32)
-							spi_miso_data_cc_output <= 'd0;
-						else
-							spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
-					end */
 				end
 		  ADC_INIT_COMPLETE: begin
 					SPI_CS_Temp 		<= 'd1;
 					spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 		<= 'd0; 
 				end
 				
 		  ADC_INIT_START_0655: begin 
-					SPI_CS_Temp		<= 'd0; 
+					SPI_CS_Temp			<= 'd0; 
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 	<= 'd0;
-					adc_init_state_i <= 'd1;
+					adc_init_state_i 	<= 'd1;
 				end
 		  ADC_INIT_START_STABLE_0655: begin
-					SPI_CS_Temp					<= SPI_CS_Temp; 
+					SPI_CS_Temp			<= SPI_CS_Temp; 
 					spi_sclk_enable	<= 'd1;
-					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 65;
-					if(spi_clock_cycles <= 63)
-						begin end//SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; end
-					if(spi_clock_cycles%2==0) 
-					begin
-						if (spi_miso_data_cc_output == 'd32)
-							spi_miso_data_cc_output <= 'd0;
-						else
-							spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
-					end
 				end
 		  ADC_INIT_COMPLETE_0655: begin
-					SPI_CS_Temp 	<= 'd1;
-				spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 	<= 'd0; 
+					SPI_CS_Temp 		<= 'd1;
+					spi_sclk_enable	<= 'd0;	
 				end
 				
 		 ADC_INIT_START_0555: begin 
-					SPI_CS_Temp		<= 'd0;
-				spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 	<= 'd0;
-					adc_init_state_i <= 'd4;
+					SPI_CS_Temp			<= 'd0;
+					spi_sclk_enable	<= 'd0;	
+					adc_init_state_i  <= 'd4;
 				end
 		  ADC_INIT_START_STABLE_0555: begin
-					SPI_CS_Temp					<= SPI_CS_Temp; 
+					SPI_CS_Temp			<= SPI_CS_Temp; 
 					spi_sclk_enable	<= 'd1;
-					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 64;
-					//SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; 
-					/*
-					if(spi_clock_cycles%2==0)
-						spi_miso_data_cc_output <= (spi_miso_data_cc_output + 'd1) % 32; */
-					if(spi_clock_cycles%2==0) 
-					begin
-						if (spi_miso_data_cc_output == 'd31)
-							spi_miso_data_cc_output <= 'd0;
-						else
-							spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
-					end
 				end
 		  ADC_INIT_COMPLETE_0555: begin
 					SPI_CS_Temp 		<= 'd1;
-				spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 		<= 'd0; 
+					spi_sclk_enable	<= 'd0;	
 				end
 				
 		  ADC_INIT_START_0033: begin 
 					SPI_CS_Temp			<= 'd0;
-				spi_sclk_enable	<= 'd0;	
-					//SPI_SCLK_Temp 		<= 'd0; 
+					spi_sclk_enable	<= 'd0;	
 					adc_init_state_i 	<= 'd3;
 				end
 		  ADC_INIT_START_STABLE_0033: begin
 					SPI_CS_Temp					<= SPI_CS_Temp; 
 					spi_sclk_enable	<= 'd1;
-					spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 65;
-					if(spi_clock_cycles <= 63)
-						begin end //SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; end
-					if(spi_clock_cycles%2==0) 
-					begin
-						if (spi_miso_data_cc_output == 'd32)
-							spi_miso_data_cc_output <= 'd0;
-						else
-							spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
-					end
 				end
 		  ADC_INIT_COMPLETE_0033: begin
 					SPI_CS_Temp 		<= 'd1; 
 					spi_sclk_enable	<= 'd0;
-					//SPI_SCLK_Temp 		<= 'd0; 
+				end
+				
+		  ADC_INIT_START_4B68: begin 
+					SPI_CS_Temp			<= 'd0;
+				spi_sclk_enable		<= 'd0;	
+					adc_init_state_i 	<= 'd2;
+				end
+		  ADC_INIT_START_STABLE_4B68: begin
+					SPI_CS_Temp			<= SPI_CS_Temp; 
+					spi_sclk_enable	<= 'd1;
+				end
+		  ADC_INIT_COMPLETE_4B68: begin
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
+				end
+				
+		 ADC_INIT_START_4F0F: begin 
+					SPI_CS_Temp			<= 'd0;
+				spi_sclk_enable		<= 'd0;	
+					adc_init_state_i 	<= 'd5;
+				end
+		  ADC_INIT_START_STABLE_4F0F: begin
+					SPI_CS_Temp			<= SPI_CS_Temp; 
+					spi_sclk_enable	<= 'd1;
+				end
+		  ADC_INIT_COMPLETE_4F0F: begin
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
 				end
 				
 		  WAIT_TRANSACTION: begin 
-					SPI_CS_Temp 	<= 'd1; 
-					//SPI_SCLK_Temp 	<= 'd0; 
+					SPI_CS_Temp 		<= 'd1; 
 				end
 		  TRANSACTION_START: begin 
-					SPI_CS_Temp		<= 'd0; 
-					//SPI_SCLK_Temp 	<= 'd0; 
+					SPI_CS_Temp			<= 'd1; 
+					spi_sclk_enable	<= 'd0;
 				end
 		  TRANSACTION_START_STABLE: begin
+					//SPI_CS_Temp			<= SPI_CS_Temp;
+					adc_init_state_i 	<= 'd0;	
 					if(SPI_DRDY == 0) 
 						begin
-							SPI_CS_Temp					<= SPI_CS_Temp; 
-							spi_clock_cycles        <= (spi_clock_cycles + 'd1) % 64;
-							//SPI_SCLK_Temp 				<= ~SPI_SCLK_Temp; 
-							/*
-							if(spi_clock_cycles%2==0)
-								spi_miso_data_cc_output <= (spi_miso_data_cc_output + 'd1) % 32; */
-							if(spi_clock_cycles%2==0) 
-							begin
-								if (spi_miso_data_cc_output == 'd31)
-									spi_miso_data_cc_output <= 'd0;
-								else
-									spi_miso_data_cc_output <= spi_miso_data_cc_output + 'd1;
-							end
+							SPI_CS_Temp			<= 'd0;
+							spi_sclk_enable	<= 'd1;
 						end
 				end
 		  TRANSACTION_COMPLETE: begin
-					SPI_CS_Temp		<= 'd1; 
-					//SPI_SCLK_Temp 	<= 'd0; 
+					SPI_CS_Temp			<= 'd1; 
+					spi_sclk_enable	<= 'd0;
 				end 
 		  default: begin
-					SPI_CS_Temp 	<= 'd1; 
-					//SPI_SCLK_Temp 	<= 'd0; 
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
 				end
     endcase
 end
@@ -376,7 +357,6 @@ begin
 				end
 		  ADC_INIT_START_STABLE:
 				begin
-					//if(spi_clock_cycles == 'd65 - 'd1)
 					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
 						begin
 							nextState = ADC_INIT_COMPLETE; 
@@ -406,12 +386,47 @@ begin
 				end
 		  ADC_INIT_COMPLETE_0655: begin
 					if(spi_miso_data == 32'h0655_0000)
-						begin nextState = ADC_INIT_START_0033; end
+						begin nextState = ADC_INIT_START_4B68; end
 					else
 						nextState = ADC_INIT_START_0655;
 				end
-				
-				
+		//----------------------------------------------------------		
+		  ADC_INIT_START_4B68:
+				nextState = ADC_INIT_START_STABLE_4B68;
+		  ADC_INIT_START_STABLE_4B68:
+				begin
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						begin
+							nextState = ADC_INIT_COMPLETE_4B68; 
+						end
+					else
+						nextState = ADC_INIT_START_STABLE_4B68;
+				end
+		  ADC_INIT_COMPLETE_4B68: begin
+					if(spi_miso_data == 32'h2B68_0000)
+						begin nextState = ADC_INIT_START_4F0F; end
+					else
+						nextState = ADC_INIT_START_4B68;
+				end
+		//----------------------------------------------------------		
+		  ADC_INIT_START_4F0F:
+				nextState = ADC_INIT_START_STABLE_4F0F;
+		  ADC_INIT_START_STABLE_4F0F:
+				begin
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						begin
+							nextState = ADC_INIT_COMPLETE_4F0F; 
+						end
+					else
+						nextState = ADC_INIT_START_STABLE_4F0F;
+				end
+		  ADC_INIT_COMPLETE_4F0F: begin
+					if(spi_miso_data == 32'h2F0F_0000)
+						begin nextState = ADC_INIT_START_0033; end
+					else
+						nextState = ADC_INIT_START_4F0F;
+				end
+		//-----------------------------------------------------------	
 		  ADC_INIT_START_0033:
 				nextState = ADC_INIT_START_STABLE_0033;
 		  ADC_INIT_START_STABLE_0033:
@@ -429,7 +444,7 @@ begin
 					else
 						nextState = ADC_INIT_START_0033;
 				end
-				
+		//------------------------------------------------------------	
 		  ADC_INIT_START_0555:
 				nextState = ADC_INIT_START_STABLE_0555;
 		  ADC_INIT_START_STABLE_0555:
@@ -443,26 +458,25 @@ begin
 				end
 		  ADC_INIT_COMPLETE_0555: begin
 					if(spi_miso_data == 32'h0555_0000)
-						begin nextState = IDLE; end
+						begin nextState = WAIT_TRANSACTION; end
 					else
 						nextState = ADC_INIT_START_0555;
 				end
-				
+		//-------------------------------------------------------------	
 		  WAIT_TRANSACTION:
 				nextState = TRANSACTION_START;
 		  TRANSACTION_START:
 				nextState = TRANSACTION_START_STABLE;
 		  TRANSACTION_START_STABLE: 
 				begin
-					if(spi_clock_cycles == 'd64 - 'd1)
-						nextState = TRANSACTION_COMPLETE;
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						nextState = TRANSACTION_COMPLETE; 
 					else
 						nextState = TRANSACTION_START_STABLE;
 				end
-				
 		  TRANSACTION_COMPLETE: 
-				nextState = WAIT_TRANSACTION; 
-				
+				nextState = IDLE; 
+		 //-------------------------------------------------------------
 		  default:
 				nextState = RESET;
     endcase
