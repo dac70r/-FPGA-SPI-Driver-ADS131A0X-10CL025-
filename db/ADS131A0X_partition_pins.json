@@ -48,6 +48,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "state[5]",
+					"strict" : false
+				},
+				{
 					"name" : "heartbeat",
 					"strict" : false
 				},
@@ -189,6 +193,10 @@
 				},
 				{
 					"name" : "adc_init_state[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adc_init_state[3]",
 					"strict" : false
 				},
 				{

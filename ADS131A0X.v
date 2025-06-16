@@ -29,7 +29,7 @@ module ADS131A0X(
 		// for debugging this module use only, do not include when integrating with main design
 		output				clock_4_167Mhz_debug,		// Keeps track of the main clock used in Submodule
 		output				clock_8_333Mhz_debug,		// Keeps track of the main clock used in Submodule
-		output [4:0]		state,					 		// Keeps track of the current state of SPI 		- for debugging (remove in final design)
+		output [5:0]		state,					 		// Keeps track of the current state of SPI 		- for debugging (remove in final design)
 		//output [4:0]		state_2,
 		//output [31:0]		spi_clock_cycles_output,
 		
@@ -52,7 +52,7 @@ wire SPI_SCLK_Temp;										// SPI Clock
 wire signal_tap_debug;
 //wire [31:0]		spi_miso_data_output;
 wire [7:0] spi_miso_data_cc;
-wire [4:0] state_2;
+wire [5:0] state_2;
 wire [31:0] spi_clock_cycles_output;
 
 /* SPI_Master Instance */

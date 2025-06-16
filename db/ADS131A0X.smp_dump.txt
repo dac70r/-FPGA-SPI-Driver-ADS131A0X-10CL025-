@@ -1,38 +1,50 @@
 
 State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|adc_init_state_i
-Name adc_init_state_i.00000101 adc_init_state_i.00000100 adc_init_state_i.00000011 adc_init_state_i.00000010 adc_init_state_i.00000001 adc_init_state_i.00000000 
-adc_init_state_i.00000000 0 0 0 0 0 0 
-adc_init_state_i.00000001 0 0 0 0 1 1 
-adc_init_state_i.00000010 0 0 0 1 0 1 
-adc_init_state_i.00000011 0 0 1 0 0 1 
-adc_init_state_i.00000100 0 1 0 0 0 1 
-adc_init_state_i.00000101 1 0 0 0 0 1 
+Name adc_init_state_i.00000111 adc_init_state_i.00000110 adc_init_state_i.00000101 adc_init_state_i.00000100 adc_init_state_i.00000011 adc_init_state_i.00000010 adc_init_state_i.00000001 adc_init_state_i.00000000 adc_init_state_i.00001000 
+adc_init_state_i.00000000 0 0 0 0 0 0 0 0 0 
+adc_init_state_i.00000001 0 0 0 0 0 0 1 1 0 
+adc_init_state_i.00000010 0 0 0 0 0 1 0 1 0 
+adc_init_state_i.00000011 0 0 0 0 1 0 0 1 0 
+adc_init_state_i.00000100 0 0 0 1 0 0 0 1 0 
+adc_init_state_i.00000101 0 0 1 0 0 0 0 1 0 
+adc_init_state_i.00000110 0 1 0 0 0 0 0 1 0 
+adc_init_state_i.00000111 1 0 0 0 0 0 0 1 0 
+adc_init_state_i.00001000 0 0 0 0 0 0 0 1 1 
 
 State Machine - |ADS131A0X|SPI_Master:SPI_Master_uut|presentState
-Name presentState.ADC_INIT_COMPLETE_4F0F presentState.ADC_INIT_START_STABLE_4F0F presentState.ADC_INIT_START_4F0F presentState.ADC_INIT_COMPLETE_4B68 presentState.ADC_INIT_START_STABLE_4B68 presentState.ADC_INIT_START_4B68 presentState.ADC_INIT_COMPLETE_0033 presentState.ADC_INIT_START_STABLE_0033 presentState.ADC_INIT_START_0033 presentState.ADC_INIT_COMPLETE_0555 presentState.ADC_INIT_START_STABLE_0555 presentState.ADC_INIT_START_0555 presentState.ADC_INIT_COMPLETE_0655 presentState.ADC_INIT_START_STABLE_0655 presentState.ADC_INIT_START_0655 presentState.TRANSACTION_COMPLETE presentState.TRANSACTION_START_STABLE presentState.TRANSACTION_START presentState.WAIT_TRANSACTION presentState.ADC_INIT_COMPLETE presentState.ADC_INIT_START_STABLE presentState.ADC_INIT_START presentState.ADC_RESET_COMPLETE presentState.ADC_RESET presentState.IDLE presentState.00000 
-presentState.00000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-presentState.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-presentState.ADC_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-presentState.ADC_RESET_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-presentState.ADC_INIT_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-presentState.ADC_INIT_START_STABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-presentState.WAIT_TRANSACTION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-presentState.TRANSACTION_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-presentState.TRANSACTION_START_STABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-presentState.TRANSACTION_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_0655 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_STABLE_0655 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE_0655 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_0555 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_STABLE_0555 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE_0555 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_0033 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_STABLE_0033 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE_0033 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_4B68 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_STABLE_4B68 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE_4B68 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_4F0F 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_START_STABLE_4F0F 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-presentState.ADC_INIT_COMPLETE_4F0F 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Name presentState.ADC_INIT_COMPLETE_4E25 presentState.ADC_INIT_START_STABLE_4E25 presentState.ADC_INIT_START_4E25 presentState.ADC_INIT_COMPLETE_4D02 presentState.ADC_INIT_START_STABLE_4D02 presentState.ADC_INIT_START_4D02 presentState.ADC_INIT_COMPLETE_4C3E presentState.ADC_INIT_START_STABLE_4C3E presentState.ADC_INIT_START_4C3E presentState.ADC_INIT_COMPLETE_4F0F presentState.ADC_INIT_START_STABLE_4F0F presentState.ADC_INIT_START_4F0F presentState.ADC_INIT_COMPLETE_4B68 presentState.ADC_INIT_START_STABLE_4B68 presentState.ADC_INIT_START_4B68 presentState.ADC_INIT_COMPLETE_0033 presentState.ADC_INIT_START_STABLE_0033 presentState.ADC_INIT_START_0033 presentState.ADC_INIT_COMPLETE_0555 presentState.ADC_INIT_START_STABLE_0555 presentState.ADC_INIT_START_0555 presentState.ADC_INIT_COMPLETE_0655 presentState.ADC_INIT_START_STABLE_0655 presentState.ADC_INIT_START_0655 presentState.TRANSACTION_COMPLETE presentState.TRANSACTION_START_STABLE presentState.TRANSACTION_START presentState.WAIT_TRANSACTION presentState.ADC_INIT_COMPLETE presentState.ADC_INIT_START_STABLE presentState.ADC_INIT_START presentState.ADC_RESET_COMPLETE presentState.ADC_RESET presentState.IDLE presentState.000000 
+presentState.000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+presentState.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+presentState.ADC_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+presentState.ADC_RESET_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+presentState.ADC_INIT_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+presentState.ADC_INIT_START_STABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+presentState.WAIT_TRANSACTION 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+presentState.TRANSACTION_START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+presentState.TRANSACTION_START_STABLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+presentState.TRANSACTION_COMPLETE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_0655 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_0655 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_0655 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_0555 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_0555 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_0555 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_0033 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_0033 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_0033 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_4B68 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_4B68 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_4B68 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_4F0F 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_4F0F 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_4F0F 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_4C3E 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_4C3E 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_4C3E 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_4D02 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_4D02 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_4D02 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_4E25 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_START_STABLE_4E25 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+presentState.ADC_INIT_COMPLETE_4E25 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
