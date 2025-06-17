@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "heartbeat",
+					"strict" : false
+				},
+				{
 					"name" : "SPI_SCLK",
 					"strict" : false
 				},
@@ -49,10 +53,6 @@
 				},
 				{
 					"name" : "state[5]",
-					"strict" : false
-				},
-				{
-					"name" : "heartbeat",
 					"strict" : false
 				},
 				{
@@ -232,6 +232,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "spi_bit_count[8]",
+					"strict" : false
+				},
+				{
 					"name" : "spi_bit_count_32max[0]",
 					"strict" : false
 				},
@@ -253,10 +257,6 @@
 				},
 				{
 					"name" : "spi_bit_count_32max[5]",
-					"strict" : false
-				},
-				{
-					"name" : "signal_tap_debug_output",
 					"strict" : false
 				},
 				{

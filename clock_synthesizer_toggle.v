@@ -25,22 +25,28 @@ module clock_synthesizer_toggle #(parameter COUNTER_LIMIT = 24_999_999)
 	 input				enable,
 	 output				clock_pol,
 	 output 				clock_pol_assist,				// output clock - 4.167Mhz
-	 output reg [7:0]	spi_bit_count 	= 8'd0
+	 output reg [8:0]	spi_bit_count 	= 9'd0
 );
 
+localparam	no_of_channels 							= 'd4;
+localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
+localparam	initial_spi_bit_count 					= 'd63;		// 0 - 63 = 64 counts
+localparam	addition_spi_bit_counts 				= 'd3;		// 1 for (leave some room) 2 for clock_pol_assist
 
+localparam	number_of_spi_bit_count_required = 	initial_spi_bit_count + addition_spi_bit_counts + 
+																(no_of_channels * no_of_spi_bit_counts_per_channel);
+			
 reg [31:0] 	counter 			= 32'b0;
 reg 			clock_state 	= 1'b0;
-reg 			toggle			= 'd1;
-reg [31:0]	n					= 'd0;
+reg [10:0]	n					= 'd0;
 
 // ADC INIT COMPLETED, now READ 5 sets of 32bits of DATA
 always @ (*)
 	begin
 		if(adc_init_completed_status)
-			n = 66+(64*2);
+			n = number_of_spi_bit_count_required;						//66+(64*4);
 		else
-			n = 66;
+			n = initial_spi_bit_count + addition_spi_bit_counts;	//66;
 	end
 
 // 1. When Enabled, the SPI_SCLK will be generated.

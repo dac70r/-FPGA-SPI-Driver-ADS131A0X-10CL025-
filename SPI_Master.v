@@ -19,26 +19,17 @@ module SPI_Master
 	output				clock_8_333Mhz_debug,						// Sub Clock of this Submodule
 	
 	output 	 	[5:0] state,											// debug - tracks the presentState of SPI
-	output		[5:0] state_2,											// debug - tracks the nextState of SPI
-	output 		[31:0]spi_clock_cycles_output,					// debug - keeps track of the 
-	
-	output		[4:0]	state_tracker_output,						// deprecated
+	//output		[5:0] state_2,											// debug - tracks the nextState of SPI
 	output 		[31:0]spi_miso_data_output,						// debug - keeps track of the spi_miso_data received
-	
-	output reg	[7:0] spi_miso_data_cc_output,
-	output		[3:0] spi_mosi_byte_count_output,				// debug - keeps track of the command sent
-	output reg	[7:0]	spi_transaction_count = 8'd0,
 	output 		[7:0]	adc_init_state,								// Keeps track of which state we are in at the ADC Init Phase
-	output reg  [7:0] index_visualized,
-	output 		[7:0]		spi_bit_count,								// spi_bit_count/2 = actual bits of the SPI
-	output reg	[7:0]		spi_bit_count_32max,						// spi_bit_count/2 = actual bits of the SPI
-	output					signal_B_negedge				
+	output 		[8:0]	spi_bit_count,									// spi_bit_count/2 = actual bits of the SPI
+	output reg	[7:0]	spi_bit_count_32max,							// spi_bit_count/2 = actual bits of the SPI
+	output				signal_B_negedge				
 );
 
 wire	synthesized_clock_8_333Mhz;					// Main Clock of this Submodule	
 wire	synthesized_clock_4_167Mhz;					// Sub Clock of this Submodule		
 wire	clock_pol_assist;					
-wire	[7:0]	count_cs_tracker;							// Tracks the Clock Cycles within each SPI Transmission
 
 // Local Signals
 //wire 			SPI_SCLK_Temp; 										// Previous, used in SPI with CS Consideration
@@ -46,7 +37,6 @@ reg 			SPI_MOSI_Temp 		= 1'd0;
 reg 			SPI_CS_Temp 		= 1'd1;							
 reg			SPI_RESET_Temp		= 1'd1;
 reg 			SPI_SCLK_Temp   	= 1'b0;             		// The state of I2C_SCLK, used in State Machine Output Logic
-reg [31:0]  spi_clock_cycles  = 32'd0;             	// Register for keeping track of number of Clock Cycles elapsed
 reg [31:0]  spi_miso_data 		= 32'd0;
 
 /* SPI State Definition */
@@ -102,18 +92,10 @@ reg [5:0] presentState					 		= 'd0;
 reg [5:0] nextState	 							= 'd0;
 
 // Local Registers and Counters
-wire				SPI_SCLK_internal_use;
-reg	[4:0]		state_tracker							= 5'd0;
 reg	[31:0] 	adc_reset_count						= 8'd0;		// Counter for ADC Reset (Single Use)	
-reg	[31:0]	delay_counter_transition_logic	= 32'd0;		// Counter for tracking 50ns delay in Setting Up ADC
 reg	[7:0]		adc_init_state_i						= 8'd0;		// Keeps track of which state we are in at the ADC Init Phase
-reg				adc_read									= 'd0;
 reg 				adc_init_completed 					= 'd0;
 reg 				spi_sclk_enable 						= 'd0;
-
-/* SPI MOSI Handler Signals */
-reg [7:0]	spi_mosi_bit_count 	= 'd0;
-reg [3:0]	spi_mosi_byte_count	= 'd0;
 
 /* Hard Coded Messages */
 localparam [31:0]		ADC_READY_0000		= 32'h0000_0000;
@@ -126,6 +108,8 @@ localparam [31:0]		ADC_SETTING_4C3E 	= 32'h4C3E_0000;
 localparam [31:0]		ADC_SETTING_4D02 	= 32'h4D02_0000;
 localparam [31:0]		ADC_SETTING_4E25 	= 32'h4E25_0000;
 
+localparam	no_of_channels 							= 'd4;
+localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
 
 clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 (
@@ -406,10 +390,7 @@ begin
         RESET:
             nextState = IDLE;
         IDLE:
-				//if(trigger == 1)
-					nextState = ADC_RESET;
-				/*else
-					nextState = IDLE;*/
+				nextState = ADC_RESET;
 		  ADC_RESET:
 				begin
 					if(adc_reset_count == 'd41_665)
@@ -594,7 +575,7 @@ begin
 				nextState = TRANSACTION_START_STABLE;
 		  TRANSACTION_START_STABLE: 
 				begin
-					if (spi_bit_count == 'd67+64*2) // initially was 65, now we add 2 more 
+					if (spi_bit_count == 'd67+no_of_spi_bit_counts_per_channel*no_of_channels) // initially was 65, now we add 2 more 
 						nextState = TRANSACTION_COMPLETE; 
 					else
 						nextState = TRANSACTION_START_STABLE;
@@ -618,13 +599,10 @@ end
 	assign clock_8_333Mhz_debug		= synthesized_clock_8_333Mhz;
 	
 	assign state 							= presentState;
-	assign state_2							= nextState;
-	assign spi_clock_cycles_output 	= spi_clock_cycles;
-	assign state_tracker_output 		= state_tracker;
 	assign spi_miso_data_output		= spi_miso_data;
 	assign adc_init_state 				= adc_init_state_i;
 	
-	assign spi_mosi_byte_count_output= spi_mosi_byte_count;
+	//assign state_2							= nextState;
 endmodule 
 
 
