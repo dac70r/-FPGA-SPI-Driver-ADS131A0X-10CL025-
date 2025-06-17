@@ -7,6 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Library,Project" />
- <window width="1100" height="800" x="0" y="0" />
+ <library
+   expandedCategories="Project,Library/Basic Functions,Library/Qsys Interconnect/Memory-Mapped,Library,Library/University Program/Audio &amp; Video/Video,Library/University Program,Library/Qsys Interconnect,Library/University Program/Audio &amp; Video,Library/Basic Functions/On Chip Memory,Library/Qsys Interconnect/Memory-Mapped Alpha" />
+ <window width="974" height="1039" x="-7" y="0" />
 </preferences>

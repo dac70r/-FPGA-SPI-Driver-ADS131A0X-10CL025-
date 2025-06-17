@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Jun 17 15:28:31 2025
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Fitter Status : Successful - Wed Jun 18 01:36:05 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : ADS131A0X
 Top-level Entity Name : ADS131A0X
 Family : Cyclone 10 LP
 Device : 10CL025YU256I7G
 Timing Models : Final
-Total logic elements : 2,819 / 24,624 ( 11 % )
-    Total combinational functions : 1,708 / 24,624 ( 7 % )
-    Dedicated logic registers : 1,925 / 24,624 ( 8 % )
-Total registers : 1925
-Total pins : 112 / 151 ( 74 % )
+Total logic elements : 3,680 / 24,624 ( 15 % )
+    Total combinational functions : 2,222 / 24,624 ( 9 % )
+    Dedicated logic registers : 2,463 / 24,624 ( 10 % )
+Total registers : 2463
+Total pins : 122 / 151 ( 81 % )
 Total virtual pins : 0
-Total memory bits : 421,888 / 608,256 ( 69 % )
+Total memory bits : 569,600 / 608,256 ( 94 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

@@ -152,6 +152,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "FIFO_WR_EN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_RD_EN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rdempty",
+					"strict" : false
+				},
+				{
+					"name" : "wrfull",
+					"strict" : false
+				},
+				{
 					"name" : "clock_4_167Mhz_debug",
 					"strict" : false
 				},
@@ -404,11 +420,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_n",
+					"name" : "SPI_MISO",
 					"strict" : false
 				},
 				{
-					"name" : "SPI_MISO",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{

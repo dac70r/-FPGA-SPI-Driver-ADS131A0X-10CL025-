@@ -14,6 +14,7 @@ module SPI_Master
 	input					SPI_DRDY,
 	
 	output reg 	[31:0]Channel0_Raw,
+	output reg 	[3:0] FIFO_WR_EN,
 	/* Not essential signals - can be removed */
 	output				clock_4_167Mhz_debug,						// Main Clock of this Submodule
 	output				clock_8_333Mhz_debug,						// Sub Clock of this Submodule
@@ -651,13 +652,19 @@ begin
     endcase
 end
 
-// Assigning Value to Channel 0
+// Assigning Value to Channel 0	- we are only interested in data when index is at 64 
 always @ (*)
 begin
 	if(spi_bit_count_32max == 64)
-		Channel0_Raw = spi_miso_data;
+		begin
+			Channel0_Raw = spi_miso_data;
+			FIFO_WR_EN 		= 'd1;
+		end
 	else
-		Channel0_Raw = Channel0_Raw;
+		begin
+			Channel0_Raw 	= 'd0;	//Channel0_Raw;
+			FIFO_WR_EN 		= 'd0;
+		end
 end
 
 	// Core Signals 
