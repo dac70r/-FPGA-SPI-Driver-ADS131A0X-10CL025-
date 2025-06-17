@@ -12,8 +12,8 @@ module SPI_Master
 	output 				SPI_SCLK,										// SPI SCLK
 	output 		 		SPI_RESET,										// SPI_RESET - to reset the ADC
 	input					SPI_DRDY,
-	input					trigger,											// External Trigger to Start Transactions
 	
+	output reg 	[31:0]Channel0_Raw,
 	/* Not essential signals - can be removed */
 	output				clock_4_167Mhz_debug,						// Main Clock of this Submodule
 	output				clock_8_333Mhz_debug,						// Sub Clock of this Submodule
@@ -38,6 +38,7 @@ reg 			SPI_CS_Temp 		= 1'd1;
 reg			SPI_RESET_Temp		= 1'd1;
 reg 			SPI_SCLK_Temp   	= 1'b0;             		// The state of I2C_SCLK, used in State Machine Output Logic
 reg [31:0]  spi_miso_data 		= 32'd0;
+reg [31:0]	Channel0_Raw_local= 32'd0;
 
 /* SPI State Definition */
 // Define state encoding using localparams
@@ -111,6 +112,9 @@ localparam [31:0]		ADC_SETTING_4E25 	= 32'h4E25_0000;
 localparam	no_of_channels 							= 'd4;
 localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
 
+/* ADC Raw Values */
+// reg [31:0]		Channel0_Raw							= 32'd0;
+
 clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 (
     .input_clock(system_clock), 								// input clock  - 50 Mhz
@@ -126,7 +130,7 @@ clock_synthesizer_toggle #(.COUNTER_LIMIT(6)) uut1
 	 .clock_pol_assist(clock_pol_assist),
 	 .spi_bit_count(spi_bit_count)
 );
-	
+
 // SPI_MOSI (For now: ADC Init - CPOL = 0, CPHA = 1)
 always @ (posedge clock_pol_assist) // SPI_SCLK_Temp)
 begin
@@ -193,10 +197,10 @@ begin
 					end
 				else if(spi_bit_count_32max >= 34 && spi_bit_count_32max <= 65)
 					begin
-						if(spi_bit_count_32max == 0)
-							spi_miso_data[0] <= SPI_MISO;
-						else
-							spi_miso_data['d33 - (spi_bit_count_32max-32*1)] <= SPI_MISO;
+						if(spi_bit_count_32max == 0) begin 
+							spi_miso_data[0] <= SPI_MISO; end
+						else begin
+							spi_miso_data['d33 - (spi_bit_count_32max-32*1)] <= SPI_MISO; end
 					end
 				else if(spi_bit_count_32max >= 66 && spi_bit_count_32max <= 97)
 					begin
@@ -647,6 +651,15 @@ begin
     endcase
 end
 
+// Assigning Value to Channel 0
+always @ (*)
+begin
+	if(spi_bit_count_32max == 64)
+		Channel0_Raw = spi_miso_data;
+	else
+		Channel0_Raw = Channel0_Raw;
+end
+
 	// Core Signals 
 	assign SPI_SCLK						= synthesized_clock_4_167Mhz; //SPI_SCLK_Temp;
 	assign SPI_CS							= SPI_CS_Temp;
@@ -660,7 +673,7 @@ end
 	assign state 							= presentState;
 	assign spi_miso_data_output		= spi_miso_data;
 	assign adc_init_state 				= adc_init_state_i;
-	
+
 	//assign state_2							= nextState;
 endmodule 
 

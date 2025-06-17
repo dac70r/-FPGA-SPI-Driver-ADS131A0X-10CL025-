@@ -21,6 +21,8 @@ module ADS131A0X(
 		output 				SPI_MOSI,				// SPI MOSI
 		input 				SPI_MISO,				// SPI MISO
 		input					SPI_DRDY,				// SPI DRDY
+		
+		output [31:0]		Channel0_Raw,
 
 		/* Debugging purposes */
 		// for debugging this module use only, do not include when integrating with main design
@@ -48,6 +50,7 @@ SPI_Master SPI_Master_uut
 	.SPI_RESET(SPI_RESET),
 	.SPI_DRDY(SPI_DRDY),
 	
+	.Channel0_Raw(Channel0_Raw),
 	// Non crucial Signals (for simulation and debugging)
 	.clock_4_167Mhz_debug(clock_4_167Mhz_debug),
 	.clock_8_333Mhz_debug(clock_8_333Mhz_debug),
