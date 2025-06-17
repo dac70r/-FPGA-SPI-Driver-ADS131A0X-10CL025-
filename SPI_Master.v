@@ -126,31 +126,44 @@ clock_synthesizer_toggle #(.COUNTER_LIMIT(6)) uut1
 	 .clock_pol_assist(clock_pol_assist),
 	 .spi_bit_count(spi_bit_count)
 );
-
+	
 // SPI_MOSI (For now: ADC Init - CPOL = 0, CPHA = 1)
 always @ (posedge clock_pol_assist) // SPI_SCLK_Temp)
 begin
-	if(spi_bit_count == 0)
-		spi_bit_count_32max <= 'd1;
-	else if (spi_bit_count <66)
-		spi_bit_count_32max <= (spi_bit_count_32max + 'd1) % 33;
-	else
-		spi_bit_count_32max <= 'd0;
-	
-	if(spi_bit_count >2) begin
-		case(adc_init_state_i)
-				0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
-				1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_bit_count_32max];
-				2: SPI_MOSI_Temp 		<= ADC_SETTING_4B68		['d32 - spi_bit_count_32max];
-				3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
-				4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_bit_count_32max];
-				5: SPI_MOSI_Temp 		<= ADC_SETTING_4F0F		['d32 - spi_bit_count_32max];
-				6: SPI_MOSI_Temp 		<= ADC_SETTING_4C3E		['d32 - spi_bit_count_32max];
-				7: SPI_MOSI_Temp 		<= ADC_SETTING_4D02		['d32 - spi_bit_count_32max];
-				8: SPI_MOSI_Temp 		<= ADC_SETTING_4E25		['d32 - spi_bit_count_32max];
-				default:
-					SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
-		endcase
+	//--------------------------adc_init_not_yet_complete---------------------------------
+	if(adc_init_completed == 0) begin
+		if(spi_bit_count == 0)
+			spi_bit_count_32max <= 'd1;
+		else if (spi_bit_count <66)
+			spi_bit_count_32max <= (spi_bit_count_32max + 'd1) % 33;
+		else
+			spi_bit_count_32max <= 'd0;
+		
+		if(spi_bit_count >2) begin
+			case(adc_init_state_i)
+					0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
+					1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_bit_count_32max];
+					2: SPI_MOSI_Temp 		<= ADC_SETTING_4B68		['d32 - spi_bit_count_32max];
+					3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
+					4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_bit_count_32max];
+					5: SPI_MOSI_Temp 		<= ADC_SETTING_4F0F		['d32 - spi_bit_count_32max];
+					6: SPI_MOSI_Temp 		<= ADC_SETTING_4C3E		['d32 - spi_bit_count_32max];
+					7: SPI_MOSI_Temp 		<= ADC_SETTING_4D02		['d32 - spi_bit_count_32max];
+					8: SPI_MOSI_Temp 		<= ADC_SETTING_4E25		['d32 - spi_bit_count_32max];
+					default:
+						SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
+			endcase
+		end
+	end
+	//--------------------------adc_init_completed----------------------------------------
+	else begin
+		SPI_MOSI_Temp 		<= 'd0;	// Always outputing 0 during read
+		if(spi_bit_count == 0)
+			spi_bit_count_32max <= 'd1;
+		else if (spi_bit_count <66 + 64*4)
+			spi_bit_count_32max <= spi_bit_count_32max + 'd1;
+		else
+			spi_bit_count_32max <= 'd0;
 	end
 end
 
@@ -168,10 +181,56 @@ begin
 	|| presentState == ADC_INIT_START_STABLE_4E25
 	|| presentState == TRANSACTION_START_STABLE))
 	begin
-		if(spi_bit_count_32max == 0)
-			spi_miso_data[0] <= SPI_MISO;
-		else
-			spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+	//--------------------------adc_init_completed--------------------------------
+		if(adc_init_completed==1)
+			begin
+				if(spi_bit_count_32max >= 2 && spi_bit_count_32max <= 33)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else	
+							spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 34 && spi_bit_count_32max <= 65)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*1)] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 66 && spi_bit_count_32max <= 97)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*2)] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 98 && spi_bit_count_32max <= 129)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*3)] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 130 && spi_bit_count_32max <= 161)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*4)] <= SPI_MISO;
+					end
+				else
+					begin 
+						//TODO: ERROR 
+					end
+			end
+	//--------------------------!adc_init_completed-------------------------------
+		else begin
+			if(spi_bit_count_32max == 0)
+				spi_miso_data[0] <= SPI_MISO;
+			else
+				spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+		end
 	end
 end
 
@@ -564,7 +623,7 @@ begin
 				end
 		  ADC_INIT_COMPLETE_0555: begin
 					if(spi_miso_data == 32'h0555_0000)
-						begin nextState = WAIT_TRANSACTION; end
+						begin nextState = WAIT_TRANSACTION; end//IDLE; end  // for testing
 					else
 						nextState = ADC_INIT_START_0555;
 				end

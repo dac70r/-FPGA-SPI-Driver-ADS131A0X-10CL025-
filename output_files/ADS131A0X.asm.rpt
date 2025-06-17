@@ -1,5 +1,5 @@
 Assembler report for ADS131A0X
-Tue Jun 17 10:26:35 2025
+Tue Jun 17 13:07:12 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Jun 17 10:26:35 2025 ;
+; Assembler Status      ; Successful - Tue Jun 17 13:07:12 2025 ;
 ; Revision Name         ; ADS131A0X                             ;
 ; Top-level Entity Name ; ADS131A0X                             ;
 ; Family                ; Cyclone 10 LP                         ;
@@ -78,8 +78,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                    ;
 +----------------+------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0024C877                                                                                                 ;
-; Checksum       ; 0x0024C877                                                                                                 ;
+; JTAG usercode  ; 0x00281E2D                                                                                                 ;
+; Checksum       ; 0x00281E2D                                                                                                 ;
 +----------------+------------------------------------------------------------------------------------------------------------+
 
 
@@ -89,15 +89,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Jun 17 10:26:33 2025
+    Info: Processing started: Tue Jun 17 13:07:10 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ADS131A0X -c ADS131A0X
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4712 megabytes
-    Info: Processing ended: Tue Jun 17 10:26:35 2025
+    Info: Peak virtual memory: 4714 megabytes
+    Info: Processing ended: Tue Jun 17 13:07:12 2025
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

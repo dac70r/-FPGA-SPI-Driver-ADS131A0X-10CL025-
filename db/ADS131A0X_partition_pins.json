@@ -260,6 +260,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "spi_bit_count_32max[6]",
+					"strict" : false
+				},
+				{
+					"name" : "spi_bit_count_32max[7]",
+					"strict" : false
+				},
+				{
 					"name" : "signal_B_negedge",
 					"strict" : false
 				},
