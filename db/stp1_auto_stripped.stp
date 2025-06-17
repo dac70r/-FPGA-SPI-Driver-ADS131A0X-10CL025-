@@ -1,4 +1,4 @@
-<session jtag_chain="Cyclone 10 LP Evaluation Kit [USB-1]" jtag_device="@1: 10CL025(Y|Z)/EP3C25/EP4CE22 (0x020F30DD)" sof_file="../output_files/ADS131A0X.sof">
+<session jtag_chain="Cyclone 10 LP Evaluation Kit [USB-2]" jtag_device="@1: 10CL025(Y|Z)/EP3C25/EP4CE22 (0x020F30DD)" sof_file="../output_files/ADS131A0X.sof">
   <display_tree gui_logging_enabled="0">
     <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
@@ -515,12 +515,12 @@
     </signal_set>
     <position_info>
       <single attribute="active tab" value="0"/>
-      <single attribute="data horizontal scroll position" value="2197"/>
-      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="data horizontal scroll position" value="465"/>
+      <single attribute="data vertical scroll position" value="1"/>
       <single attribute="setup horizontal scroll position" value="0"/>
       <single attribute="setup vertical scroll position" value="0"/>
       <single attribute="zoom level denominator" value="1"/>
-      <single attribute="zoom level numerator" value="1024"/>
+      <single attribute="zoom level numerator" value="256"/>
       <single attribute="zoom offset denominator" value="1"/>
       <single attribute="zoom offset numerator" value="0"/>
     </position_info>
@@ -538,8 +538,8 @@
     <single attribute="instance widget visible" value="1"/>
     <single attribute="jtag widget visible" value="1"/>
     <single attribute="lock mode" value="0"/>
-    <multi attribute="column width" size="23" value="34,34,201,74,68,78,95,96,98,98,88,88,316,101,101,101,101,101,101,101,101,107,78"/>
-    <multi attribute="frame size" size="2" value="1920,1009"/>
+    <multi attribute="column width" size="23" value="34,34,293,74,68,78,95,96,98,98,88,88,316,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="frame size" size="2" value="1920,974"/>
     <multi attribute="jtag widget size" size="2" value="638,166"/>
   </global_info>
 </session>

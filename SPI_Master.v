@@ -136,6 +136,7 @@ clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 clock_synthesizer_toggle #(.COUNTER_LIMIT(6)) uut1
 (
     .input_clock(system_clock),					 			// input clock  - 50 Mhz
+	 .adc_init_completed_status(adc_init_completed),
 	 .enable(spi_sclk_enable),
 	 .clock_pol(synthesized_clock_4_167Mhz),				// output clock - 4.167Mhz 
 	 .clock_pol_assist(clock_pol_assist),
@@ -593,13 +594,13 @@ begin
 				nextState = TRANSACTION_START_STABLE;
 		  TRANSACTION_START_STABLE: 
 				begin
-					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+					if (spi_bit_count == 'd67+64*2) // initially was 65, now we add 2 more 
 						nextState = TRANSACTION_COMPLETE; 
 					else
 						nextState = TRANSACTION_START_STABLE;
 				end
 		  TRANSACTION_COMPLETE: 
-				nextState = IDLE; 
+				nextState = WAIT_TRANSACTION; 
 		 //-------------------------------------------------------------
 		  default:
 				nextState = RESET;

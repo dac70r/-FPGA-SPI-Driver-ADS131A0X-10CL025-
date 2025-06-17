@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ADS131A0X
-Tue Jun 17 00:29:17 2025
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Tue Jun 17 09:09:21 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -39,7 +39,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -59,13 +59,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 17 00:29:17 2025          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 17 09:09:21 2025          ;
+; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; ADS131A0X                                      ;
 ; Top-level Entity Name              ; ADS131A0X                                      ;
 ; Family                             ; Cyclone 10 LP                                  ;
-; Total logic elements               ; 2,087                                          ;
-;     Total combinational functions  ; 1,228                                          ;
+; Total logic elements               ; 2,093                                          ;
+;     Total combinational functions  ; 1,234                                          ;
 ;     Dedicated logic registers      ; 1,571                                          ;
 ; Total registers                    ; 1571                                           ;
 ; Total pins                         ; 109                                            ;
@@ -181,81 +181,81 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                              ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                    ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
-; ADS131A0X.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v                                                        ;             ;
-; SPI_Master.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v                                                       ;             ;
-; heartbeat.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/heartbeat.v                                                        ;             ;
-; clock_synthesizer.v                                                ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer.v                                                ;             ;
-; clock_synthesizer_toggle.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v                                         ;             ;
-; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                     ;             ;
-; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                ;             ;
-; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                                   ;             ;
-; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                      ;             ;
-; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                      ;             ;
-; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                            ;             ;
-; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                        ;             ;
-; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                         ;             ;
-; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                          ;             ;
-; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                ;             ;
-; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                        ;             ;
-; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                 ;             ;
-; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                           ;             ;
-; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                        ;             ;
-; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                         ;             ;
-; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                            ;             ;
-; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                            ;             ;
-; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                          ;             ;
-; db/altsyncram_7b24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/altsyncram_7b24.tdf                                             ;             ;
-; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                          ;             ;
-; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                        ;             ;
-; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                           ;             ;
-; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                   ;             ;
-; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                        ;             ;
-; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                           ;             ;
-; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                            ;             ;
-; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                          ;             ;
-; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                                                          ;             ;
-; db/mux_msc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/mux_msc.tdf                                                     ;             ;
-; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                        ;             ;
-; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/declut.inc                                                            ;             ;
-; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                       ;             ;
-; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/decode_6vf.tdf                                                  ;             ;
-; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                       ;             ;
-; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                       ;             ;
-; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                          ;             ;
-; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                       ;             ;
-; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                               ;             ;
-; db/cntr_hgi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_hgi.tdf                                                    ;             ;
-; db/cmpr_mgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_mgc.tdf                                                    ;             ;
-; db/cntr_f9j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_f9j.tdf                                                    ;             ;
-; db/cntr_9gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_9gi.tdf                                                    ;             ;
-; db/cmpr_kgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_kgc.tdf                                                    ;             ;
-; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_r2j.tdf                                                    ;             ;
-; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_ggc.tdf                                                    ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                        ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                         ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                     ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                           ; altera_sld  ;
-; db/ip/slda5d34450/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                      ;             ;
-; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                        ;             ;
-; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                                                       ;             ;
-; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                   ;             ;
-; db/lpm_divide_i9m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/lpm_divide_i9m.tdf                                              ;             ;
-; db/sign_div_unsign_ekh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/sign_div_unsign_ekh.tdf                                         ;             ;
-; db/alt_u_div_94f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/alt_u_div_94f.tdf                                               ;             ;
-; db/add_sub_0pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/add_sub_0pc.tdf                                                 ;             ;
-; db/add_sub_1pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/add_sub_1pc.tdf                                                 ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                        ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                                              ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
+; ADS131A0X.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v                                                        ;             ;
+; SPI_Master.v                                                       ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v                                                       ;             ;
+; heartbeat.v                                                        ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/heartbeat.v                                                        ;             ;
+; clock_synthesizer.v                                                ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer.v                                                ;             ;
+; clock_synthesizer_toggle.v                                         ; yes             ; User Verilog HDL File                        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v                                         ;             ;
+; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap.vhd                                                               ;             ;
+; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                                                          ;             ;
+; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_control.vhd                                                             ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_shiftreg.tdf                                                                ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_constant.inc                                                                ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/dffeea.inc                                                                      ;             ;
+; aglobal231.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                                                  ;             ;
+; sld_mbpmg.vhd                                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_mbpmg.vhd                                                                   ;             ;
+; sld_ela_trigger_flow_mgr.vhd                                       ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd                                                    ;             ;
+; sld_buffer_manager.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_buffer_manager.vhd                                                          ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf                                                                  ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                                                           ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc                                                                     ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc                                                                  ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                                                   ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc                                                                      ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc                                                                      ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc                                                                    ;             ;
+; db/altsyncram_7b24.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/altsyncram_7b24.tdf                                             ;             ;
+; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.tdf                                                                    ;             ;
+; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/others/maxplus2/memmodes.inc                                                                  ;             ;
+; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_hdffe.inc                                                                     ;             ;
+; alt_le_rden_reg.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_le_rden_reg.inc                                                             ;             ;
+; altsyncram.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.inc                                                                  ;             ;
+; lpm_mux.tdf                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.tdf                                                                     ;             ;
+; muxlut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/muxlut.inc                                                                      ;             ;
+; bypassff.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/bypassff.inc                                                                    ;             ;
+; altshift.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altshift.inc                                                                    ;             ;
+; db/mux_msc.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/mux_msc.tdf                                                     ;             ;
+; lpm_decode.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.tdf                                                                  ;             ;
+; declut.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/declut.inc                                                                      ;             ;
+; lpm_compare.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_compare.inc                                                                 ;             ;
+; db/decode_6vf.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/decode_6vf.tdf                                                  ;             ;
+; lpm_counter.tdf                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.tdf                                                                 ;             ;
+; lpm_add_sub.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                 ;             ;
+; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/cmpconst.inc                                                                    ;             ;
+; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_counter.inc                                                                 ;             ;
+; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                         ;             ;
+; db/cntr_hgi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_hgi.tdf                                                    ;             ;
+; db/cmpr_mgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_mgc.tdf                                                    ;             ;
+; db/cntr_f9j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_f9j.tdf                                                    ;             ;
+; db/cntr_9gi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_9gi.tdf                                                    ;             ;
+; db/cmpr_kgc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_kgc.tdf                                                    ;             ;
+; db/cntr_r2j.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_r2j.tdf                                                    ;             ;
+; db/cmpr_ggc.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_ggc.tdf                                                    ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_rom_sr.vhd                                                                  ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                                                   ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                                               ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_hub.vhd                                                                     ; altera_sld  ;
+; db/ip/slda5d34450/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                                                ;             ;
+; lpm_divide.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                                                  ;             ;
+; abs_divider.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc                                                                 ;             ;
+; sign_div_unsign.inc                                                ; yes             ; Megafunction                                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                                             ;             ;
+; db/lpm_divide_i9m.tdf                                              ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/lpm_divide_i9m.tdf                                              ;             ;
+; db/sign_div_unsign_ekh.tdf                                         ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/sign_div_unsign_ekh.tdf                                         ;             ;
+; db/alt_u_div_94f.tdf                                               ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/alt_u_div_94f.tdf                                               ;             ;
+; db/add_sub_0pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/add_sub_0pc.tdf                                                 ;             ;
+; db/add_sub_1pc.tdf                                                 ; yes             ; Auto-Generated Megafunction                  ; C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/add_sub_1pc.tdf                                                 ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -263,16 +263,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------------------------------------------+
 ; Resource                                    ; Usage                                                        ;
 +---------------------------------------------+--------------------------------------------------------------+
-; Estimated Total logic elements              ; 2,087                                                        ;
+; Estimated Total logic elements              ; 2,093                                                        ;
 ;                                             ;                                                              ;
-; Total combinational functions               ; 1228                                                         ;
+; Total combinational functions               ; 1234                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                              ;
-;     -- 4 input functions                    ; 554                                                          ;
-;     -- 3 input functions                    ; 274                                                          ;
+;     -- 4 input functions                    ; 541                                                          ;
+;     -- 3 input functions                    ; 293                                                          ;
 ;     -- <=2 input functions                  ; 400                                                          ;
 ;                                             ;                                                              ;
 ; Logic elements by mode                      ;                                                              ;
-;     -- normal mode                          ; 945                                                          ;
+;     -- normal mode                          ; 951                                                          ;
 ;     -- arithmetic mode                      ; 283                                                          ;
 ;                                             ;                                                              ;
 ; Total registers                             ; 1571                                                         ;
@@ -286,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                              ;
 ; Maximum fan-out node                        ; SPI_Master:SPI_Master_uut|clock_synthesizer:uut0|clock_state ;
 ; Maximum fan-out                             ; 877                                                          ;
-; Total fan-out                               ; 10477                                                        ;
+; Total fan-out                               ; 10482                                                        ;
 ; Average fan-out                             ; 3.38                                                         ;
 +---------------------------------------------+--------------------------------------------------------------+
 
@@ -296,10 +296,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                   ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |ADS131A0X                                                                                                                              ; 1228 (1)            ; 1571 (0)                  ; 290816      ; 0            ; 0       ; 0         ; 109  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
-;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 401 (272)           ; 194 (120)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
+; |ADS131A0X                                                                                                                              ; 1234 (1)            ; 1571 (0)                  ; 290816      ; 0            ; 0       ; 0         ; 109  ; 0            ; |ADS131A0X                                                                                                                                                                                                                                                                                                                                            ; ADS131A0X                         ; work         ;
+;    |SPI_Master:SPI_Master_uut|                                                                                                          ; 407 (274)           ; 194 (120)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut                                                                                                                                                                                                                                                                                                                  ; SPI_Master                        ; work         ;
 ;       |clock_synthesizer:uut0|                                                                                                          ; 44 (44)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer:uut0                                                                                                                                                                                                                                                                                           ; clock_synthesizer                 ; work         ;
-;       |clock_synthesizer_toggle:uut1|                                                                                                   ; 57 (57)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1                                                                                                                                                                                                                                                                                    ; clock_synthesizer_toggle          ; work         ;
+;       |clock_synthesizer_toggle:uut1|                                                                                                   ; 61 (61)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1                                                                                                                                                                                                                                                                                    ; clock_synthesizer_toggle          ; work         ;
 ;       |lpm_divide:Mod0|                                                                                                                 ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0                                                                                                                                                                                                                                                                                                  ; lpm_divide                        ; work         ;
 ;          |lpm_divide_i9m:auto_generated|                                                                                                ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0|lpm_divide_i9m:auto_generated                                                                                                                                                                                                                                                                    ; lpm_divide_i9m                    ; work         ;
 ;             |sign_div_unsign_ekh:divider|                                                                                               ; 28 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ADS131A0X|SPI_Master:SPI_Master_uut|lpm_divide:Mod0|lpm_divide_i9m:auto_generated|sign_div_unsign_ekh:divider                                                                                                                                                                                                                                        ; sign_div_unsign_ekh               ; work         ;
@@ -743,20 +743,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 40                          ;
 ;     SCLR              ; 54                          ;
 ;     plain             ; 163                         ;
-; cycloneiii_lcell_comb ; 502                         ;
+; cycloneiii_lcell_comb ; 508                         ;
 ;     arith             ; 186                         ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 176                         ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 316                         ;
+;     normal            ; 322                         ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 8                           ;
 ;         2 data inputs ; 39                          ;
-;         3 data inputs ; 48                          ;
-;         4 data inputs ; 216                         ;
+;         3 data inputs ; 67                          ;
+;         4 data inputs ; 203                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.73                        ;
+; Max LUT depth         ; 7.30                        ;
+; Average LUT depth     ; 3.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -786,12 +786,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; SPI_RESET                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|SPI_RESET_Temp~_wirecell                       ; N/A     ;
 ; SPI_SCLK                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|clock_pol        ; N/A     ;
 ; SPI_SCLK                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1|clock_pol        ; N/A     ;
-; adc_init_state[0]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr60                                       ; N/A     ;
-; adc_init_state[0]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr60                                       ; N/A     ;
-; adc_init_state[1]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr59~0                                     ; N/A     ;
-; adc_init_state[1]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr59~0                                     ; N/A     ;
-; adc_init_state[2]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr58~0                                     ; N/A     ;
-; adc_init_state[2]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr58~0                                     ; N/A     ;
+; adc_init_state[0]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr61                                       ; N/A     ;
+; adc_init_state[0]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr61                                       ; N/A     ;
+; adc_init_state[1]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr60~0                                     ; N/A     ;
+; adc_init_state[1]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr60~0                                     ; N/A     ;
+; adc_init_state[2]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr59~0                                     ; N/A     ;
+; adc_init_state[2]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr59~0                                     ; N/A     ;
 ; adc_init_state[3]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00001000                      ; N/A     ;
 ; adc_init_state[3]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|adc_init_state_i.00001000                      ; N/A     ;
 ; adc_init_state[4]        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                                                     ; N/A     ;
@@ -905,16 +905,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; spi_miso_data_output[8]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|spi_miso_data[8]                               ; N/A     ;
 ; spi_miso_data_output[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|spi_miso_data[9]                               ; N/A     ;
 ; spi_miso_data_output[9]  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|spi_miso_data[9]                               ; N/A     ;
-; state[0]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr51                                       ; N/A     ;
-; state[0]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr51                                       ; N/A     ;
-; state[1]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr50                                       ; N/A     ;
-; state[1]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr50                                       ; N/A     ;
-; state[2]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr49~5                                     ; N/A     ;
-; state[2]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr49~5                                     ; N/A     ;
-; state[3]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr48~4                                     ; N/A     ;
-; state[3]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr48~4                                     ; N/A     ;
-; state[4]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr47~2                                     ; N/A     ;
-; state[4]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr47~2                                     ; N/A     ;
+; state[0]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr52                                       ; N/A     ;
+; state[0]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr52                                       ; N/A     ;
+; state[1]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr51                                       ; N/A     ;
+; state[1]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr51                                       ; N/A     ;
+; state[2]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr50~2                                     ; N/A     ;
+; state[2]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr50~2                                     ; N/A     ;
+; state[3]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr49~4                                     ; N/A     ;
+; state[3]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr49~4                                     ; N/A     ;
+; state[4]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr48~4                                     ; N/A     ;
+; state[4]                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; SPI_Master:SPI_Master_uut|WideOr48~4                                     ; N/A     ;
 ; trigger                  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; trigger                                                                  ; N/A     ;
 ; trigger                  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; trigger                                                                  ; N/A     ;
 ; auto_signaltap_0|gnd     ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                      ; N/A     ;
@@ -957,66 +957,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue Jun 17 00:28:50 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Tue Jun 17 09:08:55 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADS131A0X -c ADS131A0X
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ads131a0x.v
-    Info (12023): Found entity 1: ADS131A0X File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 11
+    Info (12023): Found entity 1: ADS131A0X File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file spi_master.v
-    Info (12023): Found entity 1: SPI_Master File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 4
+    Info (12023): Found entity 1: SPI_Master File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file heartbeat.v
-    Info (12023): Found entity 1: heartbeat File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/heartbeat.v Line: 4
+    Info (12023): Found entity 1: heartbeat File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/heartbeat.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file clock_synthesizer.v
-    Info (12023): Found entity 1: clock_synthesizer File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer.v Line: 22
-Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(21): truncated literal to match 3 bits File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 21
-Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(22): truncated literal to match 3 bits File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 22
+    Info (12023): Found entity 1: clock_synthesizer File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer.v Line: 22
+Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(21): truncated literal to match 3 bits File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 21
+Warning (10229): Verilog HDL Expression warning at spi_sclk_generator.v(22): truncated literal to match 3 bits File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file spi_sclk_generator.v
-    Info (12023): Found entity 1: spi_sclk_generator File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/spi_sclk_generator.v Line: 8
+    Info (12023): Found entity 1: spi_sclk_generator File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/spi_sclk_generator.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file clock_synthesizer_toggle.v
-    Info (12023): Found entity 1: clock_synthesizer_toggle File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v Line: 21
+    Info (12023): Found entity 1: clock_synthesizer_toggle File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v Line: 21
 Info (12127): Elaborating entity "ADS131A0X" for the top level hierarchy
-Info (12128): Elaborating entity "SPI_Master" for hierarchy "SPI_Master:SPI_Master_uut" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 90
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(48): object "SPI_SCLK_Temp" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 48
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(108): object "delay_counter_transition_logic" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 108
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(110): object "adc_read" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 110
-Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(115): object "spi_mosi_bit_count" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 115
-Warning (10230): Verilog HDL assignment warning at SPI_Master.v(151): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 151
-Warning (10034): Output port "spi_miso_data_cc_output" at SPI_Master.v(28) has no driver File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 28
-Warning (10034): Output port "spi_transaction_count" at SPI_Master.v(30) has no driver File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 30
-Warning (10034): Output port "index_visualized" at SPI_Master.v(32) has no driver File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 32
-Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 134
-Info (12128): Elaborating entity "clock_synthesizer_toggle" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 143
-Warning (10036): Verilog HDL or VHDL warning at clock_synthesizer_toggle.v(33): object "toggle" assigned a value but never read File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v Line: 33
-Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(50): truncated value with size 32 to match size of target (8) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v Line: 50
-Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(68): truncated value with size 32 to match size of target (1) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v Line: 68
-Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(69): truncated value with size 32 to match size of target (1) File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/clock_synthesizer_toggle.v Line: 69
-Info (12128): Elaborating entity "heartbeat" for hierarchy "heartbeat:heartbeat_uut" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 102
-Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "clock_synthesizer:clock_synthesizer_uut_0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 117
+Info (12128): Elaborating entity "SPI_Master" for hierarchy "SPI_Master:SPI_Master_uut" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 90
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(48): object "SPI_SCLK_Temp" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 48
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(108): object "delay_counter_transition_logic" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 108
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(110): object "adc_read" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 110
+Warning (10036): Verilog HDL or VHDL warning at SPI_Master.v(115): object "spi_mosi_bit_count" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 115
+Warning (10230): Verilog HDL assignment warning at SPI_Master.v(152): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 152
+Warning (10034): Output port "spi_miso_data_cc_output" at SPI_Master.v(28) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 28
+Warning (10034): Output port "spi_transaction_count" at SPI_Master.v(30) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 30
+Warning (10034): Output port "index_visualized" at SPI_Master.v(32) has no driver File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 32
+Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer:uut0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 134
+Info (12128): Elaborating entity "clock_synthesizer_toggle" for hierarchy "SPI_Master:SPI_Master_uut|clock_synthesizer_toggle:uut1" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 144
+Warning (10036): Verilog HDL or VHDL warning at clock_synthesizer_toggle.v(34): object "toggle" assigned a value but never read File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v Line: 34
+Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(61): truncated value with size 32 to match size of target (8) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v Line: 61
+Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v Line: 79
+Warning (10230): Verilog HDL assignment warning at clock_synthesizer_toggle.v(80): truncated value with size 32 to match size of target (1) File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/clock_synthesizer_toggle.v Line: 80
+Info (12128): Elaborating entity "heartbeat" for hierarchy "heartbeat:heartbeat_uut" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 102
+Info (12128): Elaborating entity "clock_synthesizer" for hierarchy "clock_synthesizer:clock_synthesizer_uut_0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 117
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7b24.tdf
-    Info (12023): Found entity 1: altsyncram_7b24 File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/altsyncram_7b24.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_7b24 File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/altsyncram_7b24.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_msc.tdf
-    Info (12023): Found entity 1: mux_msc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/mux_msc.tdf Line: 23
+    Info (12023): Found entity 1: mux_msc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/mux_msc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_6vf.tdf
-    Info (12023): Found entity 1: decode_6vf File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/decode_6vf.tdf Line: 23
+    Info (12023): Found entity 1: decode_6vf File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/decode_6vf.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_hgi.tdf
-    Info (12023): Found entity 1: cntr_hgi File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_hgi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_hgi File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_hgi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_mgc.tdf
-    Info (12023): Found entity 1: cmpr_mgc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_mgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_mgc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_mgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_f9j.tdf
-    Info (12023): Found entity 1: cntr_f9j File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_f9j.tdf Line: 26
+    Info (12023): Found entity 1: cntr_f9j File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_f9j.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_9gi.tdf
-    Info (12023): Found entity 1: cntr_9gi File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_9gi.tdf Line: 28
+    Info (12023): Found entity 1: cntr_9gi File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_9gi.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_kgc.tdf
-    Info (12023): Found entity 1: cmpr_kgc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_kgc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_kgc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_kgc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r2j.tdf
-    Info (12023): Found entity 1: cntr_r2j File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cntr_r2j.tdf Line: 28
+    Info (12023): Found entity 1: cntr_r2j File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cntr_r2j.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ggc.tdf
-    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/cmpr_ggc.tdf Line: 23
+    Info (12023): Found entity 1: cmpr_ggc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/cmpr_ggc.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.17.00:29:04 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.17.09:09:10 Progress: Loading slda5d34450/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1027,90 +1027,90 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/ip/slda5d34450/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SPI_Master:SPI_Master_uut|Mod0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 151
-Info (12130): Elaborated megafunction instantiation "SPI_Master:SPI_Master_uut|lpm_divide:Mod0" File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 151
-Info (12133): Instantiated megafunction "SPI_Master:SPI_Master_uut|lpm_divide:Mod0" with the following parameter: File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/SPI_Master.v Line: 151
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "SPI_Master:SPI_Master_uut|Mod0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 152
+Info (12130): Elaborated megafunction instantiation "SPI_Master:SPI_Master_uut|lpm_divide:Mod0" File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 152
+Info (12133): Instantiated megafunction "SPI_Master:SPI_Master_uut|lpm_divide:Mod0" with the following parameter: File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/SPI_Master.v Line: 152
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i9m.tdf
-    Info (12023): Found entity 1: lpm_divide_i9m File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/lpm_divide_i9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_i9m File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/lpm_divide_i9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_94f.tdf
-    Info (12023): Found entity 1: alt_u_div_94f File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/alt_u_div_94f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_94f File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/alt_u_div_94f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_0pc.tdf
-    Info (12023): Found entity 1: add_sub_0pc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/add_sub_0pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_0pc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/add_sub_0pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1pc.tdf
-    Info (12023): Found entity 1: add_sub_1pc File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/db/add_sub_1pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_1pc File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/db/add_sub_1pc.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "state_tracker_output[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "state_tracker_output[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 37
-    Warning (13410): Pin "spi_miso_data_cc_output[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_miso_data_cc_output[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 40
-    Warning (13410): Pin "spi_mosi_byte_count_output[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_mosi_byte_count_output[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 41
-    Warning (13410): Pin "spi_transaction_count[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "spi_transaction_count[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 42
-    Warning (13410): Pin "adc_init_state[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "adc_init_state[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 43
-    Warning (13410): Pin "index_visualized[0]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[1]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[2]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[3]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[4]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[5]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "index_visualized[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 44
-    Warning (13410): Pin "spi_bit_count_32max[6]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 46
-    Warning (13410): Pin "spi_bit_count_32max[7]" is stuck at GND File: C:/Users/denni/Documents/-FPGA-SPI-Driver-ADS131A0X-10CL025-/ADS131A0X.v Line: 46
+    Warning (13410): Pin "state_tracker_output[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "state_tracker_output[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 37
+    Warning (13410): Pin "spi_miso_data_cc_output[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_miso_data_cc_output[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 40
+    Warning (13410): Pin "spi_mosi_byte_count_output[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_mosi_byte_count_output[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 41
+    Warning (13410): Pin "spi_transaction_count[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "spi_transaction_count[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 42
+    Warning (13410): Pin "adc_init_state[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "adc_init_state[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 43
+    Warning (13410): Pin "index_visualized[0]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[1]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[2]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[3]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[4]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[5]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "index_visualized[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 44
+    Warning (13410): Pin "spi_bit_count_32max[6]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 46
+    Warning (13410): Pin "spi_bit_count_32max[7]" is stuck at GND File: C:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/ADS131A0X.v Line: 46
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 14 registers lost all their fanouts during netlist optimizations.
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 175 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2304 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2310 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 105 output pins
-    Info (21061): Implemented 2119 logic cells
+    Info (21061): Implemented 2125 logic cells
     Info (21064): Implemented 71 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4878 megabytes
-    Info: Processing ended: Tue Jun 17 00:29:17 2025
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Peak virtual memory: 4862 megabytes
+    Info: Processing ended: Tue Jun 17 09:09:21 2025
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:17
 
 
