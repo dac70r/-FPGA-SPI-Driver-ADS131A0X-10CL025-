@@ -20,17 +20,34 @@
 /* Default generates 1 Hz clock */
 module clock_synthesizer_toggle #(parameter COUNTER_LIMIT = 24_999_999)
 (
-    input 				input_clock, 			// input clock  - 50 Mhz
+    input 				input_clock, 					// input clock  - 50 Mhz
+	 input				adc_init_completed_status,
 	 input				enable,
 	 output				clock_pol,
 	 output 				clock_pol_assist,				// output clock - 4.167Mhz
-	 output reg [7:0]	spi_bit_count 	= 8'd0
+	 output reg [8:0]	spi_bit_count 	= 9'd0
 );
 
+localparam	no_of_channels 							= 'd4;
+localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
+localparam	initial_spi_bit_count 					= 'd63;		// 0 - 63 = 64 counts
+localparam	addition_spi_bit_counts 				= 'd3;		// 1 for (leave some room) 2 for clock_pol_assist
 
+localparam	number_of_spi_bit_count_required = 	initial_spi_bit_count + addition_spi_bit_counts + 
+																(no_of_channels * no_of_spi_bit_counts_per_channel);
+			
 reg [31:0] 	counter 			= 32'b0;
 reg 			clock_state 	= 1'b0;
-reg 			toggle			= 'd1;
+reg [10:0]	n					= 'd0;
+
+// ADC INIT COMPLETED, now READ 5 sets of 32bits of DATA
+always @ (*)
+	begin
+		if(adc_init_completed_status)
+			n = number_of_spi_bit_count_required;						//66+(64*4);
+		else
+			n = initial_spi_bit_count + addition_spi_bit_counts;	//66;
+	end
 
 // 1. When Enabled, the SPI_SCLK will be generated.
 // 2. If spi_bit_counter is smaller than or equal to 63, spi_bit_counter will be incremented by 1, maximum value of spi_bit_counter thus becomes 64
@@ -44,7 +61,7 @@ begin
 			if(counter == COUNTER_LIMIT) 
 				begin 
 					counter <= 0;
-					if(spi_bit_count <= 'd63 + 'd1 + 'd2) begin // initially we put spi_bit_count <= 63 which is ngam ngam but since we need to leave some room between last bit and assertion of CS so added 1 bit
+					if(spi_bit_count <= n) begin //'d63 + 'd1 + 'd2) begin // initially we put spi_bit_count <= 63 which is ngam ngam but since we need to leave some room between last bit and assertion of CS so added 1 bit
 															// then we realized we had to accomodate 2 more spi_bit_count since miso and mosi are sequential logic
 						clock_state <= ~clock_state;
 						spi_bit_count 	<= spi_bit_count + 'd1;
@@ -65,6 +82,6 @@ begin
 		end
 end
 
-assign clock_pol 			= (spi_bit_count >'d2 && spi_bit_count <= 'd66) ? clock_state : 'd0;	// contains exactly clock cycles: 32
-assign clock_pol_assist = (spi_bit_count <= 'd66) ? clock_state : 'd0;								// contains 1 extra clock cycles: 33
+assign clock_pol 			= (spi_bit_count >'d2 && spi_bit_count <= n) ? clock_state : 'd0;	// contains exactly clock cycles: 32
+assign clock_pol_assist = (spi_bit_count <= n) ? clock_state : 'd0;								// contains 1 extra clock cycles: 33
 endmodule

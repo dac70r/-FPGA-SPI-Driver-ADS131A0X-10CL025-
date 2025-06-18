@@ -12,32 +12,32 @@ module SPI_Master
 	output 				SPI_SCLK,										// SPI SCLK
 	output 		 		SPI_RESET,										// SPI_RESET - to reset the ADC
 	input					SPI_DRDY,
-	input					trigger,											// External Trigger to Start Transactions
+	
+	//----------Debug Phase-----------
+	output  	[31:0]Channel0_Raw,
+	output  	[31:0]Channel1_Raw,
+	output  	[31:0]Channel2_Raw,
+	output  	[31:0]Channel3_Raw,
+	
+	//----------Desired Data----------
+	output reg 	[3:0] FIFO_WR_EN,
 	
 	/* Not essential signals - can be removed */
 	output				clock_4_167Mhz_debug,						// Main Clock of this Submodule
 	output				clock_8_333Mhz_debug,						// Sub Clock of this Submodule
 	
-	output 	 	[4:0] state,											// debug - tracks the presentState of SPI
-	output		[4:0] state_2,											// debug - tracks the nextState of SPI
-	output 		[31:0]spi_clock_cycles_output,					// debug - keeps track of the 
-	
-	output		[4:0]	state_tracker_output,						// deprecated
+	output 	 	[5:0] state,											// debug - tracks the presentState of SPI
+	//output		[5:0] state_2,											// debug - tracks the nextState of SPI
 	output 		[31:0]spi_miso_data_output,						// debug - keeps track of the spi_miso_data received
-	
-	output reg	[7:0] spi_miso_data_cc_output,
-	output		[3:0] spi_mosi_byte_count_output,				// debug - keeps track of the command sent
-	output reg	[7:0]	spi_transaction_count = 8'd0,
 	output 		[7:0]	adc_init_state,								// Keeps track of which state we are in at the ADC Init Phase
-	output reg  [7:0] index_visualized,
-	output 		[7:0]		spi_bit_count,								// spi_bit_count/2 = actual bits of the SPI
-	output reg	[7:0]		spi_bit_count_32max								// spi_bit_count/2 = actual bits of the SPI
+	output 		[8:0]	spi_bit_count,									// spi_bit_count/2 = actual bits of the SPI
+	output reg	[7:0]	spi_bit_count_32max,							// spi_bit_count/2 = actual bits of the SPI
+	output				signal_B_negedge				
 );
 
 wire	synthesized_clock_8_333Mhz;					// Main Clock of this Submodule	
 wire	synthesized_clock_4_167Mhz;					// Sub Clock of this Submodule		
 wire	clock_pol_assist;					
-wire	[7:0]	count_cs_tracker;							// Tracks the Clock Cycles within each SPI Transmission
 
 // Local Signals
 //wire 			SPI_SCLK_Temp; 										// Previous, used in SPI with CS Consideration
@@ -45,71 +45,79 @@ reg 			SPI_MOSI_Temp 		= 1'd0;
 reg 			SPI_CS_Temp 		= 1'd1;							
 reg			SPI_RESET_Temp		= 1'd1;
 reg 			SPI_SCLK_Temp   	= 1'b0;             		// The state of I2C_SCLK, used in State Machine Output Logic
-reg [31:0]  spi_clock_cycles  = 32'd0;             	// Register for keeping track of number of Clock Cycles elapsed
 reg [31:0]  spi_miso_data 		= 32'd0;
 
 /* SPI State Definition */
 // Define state encoding using localparams
-localparam RESET        						= 5'd0;
-localparam IDLE        							= 5'd1;
-localparam ADC_RESET			       			= 5'd2;
-localparam ADC_RESET_COMPLETE					= 5'd3;
+localparam RESET        						= 'd0;
+localparam IDLE        							= 'd1;
+localparam ADC_RESET			       			= 'd2;
+localparam ADC_RESET_COMPLETE					= 'd3;
 
-localparam ADC_INIT_START       				= 5'd4;
-localparam ADC_INIT_START_STABLE				= 5'd5;
-localparam ADC_INIT_COMPLETE					= 5'd6;
+localparam ADC_INIT_START       				= 'd4;
+localparam ADC_INIT_START_STABLE				= 'd5;
+localparam ADC_INIT_COMPLETE					= 'd6;
 
-localparam WAIT_TRANSACTION					= 5'd7;
-localparam TRANSACTION_START					= 5'd8;
-localparam TRANSACTION_START_STABLE			= 5'd9;
-localparam TRANSACTION_COMPLETE				= 5'd10;
+localparam WAIT_TRANSACTION					= 'd7;
+localparam TRANSACTION_START					= 'd8;
+localparam TRANSACTION_START_STABLE			= 'd9;
+localparam TRANSACTION_COMPLETE				= 'd10;
 
-localparam ADC_INIT_START_0655					= 5'd11;
-localparam ADC_INIT_START_STABLE_0655			= 5'd12;
-localparam ADC_INIT_COMPLETE_0655				= 5'd13;
+localparam ADC_INIT_START_0655					= 'd11;
+localparam ADC_INIT_START_STABLE_0655			= 'd12;
+localparam ADC_INIT_COMPLETE_0655				= 'd13;
 
-localparam ADC_INIT_START_0555					= 5'd14;
-localparam ADC_INIT_START_STABLE_0555			= 5'd15;
-localparam ADC_INIT_COMPLETE_0555				= 5'd16;
+localparam ADC_INIT_START_0555					= 'd14;
+localparam ADC_INIT_START_STABLE_0555			= 'd15;
+localparam ADC_INIT_COMPLETE_0555				= 'd16;
 
-localparam ADC_INIT_START_0033					= 5'd17;
-localparam ADC_INIT_START_STABLE_0033			= 5'd18;
-localparam ADC_INIT_COMPLETE_0033				= 5'd19;
+localparam ADC_INIT_START_0033					= 'd17;
+localparam ADC_INIT_START_STABLE_0033			= 'd18;
+localparam ADC_INIT_COMPLETE_0033				= 'd19;
 
-localparam ADC_INIT_START_4B68					= 5'd20;
-localparam ADC_INIT_START_STABLE_4B68			= 5'd21;
-localparam ADC_INIT_COMPLETE_4B68				= 5'd22;
+localparam ADC_INIT_START_4B68					= 'd20;
+localparam ADC_INIT_START_STABLE_4B68			= 'd21;
+localparam ADC_INIT_COMPLETE_4B68				= 'd22;
 
-localparam ADC_INIT_START_4F0F					= 5'd23;
-localparam ADC_INIT_START_STABLE_4F0F			= 5'd24;
-localparam ADC_INIT_COMPLETE_4F0F				= 5'd25;
+localparam ADC_INIT_START_4F0F					= 'd23;
+localparam ADC_INIT_START_STABLE_4F0F			= 'd24;
+localparam ADC_INIT_COMPLETE_4F0F				= 'd25;
+
+localparam ADC_INIT_START_4C3E					= 'd26;
+localparam ADC_INIT_START_STABLE_4C3E			= 'd27;
+localparam ADC_INIT_COMPLETE_4C3E				= 'd28;
+
+localparam ADC_INIT_START_4D02					= 'd29;
+localparam ADC_INIT_START_STABLE_4D02			= 'd30;
+localparam ADC_INIT_COMPLETE_4D02				= 'd31;
+
+localparam ADC_INIT_START_4E25					= 'd32;
+localparam ADC_INIT_START_STABLE_4E25			= 'd33;
+localparam ADC_INIT_COMPLETE_4E25				= 'd34;
 
 // Current and Next States 
-reg [4:0] presentState					 		= 5'd0;
-reg [4:0] nextState	 							= 5'd0;
+reg [5:0] presentState					 		= 'd0;
+reg [5:0] nextState	 							= 'd0;
 
 // Local Registers and Counters
-wire				SPI_SCLK_internal_use;
-reg	[4:0]		state_tracker							= 5'd0;
 reg	[31:0] 	adc_reset_count						= 8'd0;		// Counter for ADC Reset (Single Use)	
-reg	[31:0]	delay_counter_transition_logic	= 32'd0;		// Counter for tracking 50ns delay in Setting Up ADC
 reg	[7:0]		adc_init_state_i						= 8'd0;		// Keeps track of which state we are in at the ADC Init Phase
-reg				adc_read									= 'd0;
+reg 				adc_init_completed 					= 'd0;
 reg 				spi_sclk_enable 						= 'd0;
-
-/* SPI MOSI Handler Signals */
-reg [7:0]	spi_mosi_bit_count 	= 'd0;
-reg [3:0]	spi_mosi_byte_count	= 'd0;
 
 /* Hard Coded Messages */
 localparam [31:0]		ADC_READY_0000		= 32'h0000_0000;
 localparam [31:0]		ADC_UNLOCK_0655	= 32'h0655_0000;
 localparam [31:0]		ADC_WAKEUP_0033	= 32'h0033_0000;	
 localparam [31:0]		ADC_LOCKED_0555	= 32'h0555_0000;
-localparam [31:0]		ADC_SETTING_4B68 	=  32'h4B68_0000;
-localparam [31:0]		ADC_SETTING_4F0F  =  32'h4F0F_0000;
-//localparam [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
-//localparam [31:0]		ADC_ENABLE_ALL_4F0F =  32'h4F0F_0000;
+localparam [31:0]		ADC_SETTING_4B68 	= 32'h4B68_0000;
+localparam [31:0]		ADC_SETTING_4F0F  = 32'h4F0F_0000;
+localparam [31:0]		ADC_SETTING_4C3E 	= 32'h4C3E_0000;
+localparam [31:0]		ADC_SETTING_4D02 	= 32'h4D02_0000;
+localparam [31:0]		ADC_SETTING_4E25 	= 32'h4E25_0000;
+
+localparam	no_of_channels 							= 'd4;
+localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
 
 clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 (
@@ -120,6 +128,7 @@ clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 clock_synthesizer_toggle #(.COUNTER_LIMIT(6)) uut1
 (
     .input_clock(system_clock),					 			// input clock  - 50 Mhz
+	 .adc_init_completed_status(adc_init_completed),
 	 .enable(spi_sclk_enable),
 	 .clock_pol(synthesized_clock_4_167Mhz),				// output clock - 4.167Mhz 
 	 .clock_pol_assist(clock_pol_assist),
@@ -129,24 +138,40 @@ clock_synthesizer_toggle #(.COUNTER_LIMIT(6)) uut1
 // SPI_MOSI (For now: ADC Init - CPOL = 0, CPHA = 1)
 always @ (posedge clock_pol_assist) // SPI_SCLK_Temp)
 begin
-	if(spi_bit_count == 0)
-		spi_bit_count_32max <= 'd1;
-	else if (spi_bit_count <66)
-		spi_bit_count_32max <= (spi_bit_count_32max + 'd1) % 33;
-	else
-		spi_bit_count_32max <= 'd0;
-	
-	if(spi_bit_count >2) begin
-		case(adc_init_state_i)
-				0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
-				1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_bit_count_32max];
-				2: SPI_MOSI_Temp 		<= ADC_SETTING_4B68		['d32 - spi_bit_count_32max];
-				3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
-				4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_bit_count_32max];
-				5: SPI_MOSI_Temp 		<= ADC_SETTING_4F0F		['d32 - spi_bit_count_32max];
-				default:
-					SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
-		endcase
+	//--------------------------adc_init_not_yet_complete---------------------------------
+	if(adc_init_completed == 0) begin
+		if(spi_bit_count == 0)
+			spi_bit_count_32max <= 'd1;
+		else if (spi_bit_count <66)
+			spi_bit_count_32max <= (spi_bit_count_32max + 'd1) % 33;
+		else
+			spi_bit_count_32max <= 'd0;
+		
+		if(spi_bit_count >2) begin
+			case(adc_init_state_i)
+					0: SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
+					1: SPI_MOSI_Temp 		<= ADC_UNLOCK_0655		['d32 - spi_bit_count_32max];
+					2: SPI_MOSI_Temp 		<= ADC_SETTING_4B68		['d32 - spi_bit_count_32max];
+					3:	SPI_MOSI_Temp 		<= ADC_WAKEUP_0033		['d32 - spi_bit_count_32max]; 
+					4: SPI_MOSI_Temp 		<= ADC_LOCKED_0555		['d32 - spi_bit_count_32max];
+					5: SPI_MOSI_Temp 		<= ADC_SETTING_4F0F		['d32 - spi_bit_count_32max];
+					6: SPI_MOSI_Temp 		<= ADC_SETTING_4C3E		['d32 - spi_bit_count_32max];
+					7: SPI_MOSI_Temp 		<= ADC_SETTING_4D02		['d32 - spi_bit_count_32max];
+					8: SPI_MOSI_Temp 		<= ADC_SETTING_4E25		['d32 - spi_bit_count_32max];
+					default:
+						SPI_MOSI_Temp 		<= ADC_READY_0000			['d32 - spi_bit_count_32max];
+			endcase
+		end
+	end
+	//--------------------------adc_init_completed----------------------------------------
+	else begin
+		SPI_MOSI_Temp 		<= 'd0;	// Always outputing 0 during read
+		if(spi_bit_count == 0)
+			spi_bit_count_32max <= 'd1;
+		else if (spi_bit_count <66 + 64*4)
+			spi_bit_count_32max <= spi_bit_count_32max + 'd1;
+		else
+			spi_bit_count_32max <= 'd0;
 	end
 end
 
@@ -159,27 +184,79 @@ begin
 	|| presentState == ADC_INIT_START_STABLE_0033
 	|| presentState == ADC_INIT_START_STABLE_4B68
 	|| presentState == ADC_INIT_START_STABLE_4F0F
+	|| presentState == ADC_INIT_START_STABLE_4C3E
+	|| presentState == ADC_INIT_START_STABLE_4D02
+	|| presentState == ADC_INIT_START_STABLE_4E25
 	|| presentState == TRANSACTION_START_STABLE))
 	begin
-		if(spi_bit_count_32max == 0)
-			spi_miso_data[0] <= SPI_MISO;
-		else
-			spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+	//--------------------------adc_init_completed--------------------------------
+		if(adc_init_completed==1)
+			begin
+				if(spi_bit_count_32max >= 2 && spi_bit_count_32max <= 33)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else	
+							spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 34 && spi_bit_count_32max <= 65)
+					begin
+						if(spi_bit_count_32max == 0) begin 
+							spi_miso_data[0] <= SPI_MISO; end
+						else begin
+							spi_miso_data['d33 - (spi_bit_count_32max-32*1)] <= SPI_MISO; end
+					end
+				else if(spi_bit_count_32max >= 66 && spi_bit_count_32max <= 97)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*2)] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 98 && spi_bit_count_32max <= 129)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*3)] <= SPI_MISO;
+					end
+				else if(spi_bit_count_32max >= 130 && spi_bit_count_32max <= 161)
+					begin
+						if(spi_bit_count_32max == 0)
+							spi_miso_data[0] <= SPI_MISO;
+						else
+							spi_miso_data['d33 - (spi_bit_count_32max-32*4)] <= SPI_MISO;
+					end
+				else
+					begin 
+						//TODO: ERROR 
+					end
+			end
+	//--------------------------!adc_init_completed-------------------------------
+		else begin
+			if(spi_bit_count_32max == 0)
+				spi_miso_data[0] <= SPI_MISO;
+			else
+				spi_miso_data['d33 - spi_bit_count_32max] <= SPI_MISO;
+		end
 	end
 end
 
 // Interrupt Service Routine ISR for SPI_DRDY
-always @ (negedge SPI_DRDY)
+reg [1:0] signal_B_sync;
+//wire signal_B_negedge;
+
+always @ (posedge synthesized_clock_8_333Mhz)
 begin
-	if(presentState == WAIT_TRANSACTION)
-		begin
-			adc_read	<= 'd1;
-		end
-	else
-		begin
-			adc_read <= 'd0;
-		end
+	if(adc_init_completed == 1)
+	begin
+		signal_B_sync[0]	<= SPI_DRDY;
+		signal_B_sync[1]	<= signal_B_sync[0];
+	end
 end
+
+assign	signal_B_negedge = (signal_B_sync[1] == 'd1 && signal_B_sync[0] == 'd0);
+
 // State Machine Next State Logic 
 always @ (posedge synthesized_clock_8_333Mhz)
 begin
@@ -198,11 +275,13 @@ begin
         RESET: begin
 					SPI_CS_Temp			<= 'd1;
 					spi_sclk_enable	<= 'd0;
+					adc_init_completed<= 'd0;
 				end
         IDLE: begin
 					SPI_CS_Temp			<= 'd1; 
 					spi_sclk_enable	<= 'd0;
 					adc_reset_count	<= 'd0;					// reset the ADC Reset Counter
+					adc_init_completed<= 'd0;
 				end
 		  ADC_RESET: begin
 					SPI_CS_Temp			<= 'd1; 
@@ -271,7 +350,7 @@ begin
 					SPI_CS_Temp 		<= 'd1; 
 					spi_sclk_enable	<= 'd0;
 				end
-				
+	//-------------------------------------			
 		  ADC_INIT_START_4B68: begin 
 					SPI_CS_Temp			<= 'd0;
 				spi_sclk_enable		<= 'd0;	
@@ -285,7 +364,49 @@ begin
 					SPI_CS_Temp 		<= 'd1; 
 					spi_sclk_enable	<= 'd0;
 				end
-				
+	//-------------------------------------
+		  ADC_INIT_START_4C3E: begin 
+					SPI_CS_Temp			<= 'd0;
+				spi_sclk_enable		<= 'd0;	
+					adc_init_state_i 	<= 'd6;
+				end
+		  ADC_INIT_START_STABLE_4C3E: begin
+					SPI_CS_Temp			<= SPI_CS_Temp; 
+					spi_sclk_enable	<= 'd1;
+				end
+		  ADC_INIT_COMPLETE_4C3E: begin
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
+				end
+	//-------------------------------------
+		  ADC_INIT_START_4D02: begin 
+					SPI_CS_Temp			<= 'd0;
+				spi_sclk_enable		<= 'd0;	
+					adc_init_state_i 	<= 'd7;
+				end
+		  ADC_INIT_START_STABLE_4D02: begin
+					SPI_CS_Temp			<= SPI_CS_Temp; 
+					spi_sclk_enable	<= 'd1;
+				end
+		  ADC_INIT_COMPLETE_4D02: begin
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
+				end
+	//-------------------------------------
+		  ADC_INIT_START_4E25: begin 
+					SPI_CS_Temp			<= 'd0;
+				spi_sclk_enable		<= 'd0;	
+					adc_init_state_i 	<= 'd8;
+				end
+		  ADC_INIT_START_STABLE_4E25: begin
+					SPI_CS_Temp			<= SPI_CS_Temp; 
+					spi_sclk_enable	<= 'd1;
+				end
+		  ADC_INIT_COMPLETE_4E25: begin
+					SPI_CS_Temp 		<= 'd1; 
+					spi_sclk_enable	<= 'd0;
+				end
+	//--------------------------------------			
 		 ADC_INIT_START_4F0F: begin 
 					SPI_CS_Temp			<= 'd0;
 				spi_sclk_enable		<= 'd0;	
@@ -302,6 +423,7 @@ begin
 				
 		  WAIT_TRANSACTION: begin 
 					SPI_CS_Temp 		<= 'd1; 
+					adc_init_completed<= 'd1;
 				end
 		  TRANSACTION_START: begin 
 					SPI_CS_Temp			<= 'd1; 
@@ -310,7 +432,7 @@ begin
 		  TRANSACTION_START_STABLE: begin
 					//SPI_CS_Temp			<= SPI_CS_Temp;
 					adc_init_state_i 	<= 'd0;	
-					if(SPI_DRDY == 0) 
+					if(adc_init_completed == 1 && signal_B_negedge == 1) 
 						begin
 							SPI_CS_Temp			<= 'd0;
 							spi_sclk_enable	<= 'd1;
@@ -335,10 +457,7 @@ begin
         RESET:
             nextState = IDLE;
         IDLE:
-				//if(trigger == 1)
-					nextState = ADC_RESET;
-				/*else
-					nextState = IDLE;*/
+				nextState = ADC_RESET;
 		  ADC_RESET:
 				begin
 					if(adc_reset_count == 'd41_665)
@@ -404,9 +523,63 @@ begin
 				end
 		  ADC_INIT_COMPLETE_4B68: begin
 					if(spi_miso_data == 32'h2B68_0000)
-						begin nextState = ADC_INIT_START_4F0F; end
+						begin nextState = ADC_INIT_START_4C3E; end
 					else
 						nextState = ADC_INIT_START_4B68;
+				end
+		//----------------------------------------------------------		
+		  ADC_INIT_START_4C3E:
+				nextState = ADC_INIT_START_STABLE_4C3E;
+		  ADC_INIT_START_STABLE_4C3E:
+				begin
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						begin
+							nextState = ADC_INIT_COMPLETE_4C3E; 
+						end
+					else
+						nextState = ADC_INIT_START_STABLE_4C3E;
+				end
+		  ADC_INIT_COMPLETE_4C3E: begin
+					if(spi_miso_data == 32'h2C3E_0000)
+						begin nextState = ADC_INIT_START_4D02; end
+					else
+						nextState = ADC_INIT_START_4C3E;
+				end
+		//----------------------------------------------------------		
+		  ADC_INIT_START_4D02:
+				nextState = ADC_INIT_START_STABLE_4D02;
+		  ADC_INIT_START_STABLE_4D02:
+				begin
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						begin
+							nextState = ADC_INIT_COMPLETE_4D02; 
+						end
+					else
+						nextState = ADC_INIT_START_STABLE_4D02;
+				end
+		  ADC_INIT_COMPLETE_4D02: begin
+					if(spi_miso_data == 32'h2D02_0000)
+						begin nextState = ADC_INIT_START_4E25; end
+					else
+						nextState = ADC_INIT_START_4D02;
+				end
+		//----------------------------------------------------------		
+		  ADC_INIT_START_4E25:
+				nextState = ADC_INIT_START_STABLE_4E25;
+		  ADC_INIT_START_STABLE_4E25:
+				begin
+					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+						begin
+							nextState = ADC_INIT_COMPLETE_4E25; 
+						end
+					else
+						nextState = ADC_INIT_START_STABLE_4E25;
+				end
+		  ADC_INIT_COMPLETE_4E25: begin
+					if(spi_miso_data == 32'h2E25_0000)
+						begin nextState = ADC_INIT_START_4F0F; end
+					else
+						nextState = ADC_INIT_START_4E25;
 				end
 		//----------------------------------------------------------		
 		  ADC_INIT_START_4F0F:
@@ -458,7 +631,7 @@ begin
 				end
 		  ADC_INIT_COMPLETE_0555: begin
 					if(spi_miso_data == 32'h0555_0000)
-						begin nextState = WAIT_TRANSACTION; end
+						begin nextState = WAIT_TRANSACTION; end//IDLE; end  // for testing
 					else
 						nextState = ADC_INIT_START_0555;
 				end
@@ -469,18 +642,51 @@ begin
 				nextState = TRANSACTION_START_STABLE;
 		  TRANSACTION_START_STABLE: 
 				begin
-					if (spi_bit_count == 'd67) // initially was 65, now we add 2 more 
+					if (spi_bit_count == 'd67+no_of_spi_bit_counts_per_channel*no_of_channels) // initially was 65, now we add 2 more 
 						nextState = TRANSACTION_COMPLETE; 
 					else
 						nextState = TRANSACTION_START_STABLE;
 				end
 		  TRANSACTION_COMPLETE: 
-				nextState = IDLE; 
+				nextState = WAIT_TRANSACTION; 
 		 //-------------------------------------------------------------
 		  default:
 				nextState = RESET;
     endcase
 end
+
+// Extracting SPI_MISO_DATA for Channel 0~3
+/* ADC Raw Values */
+reg [31:0]		Channel0_Raw_local					= 32'd0;
+reg [31:0]		Channel1_Raw_local					= 32'd0;
+reg [31:0]		Channel2_Raw_local					= 32'd0;
+reg [31:0]		Channel3_Raw_local					= 32'd0;
+
+always @ (*)
+begin
+	if(adc_init_completed) begin
+
+		case(spi_bit_count_32max)
+			64:	begin Channel0_Raw_local = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
+			97:	begin Channel1_Raw_local = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
+			129:	begin Channel2_Raw_local = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
+			161:	begin Channel3_Raw_local = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
+			default: begin
+							Channel0_Raw_local = 'd0; Channel1_Raw_local = 'd0;
+							Channel2_Raw_local = 'd0; Channel3_Raw_local = 'd0; FIFO_WR_EN = 4'b0; end
+		endcase
+	end
+	else begin
+		Channel0_Raw_local = 'd0; Channel1_Raw_local = 'd0;
+		Channel2_Raw_local = 'd0; Channel3_Raw_local = 'd0;	FIFO_WR_EN = 4'b0;
+	end
+end
+
+	// ADC Values After Processing
+	assign Channel0_Raw					=  (Channel0_Raw_local[31] == 'd0) ? (Channel0_Raw_local >> 8) : {8'hFF, Channel0_Raw_local[31:8]};
+	assign Channel1_Raw					=  (Channel1_Raw_local[31] == 'd0) ? (Channel1_Raw_local >> 8) : {8'hFF, Channel1_Raw_local[31:8]}; // Channel1_Raw_local >> 8; // 
+	assign Channel2_Raw					=  (Channel2_Raw_local[31] == 'd0) ? (Channel2_Raw_local >> 8) : {8'hFF, Channel2_Raw_local[31:8]}; // Channel2_Raw_local >> 8; // 
+	assign Channel3_Raw					=  (Channel3_Raw_local[31] == 'd0) ? (Channel3_Raw_local >> 8) : {8'hFF, Channel3_Raw_local[31:8]}; // Channel3_Raw_local >> 8; //
 
 	// Core Signals 
 	assign SPI_SCLK						= synthesized_clock_4_167Mhz; //SPI_SCLK_Temp;
@@ -493,13 +699,10 @@ end
 	assign clock_8_333Mhz_debug		= synthesized_clock_8_333Mhz;
 	
 	assign state 							= presentState;
-	assign state_2							= nextState;
-	assign spi_clock_cycles_output 	= spi_clock_cycles;
-	assign state_tracker_output 		= state_tracker;
 	assign spi_miso_data_output		= spi_miso_data;
 	assign adc_init_state 				= adc_init_state_i;
-	
-	assign spi_mosi_byte_count_output= spi_mosi_byte_count;
+
+	//assign state_2							= nextState;
 endmodule 
 
 
