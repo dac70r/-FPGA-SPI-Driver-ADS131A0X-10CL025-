@@ -21,12 +21,11 @@ module ADS131A0X(
 		output 				SPI_MOSI,				// SPI MOSI
 		input 				SPI_MISO,				// SPI MISO
 		input					SPI_DRDY,				// SPI DRDY
-		
-		output [31:0]		Channel0_Raw,
+	
 		output [3:0] 		FIFO_WR_EN,
 		output [3:0]		FIFO_RD_EN,
-		output				rdempty,
-		output				wrfull,
+		output [3:0]		rdempty,
+		output [3:0]		wrfull,
 
 		/* Debugging purposes */
 		// for debugging this module use only, do not include when integrating with main design
@@ -41,6 +40,15 @@ module ADS131A0X(
 		output [7:0]		spi_bit_count_32max,
 		output				signal_B_negedge
 );
+wire [31:0]		Channel0_Raw;
+wire [31:0]		Channel1_Raw;
+wire [31:0]		Channel2_Raw;
+wire [31:0]		Channel3_Raw;
+
+wire [31:0] Channel0_Raw_Read;
+wire [31:0] Channel1_Raw_Read;
+wire [31:0] Channel2_Raw_Read;
+wire [31:0] Channel3_Raw_Read;
 
 /* SPI_Master Instance */
 SPI_Master SPI_Master_uut
@@ -55,6 +63,9 @@ SPI_Master SPI_Master_uut
 	.SPI_DRDY(SPI_DRDY),
 	
 	.Channel0_Raw(Channel0_Raw),
+	.Channel1_Raw(Channel1_Raw),
+	.Channel2_Raw(Channel2_Raw),
+	.Channel3_Raw(Channel3_Raw),
 	.FIFO_WR_EN(FIFO_WR_EN),
 	
 	// Non crucial Signals (for simulation and debugging)
@@ -77,8 +88,8 @@ heartbeat heartbeat_uut
 	 .clock_pol(heartbeat)									// output clock to led0 @ 1Mhz
 );
 
-
-my_fifo my_fifo_uut(
+// FIFO Chn0
+my_fifo my_fifo_uut0(
 	.aclr(!reset_n),
 	.data(Channel0_Raw),
 	
@@ -88,9 +99,57 @@ my_fifo my_fifo_uut(
 	.wrclk(synthesized_clock_4_167Mhz),
 	.wrreq(FIFO_WR_EN[0]),
 	
-	.q(q),
-	.rdempty(rdempty),
-	.wrfull(wrfull)
+	.q(Channel0_Raw_Read),
+	.rdempty(rdempty[0]),
+	.wrfull(wrfull[0])
+);
+
+// FIFO Chn1
+my_fifo my_fifo_uut1(
+	.aclr(!reset_n),
+	.data(Channel1_Raw),
+	
+	.rdclk(synthesized_clock_12_5Mhz),
+	.rdreq(FIFO_RD_EN[0]),
+	
+	.wrclk(synthesized_clock_4_167Mhz),
+	.wrreq(FIFO_WR_EN[1]),
+	
+	.q(Channel1_Raw_Read),
+	.rdempty(rdempty[1]),
+	.wrfull(wrfull[1])
+);
+
+// FIFO Chn2
+my_fifo my_fifo_uut2(
+	.aclr(!reset_n),
+	.data(Channel2_Raw),
+	
+	.rdclk(synthesized_clock_12_5Mhz),
+	.rdreq(FIFO_RD_EN[0]),
+	
+	.wrclk(synthesized_clock_4_167Mhz),
+	.wrreq(FIFO_WR_EN[2]),
+	
+	.q(Channel2_Raw_Read),
+	.rdempty(rdempty[2]),
+	.wrfull(wrfull[2])
+);
+
+// FIFO Chn3
+my_fifo my_fifo_uut3(
+	.aclr(!reset_n),
+	.data(Channel3_Raw),
+	
+	.rdclk(synthesized_clock_12_5Mhz),
+	.rdreq(FIFO_RD_EN[0]),
+	
+	.wrclk(synthesized_clock_4_167Mhz),
+	.wrreq(FIFO_WR_EN[3]),
+	
+	.q(Channel3_Raw_Read),
+	.rdempty(rdempty[3]),
+	.wrfull(wrfull[3])
 );
 
 wire synthesized_clock_4_167Mhz;
@@ -101,6 +160,11 @@ clock_synthesizer #(.COUNTER_LIMIT(6)) my_fifo_clk_write
 	.input_clock(system_clock), 							// input clock  - 50 Mhz
 	.clock_pol(synthesized_clock_4_167Mhz)					// output clock - 4.167Mhz
 );
+
+//---------------------FIFO Read Clock---------------------------------------------//
+// For testing purposes: In real scenario, NIOS will provide clock to read this from FIFO
+// Note: 
+//			1. All four channels are driven by the same "rdreq signal"
 
 clock_synthesizer #(.COUNTER_LIMIT(7)) my_fifo_clk_read
 (

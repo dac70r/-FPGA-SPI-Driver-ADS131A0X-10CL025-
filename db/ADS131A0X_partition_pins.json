@@ -24,134 +24,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "Channel0_Raw[0]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[6]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[7]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[8]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[9]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[10]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[12]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[13]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[14]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[15]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[16]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[17]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[18]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[19]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[20]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[21]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[22]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[23]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[24]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[25]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[26]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[27]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[28]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[29]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[30]",
-					"strict" : false
-				},
-				{
-					"name" : "Channel0_Raw[31]",
-					"strict" : false
-				},
-				{
 					"name" : "FIFO_WR_EN[0]",
 					"strict" : false
 				},
@@ -172,11 +44,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "rdempty",
+					"name" : "rdempty[0]",
 					"strict" : false
 				},
 				{
-					"name" : "wrfull",
+					"name" : "rdempty[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rdempty[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rdempty[3]",
+					"strict" : false
+				},
+				{
+					"name" : "wrfull[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wrfull[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wrfull[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wrfull[3]",
 					"strict" : false
 				},
 				{
