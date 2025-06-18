@@ -683,10 +683,10 @@ begin
 end
 
 	// ADC Values After Processing
-	assign Channel0_Raw					= {8'b0, Channel0_Raw_local>>8};	// Channel0_Raw_local
-	assign Channel1_Raw					= Channel1_Raw_local >> 8;
-	assign Channel2_Raw					= Channel2_Raw_local >> 8;
-	assign Channel3_Raw					= Channel3_Raw_local >> 8;
+	assign Channel0_Raw					=  (Channel0_Raw_local[31] == 'd0) ? (Channel0_Raw_local >> 8) : {8'hFF, Channel0_Raw_local[31:8]};
+	assign Channel1_Raw					=  (Channel1_Raw_local[31] == 'd0) ? (Channel1_Raw_local >> 8) : {8'hFF, Channel1_Raw_local[31:8]}; // Channel1_Raw_local >> 8; // 
+	assign Channel2_Raw					=  (Channel2_Raw_local[31] == 'd0) ? (Channel2_Raw_local >> 8) : {8'hFF, Channel2_Raw_local[31:8]}; // Channel2_Raw_local >> 8; // 
+	assign Channel3_Raw					=  (Channel3_Raw_local[31] == 'd0) ? (Channel3_Raw_local >> 8) : {8'hFF, Channel3_Raw_local[31:8]}; // Channel3_Raw_local >> 8; //
 
 	// Core Signals 
 	assign SPI_SCLK						= synthesized_clock_4_167Mhz; //SPI_SCLK_Temp;
