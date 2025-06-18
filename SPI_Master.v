@@ -14,10 +14,10 @@ module SPI_Master
 	input					SPI_DRDY,
 	
 	//----------Debug Phase-----------
-	output reg 	[31:0]Channel0_Raw,
-	output reg 	[31:0]Channel1_Raw,
-	output reg 	[31:0]Channel2_Raw,
-	output reg 	[31:0]Channel3_Raw,
+	output  	[31:0]Channel0_Raw,
+	output  	[31:0]Channel1_Raw,
+	output  	[31:0]Channel2_Raw,
+	output  	[31:0]Channel3_Raw,
 	
 	//----------Desired Data----------
 	output reg 	[3:0] FIFO_WR_EN,
@@ -46,7 +46,6 @@ reg 			SPI_CS_Temp 		= 1'd1;
 reg			SPI_RESET_Temp		= 1'd1;
 reg 			SPI_SCLK_Temp   	= 1'b0;             		// The state of I2C_SCLK, used in State Machine Output Logic
 reg [31:0]  spi_miso_data 		= 32'd0;
-reg [31:0]	Channel0_Raw_local= 32'd0;
 
 /* SPI State Definition */
 // Define state encoding using localparams
@@ -119,9 +118,6 @@ localparam [31:0]		ADC_SETTING_4E25 	= 32'h4E25_0000;
 
 localparam	no_of_channels 							= 'd4;
 localparam	no_of_spi_bit_counts_per_channel 	= 'd64;
-
-/* ADC Raw Values */
-// reg [31:0]		Channel0_Raw							= 32'd0;
 
 clock_synthesizer #(.COUNTER_LIMIT(3)) uut0
 (
@@ -659,33 +655,38 @@ begin
     endcase
 end
 
-// Assigning Value to Channel 0	- we are only interested in data when index is at 64 
+// Extracting SPI_MISO_DATA for Channel 0~3
+/* ADC Raw Values */
+reg [31:0]		Channel0_Raw_local					= 32'd0;
+reg [31:0]		Channel1_Raw_local					= 32'd0;
+reg [31:0]		Channel2_Raw_local					= 32'd0;
+reg [31:0]		Channel3_Raw_local					= 32'd0;
+
 always @ (*)
 begin
 	if(adc_init_completed) begin
 
 		case(spi_bit_count_32max)
-			64:	begin Channel0_Raw = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
-			97:	begin Channel1_Raw = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
-			129:	begin Channel2_Raw = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
-			161:	begin Channel3_Raw = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
+			64:	begin Channel0_Raw_local = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
+			97:	begin Channel1_Raw_local = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
+			129:	begin Channel2_Raw_local = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
+			161:	begin Channel3_Raw_local = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
 			default: begin
-							Channel0_Raw = 'd0; Channel1_Raw = 'd0;
-							Channel2_Raw = 'd0; Channel3_Raw = 'd0; FIFO_WR_EN = 4'b0; end
+							Channel0_Raw_local = 'd0; Channel1_Raw_local = 'd0;
+							Channel2_Raw_local = 'd0; Channel3_Raw_local = 'd0; FIFO_WR_EN = 4'b0; end
 		endcase
-/*
-	if(spi_bit_count_32max == 64)
-		begin
-			Channel0_Raw 	= spi_miso_data; //{8'b0, spi_miso_data[31:24], spi_miso_data[23:16], spi_miso_data[15:8]};
-			FIFO_WR_EN 		= 'd1;
-		end
-	else
-		begin
-			Channel0_Raw 	= 'd0;	//Channel0_Raw;
-			FIFO_WR_EN 		= 'd0;
-		end*/
+	end
+	else begin
+		Channel0_Raw_local = 'd0; Channel1_Raw_local = 'd0;
+		Channel2_Raw_local = 'd0; Channel3_Raw_local = 'd0;	FIFO_WR_EN = 4'b0;
 	end
 end
+
+	// ADC Values After Processing
+	assign Channel0_Raw					= {8'b0, Channel0_Raw_local>>8};	// Channel0_Raw_local
+	assign Channel1_Raw					= Channel1_Raw_local >> 8;
+	assign Channel2_Raw					= Channel2_Raw_local >> 8;
+	assign Channel3_Raw					= Channel3_Raw_local >> 8;
 
 	// Core Signals 
 	assign SPI_SCLK						= synthesized_clock_4_167Mhz; //SPI_SCLK_Temp;
