@@ -13,8 +13,15 @@ module SPI_Master
 	output 		 		SPI_RESET,										// SPI_RESET - to reset the ADC
 	input					SPI_DRDY,
 	
+	//----------Debug Phase-----------
 	output reg 	[31:0]Channel0_Raw,
+	output reg 	[31:0]Channel1_Raw,
+	output reg 	[31:0]Channel2_Raw,
+	output reg 	[31:0]Channel3_Raw,
+	
+	//----------Desired Data----------
 	output reg 	[3:0] FIFO_WR_EN,
+	
 	/* Not essential signals - can be removed */
 	output				clock_4_167Mhz_debug,						// Main Clock of this Submodule
 	output				clock_8_333Mhz_debug,						// Sub Clock of this Submodule
@@ -655,16 +662,29 @@ end
 // Assigning Value to Channel 0	- we are only interested in data when index is at 64 
 always @ (*)
 begin
+	if(adc_init_completed) begin
+
+		case(spi_bit_count_32max)
+			64:	begin Channel0_Raw = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
+			97:	begin Channel1_Raw = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
+			129:	begin Channel2_Raw = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
+			161:	begin Channel3_Raw = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
+			default: begin
+							Channel0_Raw = 'd0; Channel1_Raw = 'd0;
+							Channel2_Raw = 'd0; Channel3_Raw = 'd0; FIFO_WR_EN = 4'b0; end
+		endcase
+/*
 	if(spi_bit_count_32max == 64)
 		begin
-			Channel0_Raw = spi_miso_data;
+			Channel0_Raw 	= spi_miso_data; //{8'b0, spi_miso_data[31:24], spi_miso_data[23:16], spi_miso_data[15:8]};
 			FIFO_WR_EN 		= 'd1;
 		end
 	else
 		begin
 			Channel0_Raw 	= 'd0;	//Channel0_Raw;
 			FIFO_WR_EN 		= 'd0;
-		end
+		end*/
+	end
 end
 
 	// Core Signals 

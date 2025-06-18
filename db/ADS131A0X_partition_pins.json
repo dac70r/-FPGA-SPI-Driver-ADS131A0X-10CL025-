@@ -156,6 +156,18 @@
 					"strict" : false
 				},
 				{
+					"name" : "FIFO_WR_EN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_WR_EN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_WR_EN[3]",
+					"strict" : false
+				},
+				{
 					"name" : "FIFO_RD_EN[0]",
 					"strict" : false
 				},
@@ -420,11 +432,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SPI_MISO",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{
-					"name" : "reset_n",
+					"name" : "SPI_MISO",
 					"strict" : false
 				},
 				{
