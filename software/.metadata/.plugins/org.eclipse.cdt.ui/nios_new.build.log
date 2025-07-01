@@ -1,0 +1,9 @@
+01:22:14 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+
+01:22:15 Build Finished (took 1s.64ms)
+

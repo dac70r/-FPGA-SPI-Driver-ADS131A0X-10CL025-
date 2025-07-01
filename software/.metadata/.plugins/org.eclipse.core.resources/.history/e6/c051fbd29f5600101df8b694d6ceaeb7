@@ -1,0 +1,17 @@
+#include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+
+// Function to Read Data from ADC Buffer
+void read_fifo_channel1_128bit(alt_u32 *buffer) {
+    buffer[3] = AIN_COFFECIENT_VOLTAGE * ((IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x00))>>8);
+    buffer[2] = AIN_COFFECIENT_VOLTAGE * ((IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x04))>>8);
+    buffer[1] = AIN_COFFECIENT_VOLTAGE * ((IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x08))>>8);
+    buffer[0] = AIN_COFFECIENT_VOLTAGE * ((IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x0C))>>8);
+}
+
+// DEBUG
+void debug_read_fifo_channel1_128bit(alt_u32 *buffer) {
+	printf("ADC[0]=%08f\n", buffer[0]);
+	printf("ADC[1]=%08f\n", buffer[1]);
+	printf("ADC[2]=%08f\n", buffer[2]);
+	printf("ADC[3]=%08f\n", buffer[3]);
+}

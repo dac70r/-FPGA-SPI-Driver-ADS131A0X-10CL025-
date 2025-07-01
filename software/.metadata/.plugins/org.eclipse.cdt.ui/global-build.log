@@ -1,0 +1,932 @@
+01:09:54 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: multiple definition of `ADC4_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: disabling relaxation; it will not work with multiple definitions
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: multiple definition of `ADC3_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: multiple definition of `ADC2_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: multiple definition of `ADC1_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: first defined here
+collect2.exe: error: ld returned 1 exit status
+Makefile:1015: recipe for target 'nios_new.elf' failed
+make: *** [nios_new.elf] Error 1
+01:11:45 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: multiple definition of `ADC4_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: disabling relaxation; it will not work with multiple definitions
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: multiple definition of `ADC3_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: multiple definition of `ADC2_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: multiple definition of `ADC1_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [nios_new.elf] Error 1
+Makefile:1015: recipe for target 'nios_new.elf' failed
+01:12:07 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: multiple definition of `ADC4_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: disabling relaxation; it will not work with multiple definitions
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: multiple definition of `ADC3_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: multiple definition of `ADC2_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: multiple definition of `ADC1_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:14: first defined here
+collect2.exe: error: ld returned 1 exit status
+Makefile:1015: recipe for target 'nios_new.elf' failed
+make: *** [nios_new.elf] Error 1
+01:12:17 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:12:19 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:94:37: error: 'ADC1_data' undeclared (first use in this function)
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |                                     ^~~~~~~~~
+hello_world_small.c:94:37: note: each undeclared identifier is reported only once for each function it appears in
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Makefile:726: recipe for target 'obj/default/hello_world_small.o' failed
+make: *** [obj/default/hello_world_small.o] Error 1
+01:12:20 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:12:53 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:94:37: error: 'ADC1_data' undeclared (first use in this function)
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |                                     ^~~~~~~~~
+hello_world_small.c:94:37: note: each undeclared identifier is reported only once for each function it appears in
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Makefile:726: recipe for target 'obj/default/hello_world_small.o' failed
+make: *** [obj/default/hello_world_small.o] Error 1
+01:13:01 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};/*
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 3308 Bytes program size (code + initialized data).
+Info:                36 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:13:20 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+01:14:17 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+01:14:28 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:14:29 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};/*
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 3308 Bytes program size (code + initialized data).
+Info:                36 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:14:31 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:14:47 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:14:48 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:18: multiple definition of `ADC4_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:18: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: disabling relaxation; it will not work with multiple definitions
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: multiple definition of `ADC3_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: multiple definition of `ADC2_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: multiple definition of `ADC1_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:15: first defined here
+collect2.exe: error: ld returned 1 exit status
+Makefile:1015: recipe for target 'nios_new.elf' failed
+make: *** [nios_new.elf] Error 1
+01:14:49 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:15:06 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:15:08 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:18: multiple definition of `ADC4_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:18: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: disabling relaxation; it will not work with multiple definitions
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: multiple definition of `ADC3_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:17: first defined here
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/bin/ld.exe: obj/default/peripheral/peripheral_linker.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: multiple definition of `ADC2_data'; obj/default/hello_world_small.o:C:\Users\guan-ming.dennis-won\Documents\Code\ADS131A0X_Library_10CL025\software\nios_new/peripheral/peripheral_linker.h:16: first defined here
+collect2.exe: error: ld returned 1 exit status
+Makefile:1015: recipe for target 'nios_new.elf' failed
+make: *** [nios_new.elf] Error 1
+01:15:10 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:15:31 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:15:33 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from hello_world_small.c:86:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 3308 Bytes program size (code + initialized data).
+Info:                36 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:15:36 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:17:07 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:17:11 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from hello_world_small.c:86:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:5:87: error: invalid operands to binary >> (have 'double' and 'int')
+    5 |     buffer[3] = AIN_COFFECIENT_VOLTAGE * (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x00))>>8;
+      |                                                                                       ^~
+peripheral/peripheral_linker.c:6:87: error: invalid operands to binary >> (have 'double' and 'int')
+    6 |     buffer[2] = AIN_COFFECIENT_VOLTAGE * (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x04))>>8;
+      |                                                                                       ^~
+peripheral/peripheral_linker.c:7:87: error: invalid operands to binary >> (have 'double' and 'int')
+    7 |     buffer[1] = AIN_COFFECIENT_VOLTAGE * (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x08))>>8;
+      |                                                                                       ^~
+peripheral/peripheral_linker.c:8:87: error: invalid operands to binary >> (have 'double' and 'int')
+    8 |     buffer[0] = AIN_COFFECIENT_VOLTAGE * (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x0C))>>8;
+      |                                                                                       ^~
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+make: *** [obj/default/peripheral/peripheral_linker.o] Error 1
+Makefile:726: recipe for target 'obj/default/peripheral/peripheral_linker.o' failed
+01:17:13 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:18:11 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08X\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:14:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08X\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:15:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08X\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+peripheral/peripheral_linker.c:16:27: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08X\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           |           alt_u32 {aka long unsigned int}
+      |                           unsigned int
+      |                        %08lX
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 9044 Bytes program size (code + initialized data).
+Info:                31 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:18:26 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+01:19:13 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:19:13 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from hello_world_small.c:86:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:14:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08f\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:15:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08f\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:16:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08f\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 9044 Bytes program size (code + initialized data).
+Info:                31 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:19:15 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:19:26 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+01:21:30 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:14:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08f\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:15:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08f\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:16:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08f\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 8912 Bytes program size (code + initialized data).
+Info:                31 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:21:46 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]
+01:22:02 **** Clean-only build of configuration Nios II for project nios_new ****
+wsl make clean 
+[nios_new clean complete]
+01:22:02 **** Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:94:11: warning: implicit declaration of function 'read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   94 |           read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+hello_world_small.c:95:11: warning: implicit declaration of function 'debug_read_fifo_channel1_128bit' [-Wimplicit-function-declaration]
+   95 |           debug_read_fifo_channel1_128bit(ADC1_data);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from hello_world_small.c:86:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Compiling peripheral/peripheral_linker.c to obj/default/peripheral/peripheral_linker.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//HAL/inc -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/ -Ic:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/peripheral/peripheral_linker.o" "peripheral/peripheral_linker.c"
+peripheral/peripheral_linker.c: In function 'debug_read_fifo_channel1_128bit':
+peripheral/peripheral_linker.c:13:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+  +++ |+#include <stdio.h>
+    2 | 
+peripheral/peripheral_linker.c:13:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |         ^~~~~~
+peripheral/peripheral_linker.c:13:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+peripheral/peripheral_linker.c:13:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   13 |         printf("ADC[0]=%08f\n", buffer[0]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:14:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   14 |         printf("ADC[1]=%08f\n", buffer[1]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:15:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   15 |         printf("ADC[2]=%08f\n", buffer[2]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+peripheral/peripheral_linker.c:16:27: warning: format '%f' expects argument of type 'double', but argument 2 has type 'alt_u32' {aka 'long unsigned int'} [-Wformat=]
+   16 |         printf("ADC[3]=%08f\n", buffer[3]);
+      |                        ~~~^     ~~~~~~~~~
+      |                           |           |
+      |                           double      alt_u32 {aka long unsigned int}
+      |                        %08ld
+In file included from peripheral/peripheral_linker.c:1:
+peripheral/peripheral_linker.h: At top level:
+peripheral/peripheral_linker.h:18:16: warning: 'ADC4_data' defined but not used [-Wunused-variable]
+   18 | static alt_u32 ADC4_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:17:16: warning: 'ADC3_data' defined but not used [-Wunused-variable]
+   17 | static alt_u32 ADC3_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:16:16: warning: 'ADC2_data' defined but not used [-Wunused-variable]
+   16 | static alt_u32 ADC2_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+peripheral/peripheral_linker.h:15:16: warning: 'ADC1_data' defined but not used [-Wunused-variable]
+   15 | static alt_u32 ADC1_data[4] = {0x0000, 0x0000, 0x0000, 0x0000};
+      |                ^~~~~~~~~
+Info: Linking nios_new.elf
+nios2-elf-g++.exe  -T'c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//linker.x' -msys-crt0='c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/  -msmallc  -Wl,-Map=nios_new.map   -Os -g -Wall   -mno-hw-div -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios_new.elf obj/default/hello_world_small.o obj/default/peripheral/peripheral_linker.o -lm -msys-lib=m
+nios2-elf-insert.exe nios_new.elf --thread_model hal --cpu_name NIOS --qsys true --simulation_enabled false --id 39011 --sidp 0x21040 --timestamp 1751380749 --stderr_dev JTAG --stdin_dev JTAG --stdout_dev JTAG --sopc_system_name nios --quartus_project_dir "c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025" --jdi ../..//output_files/ADS131A0X.jdi --sopcinfo c:/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/nios.sopcinfo
+Info: (nios_new.elf) 8912 Bytes program size (code + initialized data).
+Info:                31 KBytes free for stack + heap.
+Info: Creating nios_new.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios_new.elf >nios_new.objdump
+[nios_new build complete]
+01:22:04 **** Incremental Build of configuration Nios II for project nios_new_bsp ****
+wsl make all 
+[BSP build complete]
+01:22:14 **** Incremental Build of configuration Nios II for project nios_new ****
+wsl make all 
+Info: Building /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+make --no-print-directory -C /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new_bsp/
+[BSP build complete]
+[nios_new build complete]

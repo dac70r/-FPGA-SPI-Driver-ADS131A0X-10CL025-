@@ -1,0 +1,6 @@
+23:23:39 **** Build of configuration Nios II for project nios_bsp ****
+wsl make all 
+[BSP build complete]
+
+23:23:40 Build Finished (took 1s.114ms)
+

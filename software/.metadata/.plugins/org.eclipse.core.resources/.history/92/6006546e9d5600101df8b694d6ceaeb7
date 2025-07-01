@@ -1,0 +1,228 @@
+#include "peripheral_linker.h"  // Include the linker header file with peripheral definitions
+#include "system.h"
+#include "stdint.h"
+#include "sys/alt_alarm.h"  // required for alt_nticks and alt_ticks_per_second
+
+// Delay function
+// No Parameters
+void delay_ms(int milliseconds) {
+    usleep(milliseconds * 1000);  // Convert to microseconds
+}
+
+void delay_1s(uint8_t invert_me)
+{
+    alt_u32 start_tick = alt_nticks();
+    alt_u32 tick_rate = alt_ticks_per_second();  // e.g., 1000 ticks/sec
+    IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, invert_me);
+
+    // Wait until 1 second worth of ticks has passed
+    while ((alt_nticks() - start_tick) < tick_rate)
+    {
+        // Optionally do something while waiting
+    }
+}
+
+/* Functions to Read from FIFO  */
+// 1 ADC 1 Channel - Current
+alt_u32 read_fifo_current(void) {
+    return IORD_32DIRECT(FIFO_READER_SINGLE_0_BASE, 0);
+}
+
+// 1 ADC 1 Channel - Voltage
+alt_u32 read_fifo_voltage(void) {
+    return IORD_32DIRECT(FIFO_READER_SINGLE_1_BASE, 0);
+}
+// Function to Read Data from ADC Buffer
+void read_fifo_channel1_128bit(alt_u32 *buffer) {
+    buffer[3] = (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x00))>>8;
+    buffer[2] = (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x04))>>8;
+    buffer[1] = (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x08))>>8;
+    buffer[0] = (IORD_32DIRECT(ADC_FIFO_READER_0_BASE, 0x0C))>>8;
+}
+
+// DEBUG
+void debug_read_fifo_channel1_128bit(alt_u32 *buffer) {
+	printf("ADC[0]=%08X\n", buffer[0]);
+	printf("ADC[1]=%08X\n", buffer[1]);
+	printf("ADC[2]=%08X\n", buffer[2]);
+	printf("ADC[3]=%08X\n", buffer[3]);
+}
+
+// Self-defined SPI TransmitReceive Function (Same as HAL_SPI_TransmitReceive())
+int spi_transmit_receive(		alt_u32 base,
+									alt_u32 slave,
+									const alt_u8 *tx_buf,
+									alt_u8 *rx_buf,
+									alt_u32 length,
+									alt_u32 flags
+								)
+{
+
+	alt_u32 timeout_ticks = alt_ticks_per_second() / 100; // 10ms timeout
+	alt_u32 start_tick = alt_nticks();
+	volatile alt_u32 status = 0;
+	alt_u32 tx_count = 0;
+	alt_u32 rx_count = 0;
+
+	// 1. Select slave
+	IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(base, 1 << slave);
+
+	// 2. Optional SSO enable
+	/*
+	if ((flags & ALT_AVALON_SPI_COMMAND_TOGGLE_SS_N) == 0) {
+		IOWR_ALTERA_AVALON_SPI_CONTROL(base, ALTERA_AVALON_SPI_CONTROL_SSO_MSK);
+	}
+	*/
+
+// 3. Clear any stale RX data
+	IORD_ALTERA_AVALON_SPI_RXDATA(base);
+
+	// 4. Start full-duplex transfer
+	while (rx_count < length)
+	{
+		status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+
+		// If TX is ready and we haven’t sent all bytes, write one
+		if ((status & ALTERA_AVALON_SPI_STATUS_TRDY_MSK) && tx_count < length) {
+			alt_u8 tx_data = (tx_buf != NULL) ? tx_buf[tx_count] : 0x00;
+			IOWR_ALTERA_AVALON_SPI_TXDATA(base, tx_data);
+			tx_count++;
+		}
+
+		// If RX is ready, read one
+		if (status & ALTERA_AVALON_SPI_STATUS_RRDY_MSK) {
+			alt_u32 rx_data = IORD_ALTERA_AVALON_SPI_RXDATA(base);
+			if (rx_buf != NULL) {
+				rx_buf[rx_count] = (alt_u8)rx_data;
+			}
+			rx_count++;
+		}
+
+		// Timeout check
+		if ((alt_nticks() - start_tick) > timeout_ticks) {
+			IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+			printf("SPI Timeout Occurred!\n");
+			return -1;
+		}
+	}
+
+	// 5. Wait until transfer is totally complete (shift register empty)
+	do {
+		status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+	} while ((status & ALTERA_AVALON_SPI_STATUS_TMT_MSK) == 0);
+
+	// 6. Clear SSO (chip select) if MERGE flag not set
+	if ((flags & ALT_AVALON_SPI_COMMAND_MERGE) == 0) {
+		IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+	}
+
+	return length;
+}
+
+/***************************************************************DEPRECATED**************************************************************************/
+// Self-defined SPI TransmitReceive Function - Similar to HAL_SPI_TransmitReceive
+/*
+int spi_transmit_receive_new(		alt_u32 base,
+								alt_u32 slave,
+								const alt_u8 *tx_buf,
+								alt_u8 *rx_buf,
+								alt_u32 length,
+								alt_u32 flags
+								)
+{
+  const alt_u8 * write_end = tx_buf + length;	// calculate the end of the pointer for tx_buf
+  alt_u8 * read_end = rx_buf + length;			// calculate the end of the pointer for rx_buf
+
+  alt_u32 write_zeros = 0;						// read_length;
+  alt_u32 read_ignore = 0;						// write_length;
+  volatile alt_u32 status = 0;
+
+  const alt_u8 *tx_ptr = tx_buf;
+  alt_u8 *rx_ptr = rx_buf;
+
+  alt_32 credits = 1;								// credits for managing the tx and rx
+  alt_u32 received = 0;
+
+	alt_u32 tx_count = 0;
+	alt_u32 rx_count = 0;
+
+  // Define timeout duration (in ticks), e.g., 10 ms
+  alt_u32 timeout_ticks = alt_ticks_per_second()/1000; 	// 1000 ms
+  alt_u32 start_tick = alt_nticks();
+
+  // 1. Slave selection
+  IOWR_ALTERA_AVALON_SPI_SLAVE_SEL(base, 1 << slave);
+
+  // 2. CS Line
+  // Set the SSO bit (force chipselect) only if the toggle flag is not set
+  if ((flags & ALT_AVALON_SPI_COMMAND_TOGGLE_SS_N) == 0) {
+    IOWR_ALTERA_AVALON_SPI_CONTROL(base, ALTERA_AVALON_SPI_CONTROL_SSO_MSK);
+  }
+  // 3. Clears the data in RXDATA register
+  IORD_ALTERA_AVALON_SPI_RXDATA(base);
+
+  // Keep clocking until all the data has been processed
+  alt_u32 timeout = SPI_TIMEOUT_MAX;
+  for ( ; ; )
+  {
+	status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+	// Wait until either TX ready or RX ready (or timeout)
+    do
+    {
+      status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+      if ((alt_nticks() - start_tick > timeout_ticks))//(--timeout == 0)
+	  {
+		  // Timeout occurred, release CS and return error code
+		  IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+		  printf("SPI Timeout Occurred!");
+		  return -1;
+	  }
+    }
+
+    while (((status & ALTERA_AVALON_SPI_STATUS_TRDY_MSK) == 0 || credits == 0) &&
+            (status & ALTERA_AVALON_SPI_STATUS_RRDY_MSK) == 0);
+
+    if ((status & ALTERA_AVALON_SPI_STATUS_TRDY_MSK) != 0 && credits > 0)
+    {
+      credits--;
+
+      if (tx_ptr < write_end)
+        IOWR_ALTERA_AVALON_SPI_TXDATA(base, *tx_ptr++);
+      else if (write_zeros > 0)
+      {
+        write_zeros--;
+        IOWR_ALTERA_AVALON_SPI_TXDATA(base, 0);
+      }
+      else
+        credits = -1024;
+    }
+
+    if ((status & ALTERA_AVALON_SPI_STATUS_RRDY_MSK) != 0)
+    {
+      alt_u32 rxdata = IORD_ALTERA_AVALON_SPI_RXDATA(base);
+
+      if (read_ignore > 0)
+        read_ignore--;
+      else
+        *rx_ptr++ = (alt_u8)rxdata;
+      credits++;
+
+      if (read_ignore == 0 && rx_ptr == read_end)
+        break;
+    }
+
+  }
+
+  // Wait until the interface has finished transmitting
+  do
+  {
+    status = IORD_ALTERA_AVALON_SPI_STATUS(base);
+  }
+  while ((status & ALTERA_AVALON_SPI_STATUS_TMT_MSK) == 0);
+
+  if ((flags & ALT_AVALON_SPI_COMMAND_MERGE) == 0)
+    IOWR_ALTERA_AVALON_SPI_CONTROL(base, 0);
+
+  return length;
+}
+*/

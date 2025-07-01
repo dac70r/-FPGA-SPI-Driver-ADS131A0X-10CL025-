@@ -44,11 +44,13 @@ wire [31:0]		Channel0_Raw;
 wire [31:0]		Channel1_Raw;
 wire [31:0]		Channel2_Raw;
 wire [31:0]		Channel3_Raw;
+wire [127:0] Channel_0123_Raw;
 
 wire [31:0] Channel0_Raw_Read;
 wire [31:0] Channel1_Raw_Read;
 wire [31:0] Channel2_Raw_Read;
 wire [31:0] Channel3_Raw_Read;
+wire [127:0] Channel_0123_Raw_Read;
 
 /* SPI_Master Instance */
 SPI_Master SPI_Master_uut
@@ -66,6 +68,7 @@ SPI_Master SPI_Master_uut
 	.Channel1_Raw(Channel1_Raw),
 	.Channel2_Raw(Channel2_Raw),
 	.Channel3_Raw(Channel3_Raw),
+	.Channel_0123_Raw(Channel_0123_Raw),
 	.FIFO_WR_EN(FIFO_WR_EN),
 	
 	// Non crucial Signals (for simulation and debugging)
@@ -151,6 +154,29 @@ my_fifo my_fifo_uut3(
 	.rdempty(rdempty[3]),
 	.wrfull(wrfull[3])
 );
+
+wire 		adc_fifo_rdempty; // from fifo to nios - tells nios if fifo is empty 
+wire 		adc_fifo_wrfull;  // from fifo to nios - tells nios if fifo is full
+wire		adc_fifo_rdreq;   // from nios into fifo
+
+adc_fifo adc_fifo_inst (
+	.data(Channel_0123_Raw),
+	.rdclk(system_clock),
+	.rdreq(adc_fifo_rdreq),
+	.wrclk(synthesized_clock_4_167Mhz),
+	.wrreq(FIFO_WR_EN[3]),
+	.q(Channel_0123_Raw_Read),
+	.rdempty(adc_fifo_rdempty),
+	.wrfull(adc_fifo_wrfull)
+);
+		
+nios my_nios (
+		.adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_data_in(Channel_0123_Raw_Read), // adc_fifo_reader_0_adc_fifo_reader_conduit.fifo_data_in
+		.adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_empty(adc_fifo_rdempty),   						//                                          .fifo_empty
+		.adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_rdreq(adc_fifo_rdreq),   	//                                          .fifo_rdreq
+		.clk_clk(system_clock),                                                		//                                       clk.clk
+		.reset_reset_n(reset_n)                                         				//                                     reset.reset_n
+	);
 
 wire synthesized_clock_4_167Mhz;
 wire synthesized_clock_12_5Mhz;

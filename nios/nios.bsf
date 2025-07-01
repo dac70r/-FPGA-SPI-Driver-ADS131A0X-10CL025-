@@ -1,0 +1,87 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 752 216)
+	(text "nios" (rect 365 -1 380 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 200 20 212)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_data_in[127..0]" (rect 0 0 260 12)(font "Arial" (font_size 8)))
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_data_in[127..0]" (rect 4 61 376 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 336 72)(line_width 3))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_empty" (rect 0 0 230 12)(font "Arial" (font_size 8)))
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_empty" (rect 4 77 316 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 336 88)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 133 46 144)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 336 144)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 173 82 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 336 184)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_rdreq" (rect 0 0 225 12)(font "Arial" (font_size 8)))
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit_fifo_rdreq" (rect 4 93 316 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 336 104)(line_width 1))
+	)
+	(drawing
+		(text "adc_fifo_reader_0_adc_fifo_reader_conduit" (rect 77 43 400 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "fifo_data_in" (rect 341 67 754 144)(font "Arial" (color 0 0 0)))
+		(text "fifo_empty" (rect 341 83 742 176)(font "Arial" (color 0 0 0)))
+		(text "fifo_rdreq" (rect 341 99 742 208)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 321 115 660 243)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 341 139 700 288)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 307 155 644 323)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 341 179 724 368)(font "Arial" (color 0 0 0)))
+		(text " nios " (rect 732 200 1500 410)(font "Arial" ))
+		(line (pt 336 32)(pt 416 32)(line_width 1))
+		(line (pt 416 32)(pt 416 200)(line_width 1))
+		(line (pt 336 200)(pt 416 200)(line_width 1))
+		(line (pt 336 32)(pt 336 200)(line_width 1))
+		(line (pt 337 52)(pt 337 108)(line_width 1))
+		(line (pt 338 52)(pt 338 108)(line_width 1))
+		(line (pt 337 124)(pt 337 148)(line_width 1))
+		(line (pt 338 124)(pt 338 148)(line_width 1))
+		(line (pt 337 164)(pt 337 188)(line_width 1))
+		(line (pt 338 164)(pt 338 188)(line_width 1))
+		(line (pt 0 0)(pt 752 0)(line_width 1))
+		(line (pt 752 0)(pt 752 216)(line_width 1))
+		(line (pt 0 216)(pt 752 216)(line_width 1))
+		(line (pt 0 0)(pt 0 216)(line_width 1))
+	)
+)

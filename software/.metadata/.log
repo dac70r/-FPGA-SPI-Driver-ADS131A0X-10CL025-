@@ -1,0 +1,273 @@
+!SESSION 2025-07-01 23:13:47.204 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_392
+java.vendor=Temurin
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_MY
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2025-07-01 23:15:26.779
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-01 23:17:39.018
+!MESSAGE Indexed 'nios_bsp' (84 sources, 66 headers) in 1.35 sec: 1,247 declarations; 2,812 references; 114 unresolved inclusions; 6 syntax errors; 195 unresolved names (4.6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-01 23:17:41.880
+!MESSAGE Indexed 'nios' (1 sources, 0 headers) in 0.007 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2025-07-01 23:21:43.327 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_392
+java.vendor=Temurin
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_MY
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2025-07-01 23:21:53.747
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:24:10.374
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x410a0 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ViCAT_LSC/software/nios/nios.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2025-07-01 23:24:11.792
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]', --device=1, --instance=0, --accept-bad-sysid, --sidp=0x410a0, /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ViCAT_LSC/software/nios/nios.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2025-07-01 23:24:11.811
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2025-07-01 23:27:38.592
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:794)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:310)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:390)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1835)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile.
+Contains: Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2025-07-01 23:27:38.594
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2025-07-01 23:27:38.594
+!MESSAGE Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:310)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:390)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1835)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2025-07-01 23:27:38.594
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2025-07-01 23:27:38.594
+!MESSAGE Could not delete: C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2025-07-01 23:27:38.594
+!MESSAGE Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp'.
+
+!ENTRY org.eclipse.core.resources 4 273 2025-07-01 23:27:38.599
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2025-07-01 23:27:38.599
+!MESSAGE Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:135)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:310)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:390)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1835)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:781)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:323)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:160)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2025-07-01 23:27:38.599
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2025-07-01 23:27:38.599
+!MESSAGE Could not delete: C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp\Makefile.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2025-07-01 23:27:38.599
+!MESSAGE Could not delete 'C:\Users\guan-ming.dennis-won\Documents\Code\ViCAT_LSC\software\nios_bsp'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-01 23:29:20.598
+!MESSAGE Indexed 'nios_new_bsp' (80 sources, 60 headers) in 1.01 sec: 1,188 declarations; 2,449 references; 110 unresolved inclusions; 6 syntax errors; 191 unresolved names (5%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-01 23:29:22.019
+!MESSAGE Indexed 'nios_new' (1 sources, 0 headers) in 0.007 sec: 1 declarations; 1 references; 1 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-01 23:35:45.789
+!MESSAGE Indexed 'nios_new' (1 sources, 27 headers) in 0.064 sec: 332 declarations; 974 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:36:30.204
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x21040 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2025-07-01 23:36:32.606
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]', --device=1, --instance=0, --accept-bad-sysid, --sidp=0x21040, /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2025-07-01 23:36:32.608
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:39:50.553
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x21040 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:39:51.948
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x21040]
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2025-07-01 23:41:09.311
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:189)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:137)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:329)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:101)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:797)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:47)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:45:06.668
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-01 23:45:08.067
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:08:47.542
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:08:48.970
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:11:05.516
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:11:06.928
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:13:43.799
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:13:45.194
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:23:34.868
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:23:36.396
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:51:48.383
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:51:49.811
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:54:30.817
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 00:54:32.340
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:13:22.539
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:13:23.965
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:18:27.878
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:18:29.337
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:19:27.679
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:19:29.102
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:22:15.933
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --sidp=0x21040 --id=0x9863 --timestamp=1751380749 /mnt/c/Users/guan-ming.dennis-won/Documents/Code/ADS131A0X_Library_10CL025/software/nios_new/nios_new.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-07-02 01:22:17.403
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, wsl nios2-download '--cable=Cyclone 10 LP Evaluation Kit on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x21040 --id=0x9863 --timestamp=1751380749]

@@ -18,6 +18,7 @@ module SPI_Master
 	output  	[31:0]Channel1_Raw,
 	output  	[31:0]Channel2_Raw,
 	output  	[31:0]Channel3_Raw,
+	output 	[127:0]Channel_0123_Raw,
 	
 	//----------Desired Data----------
 	output reg 	[3:0] FIFO_WR_EN,
@@ -661,16 +662,20 @@ reg [31:0]		Channel0_Raw_local					= 32'd0;
 reg [31:0]		Channel1_Raw_local					= 32'd0;
 reg [31:0]		Channel2_Raw_local					= 32'd0;
 reg [31:0]		Channel3_Raw_local					= 32'd0;
+reg [31:0]		Channel0_Raw_register					= 32'd0;
+reg [31:0]		Channel1_Raw_register					= 32'd0;
+reg [31:0]		Channel2_Raw_register					= 32'd0;
+reg [31:0]		Channel3_Raw_register				= 32'd0;
 
 always @ (*)
 begin
 	if(adc_init_completed) begin
 
 		case(spi_bit_count_32max)
-			64:	begin Channel0_Raw_local = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
-			97:	begin Channel1_Raw_local = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
-			129:	begin Channel2_Raw_local = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
-			161:	begin Channel3_Raw_local = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
+			64:	begin Channel0_Raw_register = spi_miso_data; Channel0_Raw_local = spi_miso_data; FIFO_WR_EN[0] = 'd1; end
+			97:	begin Channel1_Raw_register = spi_miso_data; Channel1_Raw_local = spi_miso_data; FIFO_WR_EN[1] = 'd1; end
+			129:	begin Channel2_Raw_register = spi_miso_data; Channel2_Raw_local = spi_miso_data; FIFO_WR_EN[2] = 'd1; end
+			161:	begin Channel3_Raw_register = spi_miso_data; Channel3_Raw_local = spi_miso_data; FIFO_WR_EN[3] = 'd1; end
 			default: begin
 							Channel0_Raw_local = 'd0; Channel1_Raw_local = 'd0;
 							Channel2_Raw_local = 'd0; Channel3_Raw_local = 'd0; FIFO_WR_EN = 4'b0; end
@@ -687,7 +692,8 @@ end
 	assign Channel1_Raw					=  (Channel1_Raw_local[31] == 'd0) ? (Channel1_Raw_local >> 8) : {8'hFF, Channel1_Raw_local[31:8]}; // Channel1_Raw_local >> 8; // 
 	assign Channel2_Raw					=  (Channel2_Raw_local[31] == 'd0) ? (Channel2_Raw_local >> 8) : {8'hFF, Channel2_Raw_local[31:8]}; // Channel2_Raw_local >> 8; // 
 	assign Channel3_Raw					=  (Channel3_Raw_local[31] == 'd0) ? (Channel3_Raw_local >> 8) : {8'hFF, Channel3_Raw_local[31:8]}; // Channel3_Raw_local >> 8; //
-
+	assign Channel_0123_Raw				= {Channel0_Raw_register, Channel1_Raw_register, Channel2_Raw_register, Channel3_Raw_register};
+	
 	// Core Signals 
 	assign SPI_SCLK						= synthesized_clock_4_167Mhz; //SPI_SCLK_Temp;
 	assign SPI_CS							= SPI_CS_Temp;

@@ -1,0 +1,20 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios.sysid_qsys_0 -pg 1 -lvl 3 -y 310
+preplace inst nios.RAM -pg 1 -lvl 3 -y 30
+preplace inst nios.NIOS.cpu -pg 1
+preplace inst nios.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst nios.JTAG -pg 1 -lvl 3 -y 110
+preplace inst nios.NIOS.reset_bridge -pg 1
+preplace inst nios.NIOS.clock_bridge -pg 1
+preplace inst nios.NIOS -pg 1 -lvl 2 -y 120
+preplace inst nios.adc_fifo_reader_0 -pg 1 -lvl 3 -y 210
+preplace netloc FAN_OUT<net_container>nios</net_container>(SLAVE)NIOS.clk,(SLAVE)adc_fifo_reader_0.clock,(SLAVE)sysid_qsys_0.clk,(MASTER)clk_0.clk,(SLAVE)JTAG.clk,(SLAVE)RAM.clk1) 1 1 2 280 40 720
+preplace netloc INTERCONNECT<net_container>nios</net_container>(SLAVE)sysid_qsys_0.control_slave,(MASTER)NIOS.data_master,(MASTER)NIOS.instruction_master,(SLAVE)NIOS.debug_mem_slave,(SLAVE)JTAG.avalon_jtag_slave,(SLAVE)RAM.s1,(SLAVE)adc_fifo_reader_0.adc_fifo_reader_avalon_slave) 1 1 2 300 80 660
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)clk_0.clk_in,(SLAVE)nios.clk) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>nios</net_container>(MASTER)NIOS.irq,(SLAVE)JTAG.irq) 1 2 1 700
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nios</net_container>(SLAVE)NIOS.reset,(SLAVE)JTAG.reset,(SLAVE)RAM.reset1,(SLAVE)sysid_qsys_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)adc_fifo_reader_0.reset) 1 1 2 260 60 680
+levelinfo -pg 1 0 50 970
+levelinfo -hier nios 60 90 420 750 960
